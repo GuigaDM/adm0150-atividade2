@@ -1,0 +1,215 @@
+Ferramenta: ChatGPT
+   Modelo (se visível): Não Visível
+   Data e hora: 10/10/2026, 18h53
+   Busca na web: ativada
+
+## 0. Condições desta resposta
+
+* **Data de corte do seu conhecimento:** 10/10/2026.
+* **Você usou busca na web nesta resposta?** Sim.
+* **Principais limitações de dado para o DF:** faltam dados públicos consolidados sobre faturamento, preços praticados, margens e demanda insatisfeita por nicho e região administrativa. A PDAD do IPEDF permite caracterizar a população, mas não comprova disposição a pagar por serviços específicos. As estimativas financeiras desta análise são hipóteses de viabilidade, não resultados observados de empresas locais.
+
+**Critério de rigor:** diferencio evidências de demanda existente, hipóteses comerciais e informações ainda não verificadas. Uma tendência setorial, isoladamente, não aprova uma oportunidade. As estimativas devem ser validadas com entrevistas e propostas comerciais antes de qualquer investimento.
+
+As oportunidades foram avaliadas para abertura entre 2026 e 2027, com operação sustentável até 2030 e capital total de até R$ 100 mil, incluindo equipamentos, despesas pré-operacionais e capital de giro.
+
+## 1. Triagem das 8 candidatas
+
+| Candidata                                                                       | Tendência de origem                          | C1  | C2  | C3  | C4  | C5  | Resultado (aprovada/eliminada) | Se eliminada: pergunta em que falhou e motivo (1 linha)                                                                                                          |
+| ------------------------------------------------------------------------------- | -------------------------------------------- | --- | --- | --- | --- | --- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Assessoria operacional para pequenos fornecedores do governo                 | Digitalização das compras públicas           | SIM | SIM | SIM | SIM | SIM | Aprovada                       | —                                                                                                                                                                |
+| 2. Coordenação de retirada e destinação regular de entulho de pequenas reformas | Gestão de resíduos e economia circular       | SIM | SIM | SIM | SIM | SIM | Aprovada                       | —                                                                                                                                                                |
+| 3. Agência de marketing digital para pequenos negócios                          | Digitalização comercial                      | SIM | SIM | SIM | NÃO | SIM | Eliminada                      | C4: mercado concorrido, oferta facilmente copiável e ausência de diferenciação comprovada.                                                                       |
+| 4. Instalação de carregadores para veículos elétricos                           | Eletrificação da mobilidade                  | SIM | SIM | SIM | NÃO | SIM | Eliminada                      | C4: não há evidência suficiente de demanda local recorrente que justifique a aquisição de equipamentos e a estrutura de instalação dentro do capital disponível. |
+| 5. Loja virtual de produtos regionais do Cerrado                                | Comércio eletrônico e valorização regional   | SIM | SIM | SIM | NÃO | SIM | Eliminada                      | C4: custo de aquisição de clientes, logística e margem não foram comprovados para um nicho específico do DF.                                                     |
+| 6. Cozinha de refeições congeladas por assinatura                               | Conveniência alimentar                       | SIM | SIM | SIM | NÃO | SIM | Eliminada                      | C4: não há evidência de que a margem, a recorrência e o custo de aquisição fechem a conta para um público local definido.                                        |
+| 7. Serviço de adaptação residencial para idosos                                 | Envelhecimento populacional e acessibilidade | SIM | SIM | SIM | NÃO | SIM | Eliminada                      | C4: falta comprovação de demanda pagante e de um canal de aquisição economicamente viável no DF.                                                                 |
+| 8. Lavagem ecológica de veículos por assinatura em condomínios                  | Serviços por assinatura e economia de água   | SIM | SIM | SIM | NÃO | SIM | Eliminada                      | C4: a recorrência é plausível, mas a disposição a pagar, a densidade de clientes e a rentabilidade por rota não estão comprovadas.                               |
+
+**Resultado da triagem:** duas candidatas passaram pelas cinco perguntas. Isso não significa que sua viabilidade esteja comprovada: significa que há um problema identificável, uma solução executável, um cliente delimitável, um canal comercial plausível e uma janela de entrada defensável. Ambas exigem validação comercial antes do investimento.
+
+**Base documental da triagem:** o Portal Nacional de Contratações Públicas (PNCP) permite consultar editais, contratos e planos de contratação, oferecendo uma fonte oficial para investigar a demanda por serviços e compras governamentais. ([Serviços e Informações do Brasil][1]) A legislação distrital também estabelece obrigações específicas para o gerenciamento dos resíduos da construção civil, criando uma necessidade operacional concreta. ([DFLegis][2])
+
+## 2. Fichas das oportunidades aprovadas
+
+### Oportunidade 1: Assessoria operacional para pequenos fornecedores do governo
+
+#### A. Tendência × oportunidade
+
+* **Tendência de origem:** digitalização das compras públicas e ampliação da disponibilidade de informações sobre licitações e contratos.
+* **Problema específico:** pequenos fornecedores perdem oportunidades porque não monitoram editais adequados, não organizam a documentação ou não conseguem preparar propostas comerciais e administrativas de forma consistente.
+* **Cliente nomeável (quem, onde no DF, em que situação):** empresas de manutenção predial, comunicação visual, limpeza, fornecimento de materiais e serviços administrativos estabelecidas em Taguatinga, Ceilândia, Guará e Samambaia, que já vendem para outras empresas, mas ainda não participam regularmente de licitações.
+
+O PNCP centraliza informações sobre contratações públicas, editais, atas, contratos e planos de contratação. Isso permite pesquisar oportunidades sem desenvolver uma plataforma própria. ([Serviços e Informações do Brasil][1])
+
+#### B. Cinco perguntas de triagem
+
+* **Quem exatamente tem esse problema?** Proprietários de pequenas empresas que possuem capacidade operacional para fornecer produtos ou serviços, mas não dispõem de funcionário dedicado a licitações.
+* **Quanto dói? (custo em dinheiro, tempo ou risco para o cliente)** O custo pode incluir horas administrativas, contratação de consultoria pontual e oportunidades perdidas por documentação incompleta. O prejuízo médio por empresa no DF é **[SEM DADO VERIFICÁVEL]**.
+* **Quem paga, e com que dinheiro? (quem usa, quem decide e quem paga podem ser pessoas diferentes; diga se são)** O proprietário ou diretor financeiro decide e paga com o caixa da própria empresa. O usuário do serviço é o responsável comercial ou administrativo.
+* **Por que um novo pequeno negócio, e não o incumbente? (o que impede um concorrente estabelecido de copiar em três meses?)** O negócio pode competir com atendimento próximo, especialização em poucos segmentos e acompanhamento individual. A diferenciação é operacional, não uma barreira tecnológica; a retenção dependerá de resultados, confiança e conhecimento acumulado dos clientes.
+* **Por que agora, e não em 2020 ou 2035? (que mudança recente abriu a janela)** O PNCP oferece uma fonte pública centralizada para pesquisar oportunidades e acompanhar processos. A janela é operacional, e não uma ruptura tecnológica exclusiva de 2026. ([Serviços e Informações do Brasil][1])
+
+#### C. 3Ms
+
+**M1 — Demanda de mercado**
+
+* **Público-alvo:** pequenas empresas locais com capacidade de atender órgãos públicos, mas sem equipe própria de licitações. Os segmentos iniciais podem ser manutenção predial, comunicação visual e fornecimento de materiais.
+* **Acessibilidade dos clientes:** prospecção direta em associações empresariais, redes de contabilidade, fornecedores locais e contatos comerciais. A frequência de contratação do serviço dependerá da quantidade de processos adequados ao perfil de cada cliente.
+* **Durabilidade e recuperação do custo de aquisição:** a necessidade pode persistir enquanto a empresa desejar vender ao governo. O prazo para recuperar o custo de aquisição é **[SEM DADO VERIFICÁVEL]** até testar conversão, preço e retenção.
+
+**M2 — Tamanho e estrutura do mercado**
+
+* **Tamanho no DF:** **[SEM DADO VERIFICÁVEL]**. Não foi apurado o número de pequenas empresas com capacidade e interesse em contratar assessoria recorrente para licitações no Distrito Federal.
+* **Situação e estrutura:** mercado potencialmente fragmentado, com consultores independentes, escritórios especializados e empresas que mantêm equipe interna. A existência de demanda pagante precisa ser comprovada por entrevistas e contratos.
+* **Concorrentes e barreiras:** consultorias de licitação, assessorias administrativas e profissionais autônomos. A entrada exige baixo investimento físico, mas a reputação, o domínio dos procedimentos e o histórico de entregas podem favorecer a retenção. A saída tem custo relativamente baixo, desde que não haja compromissos contratuais relevantes.
+
+**M3 — Análise de margem**
+
+* **Margem bruta estimada:** 70% a 85% [ESTIMATIVA: prestação de serviços predominantemente intelectual; custos diretos de execução, ferramentas e apoio operacional equivalentes a 15%–30% da receita, sem incluir pró-labore e despesas administrativas].
+* **Principais custos fixos mensais:** R$ 4 mil a R$ 7 mil [ESTIMATIVA: pró-labore operacional, contabilidade, software, internet, telefonia, prospecção e despesas administrativas; sem escritório comercial dedicado].
+* **Ponto de equilíbrio e prazo:** receita mensal de aproximadamente R$ 5,7 mil a R$ 10 mil [ESTIMATIVA: custos fixos de R$ 4 mil a R$ 7 mil divididos por margem de contribuição de 70%]. Prazo para alcançá-lo: **[SEM DADO VERIFICÁVEL]**, pois depende da velocidade de aquisição de clientes.
+* **Cadeia de valor:** PNCP e portais oficiais → identificação e filtragem de oportunidades → conferência documental → preparação administrativa da proposta → acompanhamento do processo → cliente fornecedor.
+
+O serviço não deve prometer vitória em licitações. A entrega contratada é a assessoria operacional, documental e comercial.
+
+#### D. Classificação qualitativa (critérios de Timmons)
+
+| Critério                                                  | Alto / Médio / Baixo potencial | Justificativa (1 linha)                                                                                                        |
+| --------------------------------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| Necessidades dos clientes                                 | Médio                          | O problema é plausível, mas a intensidade da dor e a disposição a pagar precisam ser validadas com fornecedores locais.        |
+| Estrutura do mercado                                      | Médio                          | Há clientes potencialmente dispersos e diferentes alternativas de atendimento, sem estimativa confiável do tamanho do mercado. |
+| Barreiras de entrada que o novo negócio consiga construir | Médio                          | Especialização por segmento, processos padronizados e histórico de relacionamento podem elevar a retenção, mas são copiáveis.  |
+| Capital inicial                                           | Alto                           | É possível começar de casa, usando ferramentas existentes e sem desenvolver software próprio.                                  |
+| Prazo até o ponto de equilíbrio                           | Médio                          | A estrutura pode ser enxuta, mas a formação da carteira comercial é incerta.                                                   |
+
+#### E. Modelo de negócio
+
+* **Quem paga:** proprietário ou diretor de pequenas empresas fornecedoras.
+* **Por que paga (que valor recebe):** economiza tempo administrativo, melhora a organização documental e recebe uma seleção de oportunidades compatíveis com sua capacidade operacional.
+* **Quanto e com que frequência (preço e recorrência):** mensalidade de R$ 900 a R$ 1.500 por empresa [ESTIMATIVA: preço inicial hipotético para monitoramento, organização documental e acompanhamento administrativo; deve ser testado comercialmente]. Serviços extraordinários podem ser cobrados separadamente.
+* **A que custo:** investimento inicial de R$ 20 mil a R$ 35 mil [ESTIMATIVA: R$ 4 mil–R$ 7 mil para equipamentos e estrutura; R$ 3 mil–R$ 5 mil para formalização, identidade comercial e configuração; R$ 4 mil–R$ 8 mil para prospecção inicial; R$ 9 mil–R$ 15 mil para capital de giro]. O custo de aquisição de cliente é **[SEM DADO VERIFICÁVEL]** até medir o esforço comercial e a taxa de conversão.
+
+**Exemplo econômico ilustrativo:** com mensalidade média de R$ 1.200, custos fixos de R$ 5 mil e margem de contribuição de 80%, seriam necessários aproximadamente seis clientes ativos para cobrir os custos fixos [ESTIMATIVA: R$ 5.000 ÷ (R$ 1.200 × 80%) = 5,21; arredondamento para cima]. Essa simulação não comprova que seja possível conquistar ou reter essa carteira.
+
+#### F. Enquadramento digital
+
+* **Modelo:** empresarial — negócio de serviços do mundo real que utiliza a internet para vender, pesquisar oportunidades e reduzir custos operacionais.
+* **Quem detém a relação com o cliente:** o próprio negócio, com contratos, atendimento e histórico comercial próprios. O PNCP é uma fonte pública de informação, não o canal de relacionamento com o cliente. A dependência de plataformas privadas deve ser limitada, priorizando ferramentas substituíveis e dados oficiais.
+
+#### G. Riscos
+
+* **Perfil:** ramo tradicional com operação digital. A necessidade administrativa existe, mas a demanda específica por assessoria terceirizada ainda precisa ser demonstrada.
+* **De que condição externa depende (juros, incentivo, regulação, contrato público, investimento anunciado)?** Depende do volume de compras públicas compatíveis com os clientes, dos procedimentos de contratação e da capacidade financeira dos fornecedores. Não depende de incentivo fiscal ou subsídio.
+* **O que faria esta oportunidade falhar até 2030?** Clientes que não conseguem competir em preço, baixa taxa de contratação após participação em processos, inadimplência, excesso de concorrentes e mensalidades insuficientes para remunerar o trabalho especializado.
+
+#### H. Fontes desta ficha
+
+* [FONTE: Governo Federal — Portal Nacional de Contratações Públicas — consulta em 2026 — sistema oficial de divulgação e consulta de editais, contratos, atas e planos de contratação]. ([Serviços e Informações do Brasil][1])
+* [FONTE: Governo Federal — PNCP, Perguntas e Respostas — atualização consultada em 2026 — funcionamento do portal e informações disponíveis para consulta pública]. ([Serviços e Informações do Brasil][3])
+
+---
+
+### Oportunidade 2: Coordenação de retirada e destinação regular de entulho de pequenas reformas
+
+#### A. Tendência × oportunidade
+
+* **Tendência de origem:** gestão adequada de resíduos da construção civil e redução do descarte irregular.
+* **Problema específico:** moradores e pequenos profissionais de reforma precisam retirar resíduos, mas nem sempre conhecem as opções de destinação regular ou conseguem coordenar rapidamente a coleta e o transporte.
+* **Cliente nomeável (quem, onde no DF, em que situação):** proprietários de apartamentos em Águas Claras, Guará, Taguatinga e Samambaia que estão reformando banheiros, cozinhas ou pisos; pequenos empreiteiros e instaladores que precisam retirar resíduos de obras de curta duração.
+
+A legislação distrital prevê uma estrutura de gestão de resíduos da construção civil, e o SLU informa sobre os pontos de entrega destinados a pequenos volumes e as regras aplicáveis. ([DFLegis][2])
+
+#### B. Cinco perguntas de triagem
+
+* **Quem exatamente tem esse problema?** Proprietários que contratam pequenas reformas, profissionais autônomos e pequenas empresas de reforma sem frota própria ou rotina definida de retirada.
+* **Quanto dói? (custo em dinheiro, tempo ou risco para o cliente)** O cliente enfrenta tempo de coordenação, risco de atrasar a obra e risco de destinação inadequada. O custo médio por ocorrência no DF é **[SEM DADO VERIFICÁVEL]**.
+* **Quem paga, e com que dinheiro? (quem usa, quem decide e quem paga podem ser pessoas diferentes; diga se são)** O proprietário da obra ou o empreiteiro decide e paga com recursos da reforma. O usuário é quem coordena a retirada no local.
+* **Por que um novo pequeno negócio, e não o incumbente? (o que impede um concorrente estabelecido de copiar em três meses?)** O diferencial possível é combinar agendamento rápido, preço previamente informado, comprovação de destinação e atendimento a pequenas demandas. A vantagem não é estrutural: dependerá de confiabilidade, rede de transportadores e densidade de atendimento.
+* **Por que agora, e não em 2020 ou 2035? (que mudança recente abriu a janela)** A regulamentação distrital especifica obrigações para geradores e transportadores, enquanto o SLU divulga opções de destinação. Isso favorece um serviço organizado de coordenação, embora não prove crescimento recente da demanda. ([DFLegis][4])
+
+#### C. 3Ms
+
+**M1 — Demanda de mercado**
+
+* **Público-alvo:** proprietários em pequenas reformas residenciais e profissionais que executam serviços de curta duração. A operação inicial deve se concentrar em bairros com condomínios residenciais e prestadores de reforma.
+* **Acessibilidade dos clientes:** parcerias com lojas de material de construção, instaladores, pequenos empreiteiros, síndicos e administradoras de condomínios. A demanda pode ser recorrente entre parceiros profissionais, embora não necessariamente entre consumidores individuais.
+* **Durabilidade e recuperação do custo de aquisição:** a necessidade de retirada acompanha a atividade de reforma e manutenção. O prazo de recuperação do custo de aquisição é **[SEM DADO VERIFICÁVEL]** até medir pedidos, margem por atendimento e recompra dos parceiros.
+
+**M2 — Tamanho e estrutura do mercado**
+
+* **Tamanho no DF:** **[SEM DADO VERIFICÁVEL]**. Não foi encontrada nesta pesquisa uma estimativa consolidada do número anual de pequenas reformas residenciais que necessitam de serviço privado de retirada.
+* **Situação e estrutura:** mercado de serviços locais, com transportadores, empresas de caçamba e prestadores informais. A participação potencial de um intermediário depende de oferecer conveniência ou confiabilidade superior às alternativas existentes.
+* **Concorrentes e barreiras:** transportadores licenciados, locadores de caçambas e serviços de retirada oferecidos por empreiteiros. A operação pode começar sem frota própria, mas exige verificar licenciamento, documentação e regularidade dos parceiros. A legislação distrital define regras para resíduos e transportadores. ([DFLegis][2])
+
+**M3 — Análise de margem**
+
+* **Margem bruta estimada:** 25% a 40% [ESTIMATIVA: coordenação de pedidos com transportadores terceirizados; diferença entre preço cobrado e custo do transporte, destinação e atendimento, antes das despesas fixas].
+* **Principais custos fixos mensais:** R$ 3 mil a R$ 5 mil [ESTIMATIVA: pró-labore operacional, telefone, divulgação, software de agendamento, contabilidade e despesas administrativas, sem aquisição de veículo].
+* **Ponto de equilíbrio e prazo:** faturamento mensal de aproximadamente R$ 7,5 mil a R$ 20 mil [ESTIMATIVA: custos fixos de R$ 3 mil–R$ 5 mil divididos por margem de contribuição de 25%–40%]. O prazo para alcançá-lo é **[SEM DADO VERIFICÁVEL]**.
+* **Cadeia de valor:** indicação do cliente → cotação e agendamento → transportador regularizado → destinação autorizada → confirmação da conclusão e registro para o cliente.
+
+O negócio deve começar como coordenador de serviços, não como transportador de resíduos. A execução por terceiros reduz a necessidade de capital, mas exige validação regulatória prévia e controle rigoroso dos parceiros.
+
+#### D. Classificação qualitativa (critérios de Timmons)
+
+| Critério                                                  | Alto / Médio / Baixo potencial | Justificativa (1 linha)                                                                                                            |
+| --------------------------------------------------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Necessidades dos clientes                                 | Médio                          | A necessidade operacional é concreta, mas a disposição a pagar por coordenação independente ainda não foi demonstrada.             |
+| Estrutura do mercado                                      | Médio                          | Há diferentes prestadores locais e um serviço potencialmente fragmentado, sem dimensionamento confiável do mercado.                |
+| Barreiras de entrada que o novo negócio consiga construir | Médio                          | Rede confiável de transportadores, rapidez, comprovação de destinação e relacionamento com parceiros podem diferenciar a operação. |
+| Capital inicial                                           | Alto                           | A coordenação pode começar sem frota própria, desde que o modelo seja legalmente viável e os prestadores estejam regularizados.    |
+| Prazo até o ponto de equilíbrio                           | Médio                          | A estrutura é relativamente enxuta, mas a margem por pedido e a frequência de contratação precisam ser validadas.                  |
+
+#### E. Modelo de negócio
+
+* **Quem paga:** proprietário da obra ou pequeno empreiteiro que contrata a retirada.
+* **Por que paga (que valor recebe):** economiza tempo de coordenação, reduz incerteza sobre a contratação e obtém registro do serviço realizado e da destinação aplicável.
+* **Quanto e com que frequência (preço e recorrência):** preço hipotético de R$ 250 a R$ 500 por atendimento [ESTIMATIVA: faixa inicial para testar serviços de retirada de pequenas reformas; preço efetivo depende do volume, acesso, transporte e destinação]. O pagamento tende a ocorrer por demanda, com recorrência maior entre empreiteiros.
+* **A que custo:** investimento inicial de R$ 25 mil a R$ 45 mil [ESTIMATIVA: R$ 3 mil–R$ 6 mil para equipamentos e estrutura; R$ 3 mil–R$ 6 mil para formalização, contratos e configuração operacional; R$ 4 mil–R$ 8 mil para prospecção; R$ 15 mil–R$ 25 mil de capital de giro]. O custo de aquisição de cliente é **[SEM DADO VERIFICÁVEL]**.
+
+**Exemplo econômico ilustrativo:** com faturamento médio de R$ 350 por pedido e contribuição de 30%, cada atendimento geraria R$ 105 para cobrir despesas fixas [ESTIMATIVA: R$ 350 × 30%]. Para cobrir despesas fixas mensais de R$ 4 mil, seriam necessários aproximadamente 39 atendimentos mensais [ESTIMATIVA: R$ 4.000 ÷ R$ 105, arredondado para cima]. Esses valores não são preços de mercado verificados.
+
+#### F. Enquadramento digital
+
+* **Modelo:** empresarial — a operação é física, mas a internet pode reduzir o custo de cotação, agendamento, comunicação e acompanhamento.
+* **Quem detém a relação com o cliente:** o próprio negócio, desde que registre os contatos, contratos e histórico dos atendimentos. A aquisição de clientes exclusivamente por redes sociais ou marketplaces aumenta a dependência de algoritmos, comissões e mudanças nas regras das plataformas.
+
+#### G. Riscos
+
+* **Perfil:** ramo tradicional com coordenação digital. A necessidade de destinação existe, mas a demanda pagante por um intermediário precisa ser comprovada.
+* **De que condição externa depende (juros, incentivo, regulação, contrato público, investimento anunciado)?** Depende da atividade de reformas, da disponibilidade de transportadores regulares, das regras ambientais e dos custos de destinação. Não deve depender de subsídio ou incentivo fiscal.
+* **O que faria esta oportunidade falhar até 2030?** Margens insuficientes, concorrência informal com preços inferiores, baixa densidade de pedidos, problemas de qualidade dos parceiros, destinação irregular ou exigências regulatórias incompatíveis com o modelo operacional.
+
+#### H. Fontes desta ficha
+
+* [FONTE: Governo do Distrito Federal — Lei nº 4.704, de 20 de dezembro de 2011 — legislação distrital sobre gestão integrada de resíduos da construção civil e resíduos volumosos, incluindo obrigações de geradores e transportadores]. ([DFLegis][2])
+* [FONTE: Governo do Distrito Federal — Decreto nº 46.279, de 20 de setembro de 2024 — alterações regulamentares relativas a resíduos da construção civil e ao Plano de Gerenciamento de Resíduos da Construção Civil]. ([DFLegis][4])
+* [FONTE: Serviço de Limpeza Urbana do Distrito Federal — Resíduos da Construção Civil — informações sobre pequenos volumes, Papa-Entulhos e destinação]. ([Limpeza Urbana DF][5])
+
+## 3. Quadro comparativo
+
+| Oportunidade                                                 | Cliente                                                                   | Quem paga                           | Capital inicial estimado                                        | Perfil (tradicional/emergente)      | Principal risco                                                         | Quantidade de [SEM DADO VERIFICÁVEL] na ficha |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------- | ----------------------------------- | --------------------------------------------------------------- | ----------------------------------- | ----------------------------------------------------------------------- | --------------------------------------------- |
+| Assessoria operacional para pequenos fornecedores do governo | Pequenos fornecedores de manutenção, comunicação visual e materiais no DF | Proprietário ou diretor da empresa  | R$ 20 mil–R$ 35 mil [ESTIMATIVA: composição detalhada na ficha] | Tradicional com operação digital    | Não conseguir converter empresas em contratos recorrentes rentáveis     | 3                                             |
+| Coordenação de retirada e destinação regular de entulho      | Proprietários em pequenas reformas e empreiteiros locais                  | Proprietário da obra ou empreiteiro | R$ 25 mil–R$ 45 mil [ESTIMATIVA: composição detalhada na ficha] | Tradicional com coordenação digital | Margem insuficiente ou falhas regulatórias e operacionais dos parceiros | 4                                             |
+
+### Conclusão executiva
+
+**Minha preferência inicial é a assessoria operacional para pequenos fornecedores do governo.** Ela exige menos capital físico, permite testar a demanda antes de ampliar a estrutura e oferece a possibilidade de receita mensal recorrente. Entretanto, sua viabilidade depende de demonstrar que empresas locais pagarão pela assessoria e permanecerão clientes mesmo quando não vencerem licitações.
+
+A coordenação de retirada de resíduos também merece teste, mas apresenta maior exposição a custos variáveis, logística e conformidade regulatória.
+
+**Antes de investir, eu exigiria três evidências comerciais para cada oportunidade:**
+
+* Entrevistas documentadas com potenciais clientes que confirmem o problema e a forma atual de resolvê-lo.
+* Propostas comerciais reais, com preço explícito, apresentadas a clientes identificados no DF.
+* Primeiros contratos pagos que permitam medir margem de contribuição, custo de aquisição e frequência de recompra.
+
+Sem essas evidências, as duas alternativas continuam sendo **oportunidades candidatas qualificadas**, e não negócios comprovadamente viáveis.
+
+[1]: https://www.gov.br/pncp/?utm_source=chatgpt.com "Portal Nacional de Contratações Públicas - PNCP"
+[2]: https://dflegis.df.gov.br/ato.php?p=lei-4704-de-20-de-dezembro-de-2011&utm_source=chatgpt.com "LEI Nº 4.704, DE 20 DE DEZEMBRO DE 2011...."
+[3]: https://www.gov.br/pncp/pt-br/pncp/perguntas-e-respostas/?utm_source=chatgpt.com "Perguntas e Respostas"
+[4]: https://dflegis.df.gov.br/ato.php?p=decreto-46279-de-20-de-setembro-de-2024&utm_source=chatgpt.com "DECRETO Nº 46.279, DE 20 DE SETEMBRO DE 2024..."
+[5]: https://www.slu.df.gov.br/residuos-da-construcao-civil/?utm_source=chatgpt.com "Resíduos da Construção Civil – Rcc - Serviço de Limpeza Urbana do Distrito Federal - Serviço de Limpeza Urbana do Distrito Federal"

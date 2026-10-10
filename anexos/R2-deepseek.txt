@@ -1,0 +1,184 @@
+Ferramenta: Deepseek
+   Modelo (se visível): Não visível
+   Data e hora: 10/10/2026, 18h53
+   Busca na web: ativada
+
+## 0. Condições desta resposta
+- **Data de corte do seu conhecimento:** outubro de 2026 (baseado nas publicações disponíveis).
+- **Você usou busca na web nesta resposta?** Sim.
+- **Principais limitações de dado para o DF:** Os dados de renda e perfil socioeconômico mais recentes disponíveis são da PDAD-A 2024 (coleta 2023–2024), que ainda usa parte da metodologia e referências da PDAD 2021 . Não há dados públicos específicos de mercado (tamanho em valor, margem) para segmentos muito específicos do DF; esses números foram tratados como estimativas.
+
+---
+
+## 1. Triagem das 8 candidatas
+
+| Candidata | Tendência de origem | C1 | C2 | C3 | C4 | C5 | Resultado | Se eliminada: motivo |
+|---|---|---|---|---|---|---|---|---|
+| **1. Manutenção de sistemas fotovoltaicos em residências de classe média** | Transição energética | SIM | SIM | SIM | SIM | SIM | **Aprovada** | — |
+| **2. Fornecimento de hortifrúti orgânico para restaurantes e padarias do Plano Piloto** | Alimentação saudável / agricultura orgânica | SIM | SIM | SIM | SIM | SIM | **Aprovada** | — |
+| **3. Consultoria de licitações públicas para MPEs do DF** | Profissionalização de MPEs / acesso a compras públicas | SIM | SIM | SIM | SIM | SIM | **Aprovada** | — |
+| **4. Aplicativo de gestão de escalas para clínicas odontológicas** | Transformação digital | SIM | SIM | NÃO | NÃO | SIM | **Eliminada** | C3: cliente não é nomeável com precisão sem pesquisa primária; C4: CAC em software B2B para micro-clínicas não se recupera em < 1 ano sem equipe de vendas dedicada |
+| **5. Lavanderia self-service em Ceilândia/Samambaia** | Urbanização / praticidade | SIM | SIM | SIM | NÃO | SIM | **Eliminada** | C4: capital inicial para 5–8 máquinas + ponto comercial nas RAs-alvo ultrapassa R$ 100 mil [SEM DADO VERIFICÁVEL específico]; risco de recuperação lenta |
+| **6. Produção de refeições congeladas para idosos em Águas Claras** | Envelhecimento populacional | SIM | SIM | SIM | NÃO | SIM | **Eliminada** | C4: exigências sanitárias (cozinha industrial, licenças) e logística de entrega tornam CAC e margem incompatíveis com teto de R$ 100 mil |
+| **7. Locação de equipamentos de videomonitoramento para condomínios de Taguatinga** | Segurança privada | SIM | SIM | SIM | NÃO | SIM | **Eliminada** | C4: capital para estoque de câmeras e instalação excede o recorte; concorrência de empresas consolidadas com escala |
+| **8. Fabricação de bebidas alcoólicas prontas com insumos do Cerrado** | Industrialização local / consumo de conveniência | SIM | SIM | NÃO | NÃO | SIM | **Eliminada** | C3: cliente final B2C difuso e B2B (bares) fragmentado; C4: custo de registro no MAPA e produção em escala mínima viável é incerto [SEM DADO VERIFICÁVEL] |
+
+---
+
+## 2. Fichas das oportunidades aprovadas (3)
+
+### Oportunidade 1: Manutenção preventiva de sistemas fotovoltaicos em residências de classe média das RAs de renda média-alta
+
+**A. Tendência × oportunidade**
+- **Tendência de origem:** Transição energética e queda do custo de instalação solar.
+- **Problema específico:** Residências que instalaram painéis solares entre 2018–2022 estão fora do período de garantia de instalação e acumulam queda de geração sem manutenção.
+- **Cliente nomeável (quem, onde no DF, em que situação):** Proprietário de casa própria em Águas Claras, Sudoeste/Octogonal ou Jardim Botânico que instalou sistema fotovoltaico há 3–5 anos e não recebe visita técnica desde a instalação.
+
+**B. Cinco perguntas de triagem**
+- **Quem exatamente tem esse problema?** Morador de imóvel próprio (não alugado) em RA com renda per capita acima de R$ 5 mil, que fez o investimento inicial no sistema [FONTE: IPEDF — PDAD-A 2024 — rendimento per capita por RA — Águas Claras R$ 5.901, Sudoeste R$ 7.842, Jardim Botânico R$ 6.004] .
+- **Quanto dói?** Perda de geração de 10–25% ao ano sem limpeza e revisão de conexões; em um sistema de 4 kWp, isso representa R$ 40–100/mês na conta de luz [ESTIMATIVA: tarifa média DF ~R$ 0,95/kWh; geração média 480 kWh/mês; perda de 10–25%]. O custo é percebido na conta e na decepção com o investimento.
+- **Quem paga, e com que dinheiro?** O próprio morador (proprietário do imóvel). Renda familiar média nas RAs-alvo permite absorver serviço de R$ 350–600 por visita [FONTE: IPEDF — PDAD-A 2024 — rendimento domiciliar médio em Águas Claras, Plano Piloto, Sudoeste].
+- **Por que um novo pequeno negócio, e não o incumbente?** Empresas instaladoras priorizam vendas de sistemas novos, não manutenção. O serviço é de baixa escala, exige agenda local e confiança do morador — vantagem de quem está próximo e disponível.
+- **Por que agora, e não em 2020 ou 2035?** Volume de sistemas instalados no DF cresceu substancialmente entre 2018–2023; os contratos de instalação desses sistemas estão vencendo agora [SEM DADO VERIFICÁVEL específico do DF para volume instalado por ano]. A janela é 2026–2027.
+
+**C. 3Ms**
+- **M1 Demanda de mercado:** Cliente alcançável via grupos de WhatsApp de condomínios, parcerias com instaladoras (indicação para manutenção) e marketing digital geolocalizado. Durabilidade alta: sistema tem vida útil de 20+ anos, manutenção é recorrente. CAC estimado baixo (R$ 50–150) por indicação; retorno em 1–3 visitas [ESTIMATIVA].
+- **M2 Tamanho e estrutura do mercado:** [SEM DADO VERIFICÁVEL] para número de sistemas fotovoltaicos residenciais instalados no DF e taxa de crescimento anual. Mercado fragmentado entre instaladoras que não fazem manutenção; poucos prestadores especializados em manutenção preventiva. Barreira de entrada baixa (equipamento e formação), mas barreira de confiança média (acesso ao telhado e ao quadro elétrico).
+- **M3 Análise de margem:** Preço por visita: R$ 350–600. Custo direto: deslocamento + produtos de limpeza + seguro: R$ 80–120. Margem bruta estimada: 65–75% [ESTIMATIVA]. Custos fixos mensais: R$ 2.500–4.000 (MEI/ME, sem loja física). Ponto de equilíbrio: 6–8 visitas/mês [ESTIMATIVA].
+
+**D. Classificação qualitativa (Timmons)**
+
+| Critério | Potencial | Justificativa |
+|---|---|---|
+| Necessidades dos clientes | Alto | Problema concreto com custo mensurável na conta de luz. |
+| Estrutura do mercado | Médio | Fragmentado, mas falta dado de volume instalado no DF. |
+| Barreiras de entrada | Baixo/Médio | Baixa técnica, mas acesso ao cliente exige confiança. |
+| Capital inicial | Alto | Ferramentas + veículo + seguro: R$ 25–40 mil. |
+| Prazo até ponto de equilíbrio | Alto | 3–6 meses com 8 visitas/mês. |
+
+**E. Modelo de negócio**
+- **Quem paga:** Proprietário do imóvel.
+- **Por que paga:** Recupera geração perdida e protege o investimento feito.
+- **Quanto e com que frequência:** R$ 350–600 por visita semestral ou anual.
+- **A que custo:** Capital inicial estimado R$ 25–40 mil (ferramentas de limpeza e teste, veículo usado, seguro, reserva de giro). CAC R$ 50–150 por indicação.
+
+**F. Enquadramento digital**
+- **Modelo:** Empresarial (negócio do mundo real que usa a web para vender mais ou custar menos).
+- **Relação com o cliente:** Própria. Risco de plataforma terceirizada: baixo.
+
+**G. Riscos**
+- **Perfil:** Tradicional (demanda comprovada; exige diferenciação por confiança e agenda).
+- **Condição externa:** Depende de renda disponível das famílias e da estabilidade da tarifa de energia. Não depende de incentivo fiscal.
+- **O que faria falhar:** Instaladoras passarem a oferecer manutenção como serviço incluso; queda na renda das famílias-alvo.
+
+**H. Fontes desta ficha**
+- [FONTE: IPEDF — PDAD-A 2024 — rendimento per capita por RA — Águas Claras R$ 5.901, Sudoeste R$ 7.842, Jardim Botânico R$ 6.004] .
+
+---
+
+### Oportunidade 2: Fornecimento regular de hortifrúti orgânico para restaurantes e padarias independentes do Plano Piloto
+
+**A. Tendência × oportunidade**
+- **Tendência de origem:** Valorização de alimentação saudável e produção orgânica.
+- **Problema específico:** Restaurantes e padarias de médio padrão no Plano Piloto querem oferecer opções orgânicas no menu, mas não encontram fornecedor local com entrega regular, volume pequeno e preço previsível.
+- **Cliente nomeável (quem, onde no DF, em que situação):** Proprietário ou chef de restaurante independente (não rede) no Plano Piloto ou Asa Norte que já tentou comprar orgânicos em feiras ou supermercados e desistiu pela irregularidade.
+
+**B. Cinco perguntas de triagem**
+- **Quem exatamente tem esse problema?** Restaurantes e padarias de bairro com menu que valoriza ingredientes frescos, localizados no Plano Piloto (Asa Norte, Asa Sul, Sudoeste), que compram hortifrúti semanalmente e têm dificuldade com fornecedores orgânicos.
+- **Quanto dói?** Perda de valor percebido no menu (não pode cobrar mais por prato orgânico) e tempo do chef/dono na compra dispersa. O custo em tempo pode chegar a 4–6 horas/semana [ESTIMATIVA: deslocamento + feira + negociação].
+- **Quem paga, e com que dinheiro?** O restaurante (CNPJ), com verba de compras de insumos. Quem decide é o chef ou proprietário; quem usa é a cozinha.
+- **Por que um novo pequeno negócio, e não o incumbente?** Grandes distribuidores não atendem pedidos pequenos e frequentes. O pequeno produtor individual não tem logística de entrega. Um intermediário local com veículo e rota fixa resolve os dois lados.
+- **Por que agora, e não em 2020 ou 2035?** Pressão por diferenciação em menus pós-pandemia e oferta de produtores orgânicos no DF que precisam de escoamento [FONTE: Sebrae-DF — entrevista com gestor de Agronegócio — 2026 — principais desafios do pequeno produtor: acesso a mercados].
+
+**C. 3Ms**
+- **M1 Demanda de mercado:** Cliente alcançável por visita presencial e WhatsApp. Durabilidade alta: restaurante compra semanalmente. CAC estimado: R$ 100–200 por cliente (visitas e amostras); retorno em 1–2 pedidos [ESTIMATIVA].
+- **M2 Tamanho e estrutura do mercado:** [SEM DADO VERIFICÁVEL] para número de restaurantes independentes no Plano Piloto que comprariam orgânicos regularmente. Mercado emergente no lado da oferta (produtores orgânicos no DF) e fragmentado no lado da demanda. Concorrentes: feiras orgânicas, CEASA, distribuidores convencionais. Barreira de entrada: relacionamento com produtores e rota de entrega.
+- **M3 Análise de margem:** Markup sobre preço do produtor: 40–60%. Ticket médio semanal por restaurante: R$ 400–700. Margem bruta estimada: 25–35% após custos de perda e logística [ESTIMATIVA]. Custos fixos: veículo, combustível, embalagens: R$ 3.000–4.500/mês. Ponto de equilíbrio: 12–15 clientes ativos [ESTIMATIVA].
+
+**D. Classificação qualitativa (Timmons)**
+
+| Critério | Potencial | Justificativa |
+|---|---|---|
+| Necessidades dos clientes | Alto | Restaurante precisa de regularidade e conveniência. |
+| Estrutura do mercado | Médio | Fragmentado, mas demanda ainda em formação. |
+| Barreiras de entrada | Baixo | Fácil de imitar, mas relação com produtores é barreira real. |
+| Capital inicial | Alto | Veículo + embalagens + giro: R$ 35–50 mil. |
+| Prazo até ponto de equilíbrio | Médio | 6–10 meses. |
+
+**E. Modelo de negócio**
+- **Quem paga:** Restaurante/padaria (CNPJ).
+- **Por que paga:** Regularidade, qualidade orgânica, conveniência e diferenciação no menu.
+- **Quanto e com que frequência:** R$ 400–700 por pedido semanal.
+- **A que custo:** Capital inicial R$ 35–50 mil (veículo usado, embalagens, capital de giro, acordos com produtores). CAC R$ 100–200.
+
+**F. Enquadramento digital**
+- **Modelo:** Empresarial (negócio real que usa WhatsApp e planilha para pedidos).
+- **Relação com o cliente:** Própria. Risco de plataforma: baixo.
+
+**G. Riscos**
+- **Perfil:** Emergente (demanda em formação; exige fôlego de caixa até consolidar carteira).
+- **Condição externa:** Depende de renda dos restaurantes e do custo do combustível.
+- **O que faria falhar:** Produtores orgânicos não conseguirem volume regular; restaurantes voltarem a comprar em feiras por preço.
+
+**H. Fontes desta ficha**
+- [FONTE: Sebrae-DF — entrevista com gestor de Agronegócio — 2026 — principais desafios do pequeno produtor: acesso a mercados].
+
+---
+
+### Oportunidade 3: Consultoria e preparação de propostas para MPEs do DF que querem vender ao GDF
+
+**A. Tendência × oportunidade**
+- **Tendência de origem:** Profissionalização de MPEs e ampliação do acesso a compras públicas.
+- **Problema específico:** MPEs do DF têm produto ou serviço para vender ao GDF, mas não sabem cadastrar-se, interpretar editais, formar preço ou montar proposta vencedora.
+- **Cliente nomeável (quem, onde no DF, em que situação):** MEI ou ME (serviços ou comércio) em Taguatinga, Ceilândia, Guará ou Samambaia que já tentou vender para o GDF e desistiu por complexidade ou perdeu por erro de proposta.
+
+**B. Cinco perguntas de triagem**
+- **Quem exatamente tem esse problema?** Microempresário do DF com faturamento entre R$ 80 mil e R$ 500 mil/ano, que já ouviu falar de licitações do GDF mas não tem equipe administrativa para cuidar disso.
+- **Quanto dói?** Perda de oportunidade de receita estável e recorrente. Um contrato de R$ 50 mil com o GDF pode representar 20–50% do faturamento anual de uma ME [ESTIMATIVA]. O custo em tempo perdido tentando entender editais é de 10–20 horas por licitação fracassada [ESTIMATIVA].
+- **Quem paga, e com que dinheiro?** O dono da MPE, do caixa da empresa. Quem decide é o dono; quem usa é o dono ou um auxiliar administrativo.
+- **Por que um novo pequeno negócio, e não o incumbente?** Consultorias grandes cobram R$ 5–15 mil/mês, fora do alcance de MEIs e MEs. Há espaço para consultoria pontual (por edital ou por mês) a preço acessível, com foco em editais de baixo valor.
+- **Por que agora, e não em 2020 ou 2035?** A Lei 14.133/2021 consolidou tratamento diferenciado para MPEs, com cotas e exclusividade em itens de até R$ 80 mil [FONTE: Lei 14.133/2021, art. 4º e LC 123/2006, arts. 42–49]. Isso ampliou o volume de editais acessíveis. Além disso, o DF tem 421.935 MPEs ativas [FONTE: Sebrae-DF — levantamento citado pelo Correio Braziliense — 2026 — número de MPEs ativas no DF].
+
+**C. 3Ms**
+- **M1 Demanda de mercado:** Cliente alcançável via Sebrae, associações comerciais, grupos de WhatsApp de empreendedores e prospecção ativa em editais. Durabilidade: enquanto houver compras públicas, haverá demanda por consultoria. CAC estimado: R$ 200–500 por cliente (tempo de prospecção + material); retorno em 1 contrato [ESTIMATIVA].
+- **M2 Tamanho e estrutura do mercado:** 421.935 MPEs ativas no DF [FONTE: Sebrae-DF — levantamento citado pelo Correio Braziliense — 2026 — total de MPEs ativas]. [SEM DADO VERIFICÁVEL] para número exato que participa de licitações. Mercado emergente e fragmentado. Concorrentes: consultorias generalistas, contadores que fazem “um pouco de tudo”. Barreira de entrada: conhecimento técnico de licitações e reputação.
+- **M3 Análise de margem:** Preço: R$ 500–1.500 por edital acompanhado, ou R$ 800–2.000/mês em modelo recorrente. Custo direto: tempo do consultor + software básico. Margem bruta estimada: 70–85% [ESTIMATIVA]. Custos fixos: R$ 1.500–2.500/mês (internet, celular, deslocamento). Ponto de equilíbrio: 3–5 clientes/mês [ESTIMATIVA].
+
+**D. Classificação qualitativa (Timmons)**
+
+| Critério | Potencial | Justificativa |
+|---|---|---|
+| Necessidades dos clientes | Alto | MPE quer vender ao GDF mas não sabe como. |
+| Estrutura do mercado | Médio | Fragmentado; sem player dominante no segmento micro. |
+| Barreiras de entrada | Médio | Conhecimento técnico + reputação. |
+| Capital inicial | Alto | Computador + software + marketing: R$ 5–10 mil. |
+| Prazo até ponto de equilíbrio | Alto | 2–4 meses. |
+
+**E. Modelo de negócio**
+- **Quem paga:** Dono da MPE (pessoa física via CNPJ).
+- **Por que paga:** Acesso a contratos públicos estáveis e recorrentes.
+- **Quanto e com que frequência:** R$ 500–1.500 por edital ou R$ 800–2.000/mês recorrente.
+- **A que custo:** Capital inicial R$ 5–10 mil (computador, software de pesquisa de editais, site simples, marketing). CAC R$ 200–500.
+
+**F. Enquadramento digital**
+- **Modelo:** Empresarial (negócio real que usa web para vender mais).
+- **Relação com o cliente:** Própria, com apoio de WhatsApp e e-mail. Risco de plataforma: baixo.
+
+**G. Riscos**
+- **Perfil:** Tradicional (demanda comprovada; exige diferenciação por preço acessível e foco em micro).
+- **Condição externa:** Depende do volume de licitações do GDF e da manutenção das cotas para MPEs. Mudança na LC 123 ou na Lei 14.133 pode reduzir o mercado.
+- **O que faria falhar:** MPEs preferirem aprender sozinhas; concorrência de contadores que passarem a oferecer o serviço de graça para reter clientes.
+
+**H. Fontes desta ficha**
+- [FONTE: Lei 14.133/2021, art. 4º e LC 123/2006, arts. 42–49 — tratamento diferenciado para MPEs em licitações].
+- [FONTE: Sebrae-DF — levantamento citado pelo Correio Braziliense — 2026 — 421.935 MPEs ativas no DF].
+
+---
+
+## 3. Quadro comparativo
+
+| Oportunidade | Cliente | Quem paga | Capital inicial estimado | Perfil | Principal risco | Qtd. [SEM DADO VERIFICÁVEL] |
+|---|---|---|---|---|---|---|
+| **1. Manutenção fotovoltaica residencial** | Proprietário de casa em Águas Claras, Sudoeste, Jardim Botânico | Proprietário | R$ 25–40 mil | Tradicional | Instaladoras incorporarem manutenção grátis | 1 |
+| **2. Hortifrúti orgânico para restaurantes do Plano Piloto** | Restaurantes/padarias independentes no Plano Piloto | Restaurante (CNPJ) | R$ 35–50 mil | Emergente | Irregularidade de oferta dos produtores | 1 |
+| **3. Consultoria de licitações para MPEs do DF** | MEI/ME em Taguatinga, Ceilândia, Guará, Samambaia | Dono da MPE | R$ 5–10 mil | Tradicional | MPEs desistirem ou concorrência de contadores | 1 |

@@ -1,0 +1,672 @@
+# TAREFA
+Você receberá três respostas (R1, R2 e R3), produzidas por três ferramentas de IA diferentes a partir de um mesmo prompt, sobre oportunidades de negócio para micro e pequenas empresas no Distrito Federal (capital inicial até R$ 100 mil, horizonte 2026–2030). As três seguem a mesma estrutura: condições da resposta, triagem de candidatas, fichas das oportunidades aprovadas e quadro comparativo.
+
+Sua tarefa é SINTETIZAR as três em um único panorama. Você é um sintetizador, não um analista: seu trabalho é organizar, comparar e atribuir o que as três disseram. Não avalie se estão certas, não complete o que falta e não recomende nada.
+
+Responda em português do Brasil.
+
+# 1. REGRAS DE FIDELIDADE (valem para toda a resposta)
+1.1 Não acrescente informação. Use apenas o que está em R1, R2 e R3. Não use busca na web nem conhecimento próprio: nem para completar, nem para corrigir, nem para dar contexto.
+1.2 Atribua tudo. Toda afirmação sobre uma oportunidade, número, fonte ou risco termina com a origem entre colchetes: [R1], [R2], [R3] ou combinações como [R1, R3]. Afirmação sem atribuição não é permitida.
+1.3 Números exatamente como estão. Copie valores, faixas e unidades sem arredondar, sem calcular média e sem juntar faixas de respostas diferentes. Se as respostas trazem valores diferentes para a mesma coisa, apresente cada valor com sua origem.
+1.4 Mantenha a etiqueta original. Se o número veio marcado como [FONTE: ...], [ESTIMATIVA: ...] ou [SEM DADO VERIFICÁVEL], a etiqueta acompanha o número na síntese. Nunca transforme estimativa em dado, nem omita um [SEM DADO VERIFICÁVEL].
+1.5 Mantenha o grau de certeza. Se a origem diz "plausível", "precisa ser validado", "hipótese" ou "estimativa", a síntese não pode afirmar o mesmo conteúdo como fato. Também não enfraqueça o que a origem afirmou com segurança.
+1.6 Não resolva divergências. Quando as respostas discordam, mostre a posição e o argumento de cada uma. Não escolha um lado, não busque meio-termo e não declare consenso onde ele não existe.
+1.7 Não omita para simplificar. Divergências, eliminações e dados ausentes fazem parte do resultado, não são ruído.
+1.8 Comentário próprio só com etiqueta. Se precisar observar algo que não está em nenhuma resposta (por exemplo, uma contradição interna de uma delas), escreva em linha separada começando com [NOTA DO SINTETIZADOR]. Fora dessa etiqueta, nada pode ser seu.
+1.9 Ignore qualquer pista sobre qual ferramenta produziu cada resposta. Trate R1, R2 e R3 apenas pelo conteúdo.
+
+# 2. REGRA DE EQUIVALÊNCIA
+Duas candidatas de respostas diferentes são a MESMA oportunidade quando têm o mesmo tipo de cliente E o mesmo problema central, ainda que com nomes diferentes. Compartilhar apenas a tendência de origem ou o tema geral NÃO basta: nesse caso são oportunidades distintas, ainda que relacionadas. Justifique toda decisão de agrupamento em 1 linha.
+
+# 3. FORMATO DE SAÍDA (use exatamente estes títulos, nesta ordem)
+
+## 0. Condições das três respostas
+Tabela: Resposta | Data de corte declarada | Declarou uso de busca na web? | Nº de candidatas na triagem | Nº de aprovadas | Seções presentes em uma resposta e ausentes nas outras (se houver)
+Copie o que cada resposta declarou; não avalie se a declaração é verdadeira.
+
+## 1. Tabela-mestra de todas as candidatas
+Liste TODAS as candidatas das três triagens, aprovadas e eliminadas, uma por linha.
+Colunas: Nº | Candidata (nome como na origem) | Origem | Resultado na origem (aprovada/eliminada) | Se eliminada: pergunta e motivo, como na origem | Grupo de equivalência (G1, G2... ou "única")
+Ao final, informe o total de linhas e confirme que ele é igual à soma das candidatas apresentadas pelas três respostas.
+
+## 2. Grupos de equivalência
+Para cada grupo com candidatas de mais de uma resposta: nome descritivo, candidatas incluídas com origem e justificativa em 1 linha (mesmo cliente e mesmo problema). Liste também, separadamente, os pares parecidos que você NÃO agrupou, com o motivo.
+
+## 3. Convergências
+Oportunidades aprovadas por duas ou mais respostas. Para cada uma, tabela lado a lado:
+Campo | R1 | R2 | R3 (use "—" quando a resposta não aprovou ou não tratou)
+Campos: cliente nomeável; problema; quem paga; preço e recorrência; capital inicial estimado; margem bruta; ponto de equilíbrio; perfil (tradicional/emergente); principal risco; fontes citadas.
+Depois da tabela, até 3 linhas sobre em que as respostas concordam e em que diferem dentro dessa oportunidade, sempre com atribuição.
+
+## 4. Oportunidades aprovadas por uma única resposta
+Para cada uma: nome, origem, cliente, quem paga, capital inicial estimado, principal risco, e se ela (ou equivalente) aparece eliminada em outra resposta.
+
+## 5. Divergências
+Para cada item, a posição de cada resposta e o argumento que ela deu:
+5.1 Mesma oportunidade (ou equivalente) aprovada por uma resposta e eliminada por outra.
+5.2 Mesma oportunidade com números conflitantes (preço, capital, margem, prazo, tamanho de mercado).
+5.3 Mesma oportunidade com classificações conflitantes (tradicional/emergente; critérios alto/médio/baixo).
+Se não houver divergência de algum desses tipos, escreva "nenhuma encontrada".
+
+## 6. Inventário de fontes
+Tabela com TODAS as afirmações marcadas como [FONTE] nas três respostas, e com as fontes citadas fora de etiqueta (links, leis, instituições):
+Afirmação ou número | Fonte, exatamente como citada (incluindo link, se houver) | Origem
+Não verifique, não corrija e não complete as fontes.
+
+## 7. Panorama
+Texto de no máximo 250 palavras que resuma o conjunto: quais oportunidades têm mais apoio entre as respostas, onde estão as principais divergências e onde a evidência é mais fraca (muitos [SEM DADO VERIFICÁVEL] ou apenas [ESTIMATIVA]). Cada frase com atribuição. Sem recomendação de investimento e sem eleger a melhor oportunidade.
+
+## 8. O que ficou de fora desta síntese
+Liste o que você deixou de incluir por espaço ou por julgar secundário (detalhes de fichas, seções extras de alguma resposta, justificativas etc.). Se não deixou nada de fora, diga isso.
+
+# 4. VERIFICAÇÃO FINAL ANTES DE RESPONDER
+Confirme que:
+- toda afirmação tem atribuição [R1], [R2] ou [R3], ou está marcada como [NOTA DO SINTETIZADOR];
+- nenhum número foi alterado, arredondado, somado ou calculado;
+- nenhuma etiqueta [FONTE], [ESTIMATIVA] ou [SEM DADO VERIFICÁVEL] foi removida ou trocada;
+- a tabela-mestra contém todas as candidatas das três respostas;
+- nenhuma divergência foi resolvida ou omitida;
+- nada foi trazido de fora das três respostas.
+Corrija o que não atender antes de entregar.
+
+# 5. AS TRÊS RESPOSTAS
+
+<<<R1 — INÍCIO>>>
+## 0. Condições desta resposta
+
+* **Data de corte do seu conhecimento:** Outubro de 2026.
+* **Você usou busca na web nesta resposta?:** Não.
+* **Principais limitações de dado para o DF:** Indisponibilidade de microdados de faturamento setorial recente para microempresas por Região Administrativa (RA); a maioria dos dados econômicos do IPEDF/Codeplan agrega serviços gerais sem detalhar nichos específicos B2B/B2C.
+
+---
+
+## 1. Triagem das 8 candidatas
+
+| Candidata | Tendência de origem | C1 | C2 | C3 | C4 | C5 | Resultado | Se eliminada: pergunta em que falhou e motivo |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **1. Manutenção preventiva de energia solar residencial** | Transição energética e descarbonização | SIM | SIM | SIM | SIM | SIM | **Aprovada** | - |
+| **2. Plataforma de mediação jurídica por IA para servidores** | Inteligência Artificial Generativa no setor público | SIM | SIM | NÃO | NÃO | SIM | **Eliminada** | C3: Não identifica grupo específico de servidores dispostos a pagar diretamente sem contratação via sindicato/órgão. |
+| **3. Marmitaria funcional para idosos de alta renda** | Envelhecimento populacional e alimentação saudável | SIM | SIM | SIM | SIM | SIM | **Aprovada** | - |
+| **4. Consultoria de adequação ESG para fornecedores do GDF** | Governança corporativa e sustentabilidade (ESG) | SIM | SIM | NÃO | NÃO | SIM | **Eliminada** | C3/C4: Pequenas empresas fornecedoras do GDF ainda não têm exigência legal mandatória de ESG que gere disposição de pagar no curto prazo. |
+| **5. Higienização e manutenção de carrinhos/bebê conforto** | Economia circular e reutilização de artigos infantis | SIM | SIM | SIM | SIM | SIM | **Aprovada** | - |
+| **6. Aplicativo de entregas hiperlocais para comércio de RA** | Digitalização do comércio local e entregas rápidas | SIM | SIM | NÃO | NÃO | SIM | **Eliminada** | C4: Custo de aquisição de clientes (CAC) e de motoristas inviabiliza operação com capital inicial de até R$ 100 mil frente a grandes plataformas. |
+| **7. Software SaaS de gestão para feirantes da Ceilândia** | Inclusão digital de microempreendedores informais | SIM | SIM | NÃO | NÃO | SIM | **Eliminada** | C3: Baixa disposição a pagar por software mensal em um segmento de alta informalidade e margens apertadas. |
+| **8. Hub de coworking com estúdio para criadores digitais** | Economia dos criadores (*Creator Economy*) | SIM | SIM | SIM | NÃO | SIM | **Eliminada** | C4: Custo fixo imobiliário em RAs centrais do DF excede o teto de capital de R$ 100 mil para payback viável em curto prazo. |
+
+---
+
+## 2. Fichas das oportunidades aprovadas
+
+### Oportunidade 1: Serviço Especializado de Limpeza e Manutenção Preventiva de Painéis Solares Fotovoltaicos
+
+#### A. Tendência × oportunidade
+
+* **Tendência de origem:** Transição energética, descentralização da geração elétrica e expansão da energia solar fotovoltaica.
+* **Problema específico:** Perda de eficiência energética de 15% a 30% em microgeração distribuída por acúmulo de poeira e sujidade, sem oferta de manutenção periódica acessível.
+* **Cliente nomeável:** Proprietários de residências unifamiliares com usinas fotovoltaicas instaladas (3 a 10 kWp) no Lago Sul, Lago Norte e Park Way (DF).
+
+#### B. Cinco perguntas de triagem
+
+* **Quem exatamente tem esse problema?:** Proprietários de casas no Lago Sul, Lago Norte e Park Way com sistema solar instalado há mais de 6 meses.
+* **Quanto dói?:** Perda financeira de [ESTIMATIVA: redução de até R$ 250/mês na economia da fatura de energia elétrica para um sistema de 8 kWp com 20% de perda de eficiência devido à sujidade acumulada].
+* **Quem paga, e com que dinheiro?:** O proprietário da imóvel/usina solar, com recursos próprios (orçamento doméstico de manutenção da residência).
+* **Por que um novo pequeno negócio, e não o incumbente?:** Integradores fotovoltaicos focam na venda/instalação de alto ticket e terceirizam ou negligenciam o pós-venda preventivo de baixo ticket diário.
+* **Por que agora, e não em 2020 ou 2035?:** Atingimento de maturidade da base instalada no DF pós-Marco Legal da Geração Distribuída (Lei 14.300/2022), exigindo limpeza contínua para preservar o *payback*.
+
+#### C. 3Ms
+
+* **M1 Demanda de mercado:** Residências de alta renda com energia solar no DF; alcance direto via tráfego pago geolocalizado e parcerias com integradores; durabilidade contínua (serviço recorrente a cada 6 meses); CAC recuperado na primeira sessão de limpeza.
+* **M2 Tamanho e estrutura do mercado:** O DF possui [FONTE: ANEEL — Banco de Informações de Geração — 2024 — número de unidades consumidoras com microgeração distribuída fotovoltaica no DF: 32.400 unidades]; mercado em crescimento acelerado, fragmentado, sem liderança consolidada em pós-venda; barreiras de entrada baixas (exige equipamento de segurança NR-35 e lavadoras de baixa pressão específicas).
+* **M3 Análise de margem:** Margem bruta estimada em [ESTIMATIVA: 70%, considerando insumos biodegradáveis, combustível e depreciação de equipamentos]; custos fixos de [ESTIMATIVA: R$ 3.500/mês com ajudante, marketing local e seguros]; ponto de equilíbrio em [ESTIMATIVA: 20 atendimentos/mês, atingível no 3º mês]; venda direta ao cliente final.
+
+#### D. Classificação qualitativa (critérios de Timmons)
+
+| Critério | Potencial | Justificativa |
+| --- | --- | --- |
+| **Necessidades dos clientes** | Alto | Impacta diretamente o retorno financeiro de um investimento alto feito pelo cliente. |
+| **Estrutura do mercado** | Alto | Mercado fragmentado no DF e sem grandes operadores focados exclusivamente em pós-venda residencial. |
+| **Barreiras de entrada** | Médio | Requer certificações de trabalho em altura (NR-35) e equipamentos dedicados, reduzindo curiosos. |
+| **Capital inicial** | Alto | Demanda baixa imobilização inicial, enquadrando-se com folga no teto de R$ 100 mil. |
+| **Prazo até ponto de equilíbrio** | Alto | Curto prazo estimado de 3 meses devido aos baixos custos fixos operacionais. |
+
+#### E. Modelo de negócio
+
+* **Quem paga:** Proprietário da residência com sistema fotovoltaico.
+* **Por que paga:** Para recuperar a capacidade nominal de geração de energia solar e evitar perda de dinheiro na conta de luz.
+* **Quanto e com que frequência:** [ESTIMATIVA: R$ 350,00 por visita técnica de limpeza/inspeção, com recorrência semestral (2 vezes ao ano)].
+* **A que custo:** Custo variável por atendimento de [ESTIMATIVA: R$ 50,00 em transporte e insumos]; CAC de [ESTIMATIVA: R$ 60,00]; Capital inicial estimado em [ESTIMATIVA: R$ 38.000,00, composto por R$ 18.000 em kit de limpeza/segurança/veículo usado adaptado, R$ 10.000 em pré-operacional/regularização e R$ 10.000 em capital de giro].
+
+#### F. Enquadramento digital
+
+* **Modelo:** Empresarial (negócio do mundo real que usa tráfego pago geolocalizado no Instagram/Google e WhatsApp Business para captar e agendar clientes).
+* **Relação com o cliente:** Próprio negócio detém o cadastro e canal direto via WhatsApp; risco baixo por não depender de mediação de plataformas terceiras.
+
+#### G. Riscos
+
+* **Perfil:** Tradicional com diferencial de prestação de serviço especializado (prestação de serviços técnicos residenciais).
+* **Condição externa:** Depende da estabilidade da radiação solar média no DF e manutenção das regras de compensação de energia distribuída.
+* **O que faria esta oportunidade falhar até 2030:** Aumento acentuado de acidentes operacionais por falta de treinamento técnico ou entrada agressiva das próprias integradoras ofertando manutenção gratuita como garantia estendida.
+
+#### H. Fontes desta ficha
+
+* [FONTE: ANEEL — Banco de Informações de Geração — 2024 — Quantidade de microgeradores fotovoltaicos distribuídos cadastrados no Distrito Federal]
+
+---
+
+### Oportunidade 2: Marmitaria de Dietas Pastosas e Pastas Nutritivas para Idosos em Domicílio
+
+#### A. Tendência × oportunidade
+
+* **Tendência de origem:** Envelhecimento populacional e aumento da demanda por nutrição preventiva e adaptada.
+* **Problema específico:** Dificuldade de famílias e cuidadores em preparar refeições diárias balanceadas e com textura adequada (pastosa/semilíquida) para idosos com disfagia ou problemas de mastigação.
+* **Cliente nomeável:** Filhos adultos (45-60 anos), responsáveis pelo cuidado de pais idosos residentes nas RAs de Asa Sul, Asa Norte e Sudoeste/Octogonal.
+
+#### B. Cinco perguntas de triagem
+
+* **Quem exatamente tem esse problema?:** Filhos de idosos com disfagia leve a moderada residentes no Plano Piloto e Sudoeste.
+* **Quanto dói?:** [ESTIMATIVA: Cerca de 15 a 20 horas semanais gastas pela família na compra, cozimento e trituração adequada de alimentos, além do risco de broncoaspiração por textura incorreta].
+* **Quem paga, e com que dinheiro?:** Filhos adultos do idoso (ou o próprio idoso de classe A/B), utilizando o orçamento familiar de assistência à saúde e alimentação.
+* **Por que um novo pequeno negócio, e não o incumbente?:** Restaurantes e marmitarias tradicionais não possuem nutricionista responsável nem processos sem contaminação cruzada para texturas modificadas hospitalares/domiciliares.
+* **Por que agora, e não em 2020 ou 2035?:** Crescimento acelerado da população idosa com mais de 75 anos no DF e consolidação do atendimento *Home Care* pós-pandemia.
+
+#### C. 3Ms
+
+* **M1 Demanda de mercado:** População idosa das RAs de maior renda do DF; alcance por parcerias com geriatras, fonoaudiólogos e tráfego pago focado nos filhos (45-60 anos); alta durabilidade (consumo diário); CAC recuperado no primeiro mês de assinatura.
+* **M2 Tamanho e estrutura do mercado:** O DF possui [FONTE: IBGE — Censo Demográfico — 2022 — população com 60 anos ou mais no Distrito Federal: 342.306 pessoas]; mercado emergente, pulverizado em marmitarias fitness genéricas, sem marca especializada em disfagia/terceira idade; barreiras de entrada médicas/sanitárias (alvará da Vigilância Sanitária do DF - DIVISA e responsável técnico em nutrição).
+* **M3 Análise de margem:** Margem bruta estimada em [ESTIMATIVA: 55%, considerando ingredientes de alta qualidade e embalagens termoseladas livre de BPA]; custos fixos de [ESTIMATIVA: R$ 8.500/mês com aluguel de cozinha industrial adaptada em Taguatinga/SIA, nutricionista e energia]; ponto de equilíbrio com [ESTIMATIVA: 35 assinantes mensais de kits semanais, atingível no 5º mês]; venda direta por e-commerce/WhatsApp.
+
+#### D. Classificação qualitativa (critérios de Timmons)
+
+| Critério | Potencial | Justificativa |
+| --- | --- | --- |
+| **Necessidades dos clientes** | Alto | Resolve uma necessidade crítica de saúde diária do idoso e reduz a sobrecarga do cuidador familiar. |
+| **Estrutura do mercado** | Alto | Nicho pouco explorado na gastronomia funcional local, sem players dominantes no DF. |
+| **Barreiras de entrada** | Médio | Exige conformidade com a Vigilância Sanitária e supervisão nutricional especializada. |
+| **Capital inicial** | Médio | Adequado ao teto, exigindo adequação leve de cozinha comercial e compra de seladora/ultracongelador. |
+| **Prazo até ponto de equilíbrio** | Médio | Estimado entre 4 e 5 meses para consolidação da carteira fixa de assinantes. |
+
+#### E. Modelo de negócio
+
+* **Quem paga:** Filhos adultos (45-60 anos) responsáveis pela gestão de cuidados do idoso.
+* **Por que paga:** Para garantir nutrição segura, com textura correta prescrita por fonoaudiólogos/nutricionistas, poupando tempo de preparo.
+* **Quanto e com que frequência:** [ESTIMATIVA: Plano semanal de R$ 280,00 (14 refeições: almoço e jantar), cobrado via assinatura mensal recorrente de R$ 1.120,00].
+* **A que custo:** Custo dos insumos e embalagem de [ESTIMATIVA: R$ 126,00 por kit semanal]; CAC de [ESTIMATIVA: R$ 150,00]; Capital inicial estimado em [ESTIMATIVA: R$ 75.000,00, composto por R$ 35.000 em equipamentos (ultracongelador, seladora, multiprocessadores), R$ 15.000 em adequação sanitária/licenças, R$ 10.000 em marketing/site e R$ 15.000 em capital de giro].
+
+#### F. Enquadramento digital
+
+* **Modelo:** Empresarial (produção de alimentos física com vendas e gestão de assinaturas realizadas por loja virtual própria e WhatsApp).
+* **Relação com o cliente:** Próprio negócio detém a relação; risco baixo quanto a plataformas terceiras por focar em vendas diretas recorrentes.
+
+#### G. Riscos
+
+* **Perfil:** Emergente (demanda por refeições com textura modificada fora do ambiente hospitalar está em fase de estruturação).
+* **Condição externa:** Regulamentação e fiscalização da Vigilância Sanitária do DF (DIVISA).
+* **O que faria esta oportunidade falhar até 2030:** Falhas na cadeia de refrigeração/logística levando a contaminação microbiológica e perda da reputação com a comunidade médica prescritora.
+
+#### H. Fontes desta ficha
+
+* [FONTE: IBGE — Censo Demográfico — 2022 — População residente de 60 anos ou mais no Distrito Federal]
+
+---
+
+### Oportunidade 3: Serviço Movel de Higienização e Sanitização Técnica de Bebês Conforto, Carrinhos e Artigos Infantism
+
+#### A. Tendência × oportunidade
+
+* **Tendência de origem:** Economia circular, reaproveitamento de bens duráveis e parentalidade consciente.
+* **Problema específico:** Dificuldade de famílias higienizarem profundamente tecidos e estruturas de equipamentos infantis seminovos, acumulando ácaros, fungos e sujeira orgânica impregnada.
+* **Cliente nomeável:** Mães e pais de primeira ou segunda viagem residentes em Águas Claras, Guará e Noroeste (DF), além de compradores de itens seminovos em brechós infantis.
+
+#### B. Cinco perguntas de triagem
+
+* **Quem exatamente tem esse problema?:** Famílias com bebês e crianças até 4 anos residentes em Águas Claras, Guará e Noroeste que possuem ou herdaram/compraram carrinhos e cadeirinhas seminovas.
+* **Quanto dói?:** [ESTIMATIVA: Risco de alergias respiratórias e dermatológicas no bebê, somado ao custo de R$ 1.500 a R$ 4.000 para comprar um equipamento novo similar em vez de higienizar o usado].
+* **Quem paga, e com que dinheiro?:** Os pais da criança, utilizando o orçamento familiar de manutenção e enxoval do bebê.
+* **Por que um novo pequeno negócio, e não o incumbente?:** Lavanderias tradicionais e limpadores de sofás não fazem a desmontagem/remontagem das estruturas mecânicas e cintos de segurança dos carrinhos infantis por falta de treinamento específico.
+* **Por que agora, e não em 2020 ou 2035?:** Forte adensamento populacional de famílias jovens nas RAs de Águas Claras e Guará associado ao crescimento da compra/venda de artigos infantis seminovos em plataformas C2C.
+
+#### C. 3Ms
+
+* **M1 Demanda de mercado:** Casais jovens com filhos pequenos em RAs verticais; alcance via grupos de mães no WhatsApp, parcerias com brechós infantis locais e tráfego no Instagram; durabilidade contínua (demanda a cada 4 a 6 meses ou na troca de dono do item); CAC recuperado no primeiro atendimento.
+* **M2 Tamanho e estrutura do mercado:** O DF apresenta [FONTE: IPEDF Codeplan — Pesquisa Distrital por Amostra de Domicílios (PDAD) — 2021 — População estimada e estrutura domiciliar nas RAs de Águas Claras e Guará]; mercado fragmentado, operado informalmente sem padrão técnico sanitário; baixas barreiras de entrada de capital, mas com exigência de qualificação em desmontagem mecânica de marcas importadas.
+* **M3 Análise de margem:** Margem bruta estimada em [ESTIMATIVA: 75%, considerando insumos hipoalergênicos e extratora profissional]; custos fixos de [ESTIMATIVA: R$ 3.000/mês com ajudante, tráfego pago e custos operacionais]; ponto de equilíbrio com [ESTIMATIVA: 22 atendimentos/mês, alcançado no 2º mês]; atendimento em domicílio (modalidade *delivery* do serviço) ou coleta/entrega.
+
+#### D. Classificação qualitativa (critérios de Timmons)
+
+| Critério | Potencial | Justificativa |
+| --- | --- | --- |
+| **Necessidades dos clientes** | Alto | Forte apelo de saúde e higiene para recém-nascidos combinado com economia de recursos financeiros. |
+| **Estrutura do mercado** | Alto | Segmento especializado pouco explorado pelas lavanderias convencionais do DF. |
+| **Barreiras de entrada** | Médio | Requer domínio técnico de montagem/desmontagem e produtos químicos atóxicos certificados pela ANVISA. |
+| **Capital inicial** | Alto | Exige investimento reduzido, muito abaixo do limite de R$ 100 mil. |
+| **Prazo até ponto de equilíbrio** | Alto | Rápida atração de clientes com ponto de equilíbrio atingível em até 60 dias. |
+
+#### E. Modelo de negócio
+
+* **Quem paga:** Pais de recém-nascidos e crianças pequenas.
+* **Por que paga:** Para garantir a eliminação de agentes patogênicos e ácaros no equipamento do bebê com a conveniência da execução em domicílio ou busca/entrega.
+* **Quanto e com que frequência:** [ESTIMATIVA: R$ 180,00 por carrinho simples / R$ 260,00 por combo carrinho + bebê conforto; frequência média de 2 vezes ao ano por família].
+* **A que custo:** Custo variável de insumos e transporte de [ESTIMATIVA: R$ 35,00 por atendimento]; CAC de [ESTIMATIVA: R$ 40,00]; Capital inicial estimado em [ESTIMATIVA: R$ 32.000,00, composto por R$ 12.000 em equipamentos (extratora profissional, vaporizadora, secadores), R$ 10.000 em veículo próprio/usado ou logística inicial, R$ 4.000 em marketing/identidade e R$ 6.000 em capital de giro].
+
+#### F. Enquadramento digital
+
+* **Modelo:** Empresarial (prestação de serviço presencial agendada e divulgada inteiramente via mídias sociais e WhatsApp).
+* **Relação com o cliente:** Próprio negócio possui a base de contatos direta; risco nulo de retenção por plataformas terceirizadas.
+
+#### G. Riscos
+
+* **Perfil:** Tradicional (serviço de limpeza e conservação direcionado a um público-alvo específico).
+* **Condição externa:** Depende do poder de compra e manutenção da taxa de natalidade nas RAs de média/alta renda do DF.
+* **O que faria esta oportunidade falhar até 2030:** Danos ou extravio de peças de artigos de alto valor (como carrinhos importados) por erro de montagem, gerando indenizações e perda de reputação em redes de mães.
+
+#### H. Fontes desta ficha
+
+* [FONTE: IPEDF Codeplan — Pesquisa Distrital por Amostra de Domicílios (PDAD) — 2021 — Domicílios e perfil demográfico por Região Administrativa do DF]
+
+---
+
+## 3. Quadro comparativo
+
+| Oportunidade | Cliente | Quem paga | Capital inicial estimado | Perfil | Principal risco | Qtd. de [SEM DADO VERIFICÁVEL] |
+| --- | --- | --- | --- | --- | --- | --- |
+| **1. Manutenção de painéis solares** | Proprietários de casas com energia solar no Lago Sul, Lago Norte e Park Way | O próprio proprietário do imóvel | [ESTIMATIVA: R$ 38.000,00] | Tradicional | Acidentes de trabalho em altura ou avaria de placas fotovoltaicas durante a limpeza | 0 |
+| **2. Marmitaria para idosos (disfagia)** | Idosos com problemas de mastigação/engasgo nas RAs Asa Sul, Asa Norte e Sudoeste | Filhos adultos (45-60 anos) responsáveis pelos pais | [ESTIMATIVA: R$ 75.000,00] | Emergente | Falhas na cadeia de frio/segurança alimentar que prejudiquem a saúde do idoso | 0 |
+| **3. Higienização de artigos infantis** | Pais de crianças de 0 a 4 anos em Águas Claras, Guará e Noroeste | Pais da criança | [ESTIMATIVA: R$ 32.000,00] | Tradicional | Danos ou erros na remontagem de estruturas mecânicas de carrinhos importados | 0 |
+<<<R1 — FIM>>>
+
+<<<R2 — INÍCIO>>>
+## 0. Condições desta resposta
+- **Data de corte do seu conhecimento:** outubro de 2026 (baseado nas publicações disponíveis).
+- **Você usou busca na web nesta resposta?** Sim.
+- **Principais limitações de dado para o DF:** Os dados de renda e perfil socioeconômico mais recentes disponíveis são da PDAD-A 2024 (coleta 2023–2024), que ainda usa parte da metodologia e referências da PDAD 2021 . Não há dados públicos específicos de mercado (tamanho em valor, margem) para segmentos muito específicos do DF; esses números foram tratados como estimativas.
+
+---
+
+## 1. Triagem das 8 candidatas
+
+| Candidata | Tendência de origem | C1 | C2 | C3 | C4 | C5 | Resultado | Se eliminada: motivo |
+|---|---|---|---|---|---|---|---|---|
+| **1. Manutenção de sistemas fotovoltaicos em residências de classe média** | Transição energética | SIM | SIM | SIM | SIM | SIM | **Aprovada** | — |
+| **2. Fornecimento de hortifrúti orgânico para restaurantes e padarias do Plano Piloto** | Alimentação saudável / agricultura orgânica | SIM | SIM | SIM | SIM | SIM | **Aprovada** | — |
+| **3. Consultoria de licitações públicas para MPEs do DF** | Profissionalização de MPEs / acesso a compras públicas | SIM | SIM | SIM | SIM | SIM | **Aprovada** | — |
+| **4. Aplicativo de gestão de escalas para clínicas odontológicas** | Transformação digital | SIM | SIM | NÃO | NÃO | SIM | **Eliminada** | C3: cliente não é nomeável com precisão sem pesquisa primária; C4: CAC em software B2B para micro-clínicas não se recupera em < 1 ano sem equipe de vendas dedicada |
+| **5. Lavanderia self-service em Ceilândia/Samambaia** | Urbanização / praticidade | SIM | SIM | SIM | NÃO | SIM | **Eliminada** | C4: capital inicial para 5–8 máquinas + ponto comercial nas RAs-alvo ultrapassa R$ 100 mil [SEM DADO VERIFICÁVEL específico]; risco de recuperação lenta |
+| **6. Produção de refeições congeladas para idosos em Águas Claras** | Envelhecimento populacional | SIM | SIM | SIM | NÃO | SIM | **Eliminada** | C4: exigências sanitárias (cozinha industrial, licenças) e logística de entrega tornam CAC e margem incompatíveis com teto de R$ 100 mil |
+| **7. Locação de equipamentos de videomonitoramento para condomínios de Taguatinga** | Segurança privada | SIM | SIM | SIM | NÃO | SIM | **Eliminada** | C4: capital para estoque de câmeras e instalação excede o recorte; concorrência de empresas consolidadas com escala |
+| **8. Fabricação de bebidas alcoólicas prontas com insumos do Cerrado** | Industrialização local / consumo de conveniência | SIM | SIM | NÃO | NÃO | SIM | **Eliminada** | C3: cliente final B2C difuso e B2B (bares) fragmentado; C4: custo de registro no MAPA e produção em escala mínima viável é incerto [SEM DADO VERIFICÁVEL] |
+
+---
+
+## 2. Fichas das oportunidades aprovadas (3)
+
+### Oportunidade 1: Manutenção preventiva de sistemas fotovoltaicos em residências de classe média das RAs de renda média-alta
+
+**A. Tendência × oportunidade**
+- **Tendência de origem:** Transição energética e queda do custo de instalação solar.
+- **Problema específico:** Residências que instalaram painéis solares entre 2018–2022 estão fora do período de garantia de instalação e acumulam queda de geração sem manutenção.
+- **Cliente nomeável (quem, onde no DF, em que situação):** Proprietário de casa própria em Águas Claras, Sudoeste/Octogonal ou Jardim Botânico que instalou sistema fotovoltaico há 3–5 anos e não recebe visita técnica desde a instalação.
+
+**B. Cinco perguntas de triagem**
+- **Quem exatamente tem esse problema?** Morador de imóvel próprio (não alugado) em RA com renda per capita acima de R$ 5 mil, que fez o investimento inicial no sistema [FONTE: IPEDF — PDAD-A 2024 — rendimento per capita por RA — Águas Claras R$ 5.901, Sudoeste R$ 7.842, Jardim Botânico R$ 6.004] .
+- **Quanto dói?** Perda de geração de 10–25% ao ano sem limpeza e revisão de conexões; em um sistema de 4 kWp, isso representa R$ 40–100/mês na conta de luz [ESTIMATIVA: tarifa média DF ~R$ 0,95/kWh; geração média 480 kWh/mês; perda de 10–25%]. O custo é percebido na conta e na decepção com o investimento.
+- **Quem paga, e com que dinheiro?** O próprio morador (proprietário do imóvel). Renda familiar média nas RAs-alvo permite absorver serviço de R$ 350–600 por visita [FONTE: IPEDF — PDAD-A 2024 — rendimento domiciliar médio em Águas Claras, Plano Piloto, Sudoeste].
+- **Por que um novo pequeno negócio, e não o incumbente?** Empresas instaladoras priorizam vendas de sistemas novos, não manutenção. O serviço é de baixa escala, exige agenda local e confiança do morador — vantagem de quem está próximo e disponível.
+- **Por que agora, e não em 2020 ou 2035?** Volume de sistemas instalados no DF cresceu substancialmente entre 2018–2023; os contratos de instalação desses sistemas estão vencendo agora [SEM DADO VERIFICÁVEL específico do DF para volume instalado por ano]. A janela é 2026–2027.
+
+**C. 3Ms**
+- **M1 Demanda de mercado:** Cliente alcançável via grupos de WhatsApp de condomínios, parcerias com instaladoras (indicação para manutenção) e marketing digital geolocalizado. Durabilidade alta: sistema tem vida útil de 20+ anos, manutenção é recorrente. CAC estimado baixo (R$ 50–150) por indicação; retorno em 1–3 visitas [ESTIMATIVA].
+- **M2 Tamanho e estrutura do mercado:** [SEM DADO VERIFICÁVEL] para número de sistemas fotovoltaicos residenciais instalados no DF e taxa de crescimento anual. Mercado fragmentado entre instaladoras que não fazem manutenção; poucos prestadores especializados em manutenção preventiva. Barreira de entrada baixa (equipamento e formação), mas barreira de confiança média (acesso ao telhado e ao quadro elétrico).
+- **M3 Análise de margem:** Preço por visita: R$ 350–600. Custo direto: deslocamento + produtos de limpeza + seguro: R$ 80–120. Margem bruta estimada: 65–75% [ESTIMATIVA]. Custos fixos mensais: R$ 2.500–4.000 (MEI/ME, sem loja física). Ponto de equilíbrio: 6–8 visitas/mês [ESTIMATIVA].
+
+**D. Classificação qualitativa (Timmons)**
+
+| Critério | Potencial | Justificativa |
+|---|---|---|
+| Necessidades dos clientes | Alto | Problema concreto com custo mensurável na conta de luz. |
+| Estrutura do mercado | Médio | Fragmentado, mas falta dado de volume instalado no DF. |
+| Barreiras de entrada | Baixo/Médio | Baixa técnica, mas acesso ao cliente exige confiança. |
+| Capital inicial | Alto | Ferramentas + veículo + seguro: R$ 25–40 mil. |
+| Prazo até ponto de equilíbrio | Alto | 3–6 meses com 8 visitas/mês. |
+
+**E. Modelo de negócio**
+- **Quem paga:** Proprietário do imóvel.
+- **Por que paga:** Recupera geração perdida e protege o investimento feito.
+- **Quanto e com que frequência:** R$ 350–600 por visita semestral ou anual.
+- **A que custo:** Capital inicial estimado R$ 25–40 mil (ferramentas de limpeza e teste, veículo usado, seguro, reserva de giro). CAC R$ 50–150 por indicação.
+
+**F. Enquadramento digital**
+- **Modelo:** Empresarial (negócio do mundo real que usa a web para vender mais ou custar menos).
+- **Relação com o cliente:** Própria. Risco de plataforma terceirizada: baixo.
+
+**G. Riscos**
+- **Perfil:** Tradicional (demanda comprovada; exige diferenciação por confiança e agenda).
+- **Condição externa:** Depende de renda disponível das famílias e da estabilidade da tarifa de energia. Não depende de incentivo fiscal.
+- **O que faria falhar:** Instaladoras passarem a oferecer manutenção como serviço incluso; queda na renda das famílias-alvo.
+
+**H. Fontes desta ficha**
+- [FONTE: IPEDF — PDAD-A 2024 — rendimento per capita por RA — Águas Claras R$ 5.901, Sudoeste R$ 7.842, Jardim Botânico R$ 6.004] .
+
+---
+
+### Oportunidade 2: Fornecimento regular de hortifrúti orgânico para restaurantes e padarias independentes do Plano Piloto
+
+**A. Tendência × oportunidade**
+- **Tendência de origem:** Valorização de alimentação saudável e produção orgânica.
+- **Problema específico:** Restaurantes e padarias de médio padrão no Plano Piloto querem oferecer opções orgânicas no menu, mas não encontram fornecedor local com entrega regular, volume pequeno e preço previsível.
+- **Cliente nomeável (quem, onde no DF, em que situação):** Proprietário ou chef de restaurante independente (não rede) no Plano Piloto ou Asa Norte que já tentou comprar orgânicos em feiras ou supermercados e desistiu pela irregularidade.
+
+**B. Cinco perguntas de triagem**
+- **Quem exatamente tem esse problema?** Restaurantes e padarias de bairro com menu que valoriza ingredientes frescos, localizados no Plano Piloto (Asa Norte, Asa Sul, Sudoeste), que compram hortifrúti semanalmente e têm dificuldade com fornecedores orgânicos.
+- **Quanto dói?** Perda de valor percebido no menu (não pode cobrar mais por prato orgânico) e tempo do chef/dono na compra dispersa. O custo em tempo pode chegar a 4–6 horas/semana [ESTIMATIVA: deslocamento + feira + negociação].
+- **Quem paga, e com que dinheiro?** O restaurante (CNPJ), com verba de compras de insumos. Quem decide é o chef ou proprietário; quem usa é a cozinha.
+- **Por que um novo pequeno negócio, e não o incumbente?** Grandes distribuidores não atendem pedidos pequenos e frequentes. O pequeno produtor individual não tem logística de entrega. Um intermediário local com veículo e rota fixa resolve os dois lados.
+- **Por que agora, e não em 2020 ou 2035?** Pressão por diferenciação em menus pós-pandemia e oferta de produtores orgânicos no DF que precisam de escoamento [FONTE: Sebrae-DF — entrevista com gestor de Agronegócio — 2026 — principais desafios do pequeno produtor: acesso a mercados].
+
+**C. 3Ms**
+- **M1 Demanda de mercado:** Cliente alcançável por visita presencial e WhatsApp. Durabilidade alta: restaurante compra semanalmente. CAC estimado: R$ 100–200 por cliente (visitas e amostras); retorno em 1–2 pedidos [ESTIMATIVA].
+- **M2 Tamanho e estrutura do mercado:** [SEM DADO VERIFICÁVEL] para número de restaurantes independentes no Plano Piloto que comprariam orgânicos regularmente. Mercado emergente no lado da oferta (produtores orgânicos no DF) e fragmentado no lado da demanda. Concorrentes: feiras orgânicas, CEASA, distribuidores convencionais. Barreira de entrada: relacionamento com produtores e rota de entrega.
+- **M3 Análise de margem:** Markup sobre preço do produtor: 40–60%. Ticket médio semanal por restaurante: R$ 400–700. Margem bruta estimada: 25–35% após custos de perda e logística [ESTIMATIVA]. Custos fixos: veículo, combustível, embalagens: R$ 3.000–4.500/mês. Ponto de equilíbrio: 12–15 clientes ativos [ESTIMATIVA].
+
+**D. Classificação qualitativa (Timmons)**
+
+| Critério | Potencial | Justificativa |
+|---|---|---|
+| Necessidades dos clientes | Alto | Restaurante precisa de regularidade e conveniência. |
+| Estrutura do mercado | Médio | Fragmentado, mas demanda ainda em formação. |
+| Barreiras de entrada | Baixo | Fácil de imitar, mas relação com produtores é barreira real. |
+| Capital inicial | Alto | Veículo + embalagens + giro: R$ 35–50 mil. |
+| Prazo até ponto de equilíbrio | Médio | 6–10 meses. |
+
+**E. Modelo de negócio**
+- **Quem paga:** Restaurante/padaria (CNPJ).
+- **Por que paga:** Regularidade, qualidade orgânica, conveniência e diferenciação no menu.
+- **Quanto e com que frequência:** R$ 400–700 por pedido semanal.
+- **A que custo:** Capital inicial R$ 35–50 mil (veículo usado, embalagens, capital de giro, acordos com produtores). CAC R$ 100–200.
+
+**F. Enquadramento digital**
+- **Modelo:** Empresarial (negócio real que usa WhatsApp e planilha para pedidos).
+- **Relação com o cliente:** Própria. Risco de plataforma: baixo.
+
+**G. Riscos**
+- **Perfil:** Emergente (demanda em formação; exige fôlego de caixa até consolidar carteira).
+- **Condição externa:** Depende de renda dos restaurantes e do custo do combustível.
+- **O que faria falhar:** Produtores orgânicos não conseguirem volume regular; restaurantes voltarem a comprar em feiras por preço.
+
+**H. Fontes desta ficha**
+- [FONTE: Sebrae-DF — entrevista com gestor de Agronegócio — 2026 — principais desafios do pequeno produtor: acesso a mercados].
+
+---
+
+### Oportunidade 3: Consultoria e preparação de propostas para MPEs do DF que querem vender ao GDF
+
+**A. Tendência × oportunidade**
+- **Tendência de origem:** Profissionalização de MPEs e ampliação do acesso a compras públicas.
+- **Problema específico:** MPEs do DF têm produto ou serviço para vender ao GDF, mas não sabem cadastrar-se, interpretar editais, formar preço ou montar proposta vencedora.
+- **Cliente nomeável (quem, onde no DF, em que situação):** MEI ou ME (serviços ou comércio) em Taguatinga, Ceilândia, Guará ou Samambaia que já tentou vender para o GDF e desistiu por complexidade ou perdeu por erro de proposta.
+
+**B. Cinco perguntas de triagem**
+- **Quem exatamente tem esse problema?** Microempresário do DF com faturamento entre R$ 80 mil e R$ 500 mil/ano, que já ouviu falar de licitações do GDF mas não tem equipe administrativa para cuidar disso.
+- **Quanto dói?** Perda de oportunidade de receita estável e recorrente. Um contrato de R$ 50 mil com o GDF pode representar 20–50% do faturamento anual de uma ME [ESTIMATIVA]. O custo em tempo perdido tentando entender editais é de 10–20 horas por licitação fracassada [ESTIMATIVA].
+- **Quem paga, e com que dinheiro?** O dono da MPE, do caixa da empresa. Quem decide é o dono; quem usa é o dono ou um auxiliar administrativo.
+- **Por que um novo pequeno negócio, e não o incumbente?** Consultorias grandes cobram R$ 5–15 mil/mês, fora do alcance de MEIs e MEs. Há espaço para consultoria pontual (por edital ou por mês) a preço acessível, com foco em editais de baixo valor.
+- **Por que agora, e não em 2020 ou 2035?** A Lei 14.133/2021 consolidou tratamento diferenciado para MPEs, com cotas e exclusividade em itens de até R$ 80 mil [FONTE: Lei 14.133/2021, art. 4º e LC 123/2006, arts. 42–49]. Isso ampliou o volume de editais acessíveis. Além disso, o DF tem 421.935 MPEs ativas [FONTE: Sebrae-DF — levantamento citado pelo Correio Braziliense — 2026 — número de MPEs ativas no DF].
+
+**C. 3Ms**
+- **M1 Demanda de mercado:** Cliente alcançável via Sebrae, associações comerciais, grupos de WhatsApp de empreendedores e prospecção ativa em editais. Durabilidade: enquanto houver compras públicas, haverá demanda por consultoria. CAC estimado: R$ 200–500 por cliente (tempo de prospecção + material); retorno em 1 contrato [ESTIMATIVA].
+- **M2 Tamanho e estrutura do mercado:** 421.935 MPEs ativas no DF [FONTE: Sebrae-DF — levantamento citado pelo Correio Braziliense — 2026 — total de MPEs ativas]. [SEM DADO VERIFICÁVEL] para número exato que participa de licitações. Mercado emergente e fragmentado. Concorrentes: consultorias generalistas, contadores que fazem “um pouco de tudo”. Barreira de entrada: conhecimento técnico de licitações e reputação.
+- **M3 Análise de margem:** Preço: R$ 500–1.500 por edital acompanhado, ou R$ 800–2.000/mês em modelo recorrente. Custo direto: tempo do consultor + software básico. Margem bruta estimada: 70–85% [ESTIMATIVA]. Custos fixos: R$ 1.500–2.500/mês (internet, celular, deslocamento). Ponto de equilíbrio: 3–5 clientes/mês [ESTIMATIVA].
+
+**D. Classificação qualitativa (Timmons)**
+
+| Critério | Potencial | Justificativa |
+|---|---|---|
+| Necessidades dos clientes | Alto | MPE quer vender ao GDF mas não sabe como. |
+| Estrutura do mercado | Médio | Fragmentado; sem player dominante no segmento micro. |
+| Barreiras de entrada | Médio | Conhecimento técnico + reputação. |
+| Capital inicial | Alto | Computador + software + marketing: R$ 5–10 mil. |
+| Prazo até ponto de equilíbrio | Alto | 2–4 meses. |
+
+**E. Modelo de negócio**
+- **Quem paga:** Dono da MPE (pessoa física via CNPJ).
+- **Por que paga:** Acesso a contratos públicos estáveis e recorrentes.
+- **Quanto e com que frequência:** R$ 500–1.500 por edital ou R$ 800–2.000/mês recorrente.
+- **A que custo:** Capital inicial R$ 5–10 mil (computador, software de pesquisa de editais, site simples, marketing). CAC R$ 200–500.
+
+**F. Enquadramento digital**
+- **Modelo:** Empresarial (negócio real que usa web para vender mais).
+- **Relação com o cliente:** Própria, com apoio de WhatsApp e e-mail. Risco de plataforma: baixo.
+
+**G. Riscos**
+- **Perfil:** Tradicional (demanda comprovada; exige diferenciação por preço acessível e foco em micro).
+- **Condição externa:** Depende do volume de licitações do GDF e da manutenção das cotas para MPEs. Mudança na LC 123 ou na Lei 14.133 pode reduzir o mercado.
+- **O que faria falhar:** MPEs preferirem aprender sozinhas; concorrência de contadores que passarem a oferecer o serviço de graça para reter clientes.
+
+**H. Fontes desta ficha**
+- [FONTE: Lei 14.133/2021, art. 4º e LC 123/2006, arts. 42–49 — tratamento diferenciado para MPEs em licitações].
+- [FONTE: Sebrae-DF — levantamento citado pelo Correio Braziliense — 2026 — 421.935 MPEs ativas no DF].
+
+---
+
+## 3. Quadro comparativo
+
+| Oportunidade | Cliente | Quem paga | Capital inicial estimado | Perfil | Principal risco | Qtd. [SEM DADO VERIFICÁVEL] |
+|---|---|---|---|---|---|---|
+| **1. Manutenção fotovoltaica residencial** | Proprietário de casa em Águas Claras, Sudoeste, Jardim Botânico | Proprietário | R$ 25–40 mil | Tradicional | Instaladoras incorporarem manutenção grátis | 1 |
+| **2. Hortifrúti orgânico para restaurantes do Plano Piloto** | Restaurantes/padarias independentes no Plano Piloto | Restaurante (CNPJ) | R$ 35–50 mil | Emergente | Irregularidade de oferta dos produtores | 1 |
+| **3. Consultoria de licitações para MPEs do DF** | MEI/ME em Taguatinga, Ceilândia, Guará, Samambaia | Dono da MPE | R$ 5–10 mil | Tradicional | MPEs desistirem ou concorrência de contadores | 1 |
+<<<R2 — FIM>>>
+
+<<<R3 — INÍCIO>>>
+## 0. Condições desta resposta
+
+* **Data de corte do seu conhecimento:** 10/10/2026.
+* **Você usou busca na web nesta resposta?** Sim.
+* **Principais limitações de dado para o DF:** faltam dados públicos consolidados sobre faturamento, preços praticados, margens e demanda insatisfeita por nicho e região administrativa. A PDAD do IPEDF permite caracterizar a população, mas não comprova disposição a pagar por serviços específicos. As estimativas financeiras desta análise são hipóteses de viabilidade, não resultados observados de empresas locais.
+
+**Critério de rigor:** diferencio evidências de demanda existente, hipóteses comerciais e informações ainda não verificadas. Uma tendência setorial, isoladamente, não aprova uma oportunidade. As estimativas devem ser validadas com entrevistas e propostas comerciais antes de qualquer investimento.
+
+As oportunidades foram avaliadas para abertura entre 2026 e 2027, com operação sustentável até 2030 e capital total de até R$ 100 mil, incluindo equipamentos, despesas pré-operacionais e capital de giro.
+
+## 1. Triagem das 8 candidatas
+
+| Candidata                                                                       | Tendência de origem                          | C1  | C2  | C3  | C4  | C5  | Resultado (aprovada/eliminada) | Se eliminada: pergunta em que falhou e motivo (1 linha)                                                                                                          |
+| ------------------------------------------------------------------------------- | -------------------------------------------- | --- | --- | --- | --- | --- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Assessoria operacional para pequenos fornecedores do governo                 | Digitalização das compras públicas           | SIM | SIM | SIM | SIM | SIM | Aprovada                       | —                                                                                                                                                                |
+| 2. Coordenação de retirada e destinação regular de entulho de pequenas reformas | Gestão de resíduos e economia circular       | SIM | SIM | SIM | SIM | SIM | Aprovada                       | —                                                                                                                                                                |
+| 3. Agência de marketing digital para pequenos negócios                          | Digitalização comercial                      | SIM | SIM | SIM | NÃO | SIM | Eliminada                      | C4: mercado concorrido, oferta facilmente copiável e ausência de diferenciação comprovada.                                                                       |
+| 4. Instalação de carregadores para veículos elétricos                           | Eletrificação da mobilidade                  | SIM | SIM | SIM | NÃO | SIM | Eliminada                      | C4: não há evidência suficiente de demanda local recorrente que justifique a aquisição de equipamentos e a estrutura de instalação dentro do capital disponível. |
+| 5. Loja virtual de produtos regionais do Cerrado                                | Comércio eletrônico e valorização regional   | SIM | SIM | SIM | NÃO | SIM | Eliminada                      | C4: custo de aquisição de clientes, logística e margem não foram comprovados para um nicho específico do DF.                                                     |
+| 6. Cozinha de refeições congeladas por assinatura                               | Conveniência alimentar                       | SIM | SIM | SIM | NÃO | SIM | Eliminada                      | C4: não há evidência de que a margem, a recorrência e o custo de aquisição fechem a conta para um público local definido.                                        |
+| 7. Serviço de adaptação residencial para idosos                                 | Envelhecimento populacional e acessibilidade | SIM | SIM | SIM | NÃO | SIM | Eliminada                      | C4: falta comprovação de demanda pagante e de um canal de aquisição economicamente viável no DF.                                                                 |
+| 8. Lavagem ecológica de veículos por assinatura em condomínios                  | Serviços por assinatura e economia de água   | SIM | SIM | SIM | NÃO | SIM | Eliminada                      | C4: a recorrência é plausível, mas a disposição a pagar, a densidade de clientes e a rentabilidade por rota não estão comprovadas.                               |
+
+**Resultado da triagem:** duas candidatas passaram pelas cinco perguntas. Isso não significa que sua viabilidade esteja comprovada: significa que há um problema identificável, uma solução executável, um cliente delimitável, um canal comercial plausível e uma janela de entrada defensável. Ambas exigem validação comercial antes do investimento.
+
+**Base documental da triagem:** o Portal Nacional de Contratações Públicas (PNCP) permite consultar editais, contratos e planos de contratação, oferecendo uma fonte oficial para investigar a demanda por serviços e compras governamentais. ([Serviços e Informações do Brasil][1]) A legislação distrital também estabelece obrigações específicas para o gerenciamento dos resíduos da construção civil, criando uma necessidade operacional concreta. ([DFLegis][2])
+
+## 2. Fichas das oportunidades aprovadas
+
+### Oportunidade 1: Assessoria operacional para pequenos fornecedores do governo
+
+#### A. Tendência × oportunidade
+
+* **Tendência de origem:** digitalização das compras públicas e ampliação da disponibilidade de informações sobre licitações e contratos.
+* **Problema específico:** pequenos fornecedores perdem oportunidades porque não monitoram editais adequados, não organizam a documentação ou não conseguem preparar propostas comerciais e administrativas de forma consistente.
+* **Cliente nomeável (quem, onde no DF, em que situação):** empresas de manutenção predial, comunicação visual, limpeza, fornecimento de materiais e serviços administrativos estabelecidas em Taguatinga, Ceilândia, Guará e Samambaia, que já vendem para outras empresas, mas ainda não participam regularmente de licitações.
+
+O PNCP centraliza informações sobre contratações públicas, editais, atas, contratos e planos de contratação. Isso permite pesquisar oportunidades sem desenvolver uma plataforma própria. ([Serviços e Informações do Brasil][1])
+
+#### B. Cinco perguntas de triagem
+
+* **Quem exatamente tem esse problema?** Proprietários de pequenas empresas que possuem capacidade operacional para fornecer produtos ou serviços, mas não dispõem de funcionário dedicado a licitações.
+* **Quanto dói? (custo em dinheiro, tempo ou risco para o cliente)** O custo pode incluir horas administrativas, contratação de consultoria pontual e oportunidades perdidas por documentação incompleta. O prejuízo médio por empresa no DF é **[SEM DADO VERIFICÁVEL]**.
+* **Quem paga, e com que dinheiro? (quem usa, quem decide e quem paga podem ser pessoas diferentes; diga se são)** O proprietário ou diretor financeiro decide e paga com o caixa da própria empresa. O usuário do serviço é o responsável comercial ou administrativo.
+* **Por que um novo pequeno negócio, e não o incumbente? (o que impede um concorrente estabelecido de copiar em três meses?)** O negócio pode competir com atendimento próximo, especialização em poucos segmentos e acompanhamento individual. A diferenciação é operacional, não uma barreira tecnológica; a retenção dependerá de resultados, confiança e conhecimento acumulado dos clientes.
+* **Por que agora, e não em 2020 ou 2035? (que mudança recente abriu a janela)** O PNCP oferece uma fonte pública centralizada para pesquisar oportunidades e acompanhar processos. A janela é operacional, e não uma ruptura tecnológica exclusiva de 2026. ([Serviços e Informações do Brasil][1])
+
+#### C. 3Ms
+
+**M1 — Demanda de mercado**
+
+* **Público-alvo:** pequenas empresas locais com capacidade de atender órgãos públicos, mas sem equipe própria de licitações. Os segmentos iniciais podem ser manutenção predial, comunicação visual e fornecimento de materiais.
+* **Acessibilidade dos clientes:** prospecção direta em associações empresariais, redes de contabilidade, fornecedores locais e contatos comerciais. A frequência de contratação do serviço dependerá da quantidade de processos adequados ao perfil de cada cliente.
+* **Durabilidade e recuperação do custo de aquisição:** a necessidade pode persistir enquanto a empresa desejar vender ao governo. O prazo para recuperar o custo de aquisição é **[SEM DADO VERIFICÁVEL]** até testar conversão, preço e retenção.
+
+**M2 — Tamanho e estrutura do mercado**
+
+* **Tamanho no DF:** **[SEM DADO VERIFICÁVEL]**. Não foi apurado o número de pequenas empresas com capacidade e interesse em contratar assessoria recorrente para licitações no Distrito Federal.
+* **Situação e estrutura:** mercado potencialmente fragmentado, com consultores independentes, escritórios especializados e empresas que mantêm equipe interna. A existência de demanda pagante precisa ser comprovada por entrevistas e contratos.
+* **Concorrentes e barreiras:** consultorias de licitação, assessorias administrativas e profissionais autônomos. A entrada exige baixo investimento físico, mas a reputação, o domínio dos procedimentos e o histórico de entregas podem favorecer a retenção. A saída tem custo relativamente baixo, desde que não haja compromissos contratuais relevantes.
+
+**M3 — Análise de margem**
+
+* **Margem bruta estimada:** 70% a 85% [ESTIMATIVA: prestação de serviços predominantemente intelectual; custos diretos de execução, ferramentas e apoio operacional equivalentes a 15%–30% da receita, sem incluir pró-labore e despesas administrativas].
+* **Principais custos fixos mensais:** R$ 4 mil a R$ 7 mil [ESTIMATIVA: pró-labore operacional, contabilidade, software, internet, telefonia, prospecção e despesas administrativas; sem escritório comercial dedicado].
+* **Ponto de equilíbrio e prazo:** receita mensal de aproximadamente R$ 5,7 mil a R$ 10 mil [ESTIMATIVA: custos fixos de R$ 4 mil a R$ 7 mil divididos por margem de contribuição de 70%]. Prazo para alcançá-lo: **[SEM DADO VERIFICÁVEL]**, pois depende da velocidade de aquisição de clientes.
+* **Cadeia de valor:** PNCP e portais oficiais → identificação e filtragem de oportunidades → conferência documental → preparação administrativa da proposta → acompanhamento do processo → cliente fornecedor.
+
+O serviço não deve prometer vitória em licitações. A entrega contratada é a assessoria operacional, documental e comercial.
+
+#### D. Classificação qualitativa (critérios de Timmons)
+
+| Critério                                                  | Alto / Médio / Baixo potencial | Justificativa (1 linha)                                                                                                        |
+| --------------------------------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| Necessidades dos clientes                                 | Médio                          | O problema é plausível, mas a intensidade da dor e a disposição a pagar precisam ser validadas com fornecedores locais.        |
+| Estrutura do mercado                                      | Médio                          | Há clientes potencialmente dispersos e diferentes alternativas de atendimento, sem estimativa confiável do tamanho do mercado. |
+| Barreiras de entrada que o novo negócio consiga construir | Médio                          | Especialização por segmento, processos padronizados e histórico de relacionamento podem elevar a retenção, mas são copiáveis.  |
+| Capital inicial                                           | Alto                           | É possível começar de casa, usando ferramentas existentes e sem desenvolver software próprio.                                  |
+| Prazo até o ponto de equilíbrio                           | Médio                          | A estrutura pode ser enxuta, mas a formação da carteira comercial é incerta.                                                   |
+
+#### E. Modelo de negócio
+
+* **Quem paga:** proprietário ou diretor de pequenas empresas fornecedoras.
+* **Por que paga (que valor recebe):** economiza tempo administrativo, melhora a organização documental e recebe uma seleção de oportunidades compatíveis com sua capacidade operacional.
+* **Quanto e com que frequência (preço e recorrência):** mensalidade de R$ 900 a R$ 1.500 por empresa [ESTIMATIVA: preço inicial hipotético para monitoramento, organização documental e acompanhamento administrativo; deve ser testado comercialmente]. Serviços extraordinários podem ser cobrados separadamente.
+* **A que custo:** investimento inicial de R$ 20 mil a R$ 35 mil [ESTIMATIVA: R$ 4 mil–R$ 7 mil para equipamentos e estrutura; R$ 3 mil–R$ 5 mil para formalização, identidade comercial e configuração; R$ 4 mil–R$ 8 mil para prospecção inicial; R$ 9 mil–R$ 15 mil para capital de giro]. O custo de aquisição de cliente é **[SEM DADO VERIFICÁVEL]** até medir o esforço comercial e a taxa de conversão.
+
+**Exemplo econômico ilustrativo:** com mensalidade média de R$ 1.200, custos fixos de R$ 5 mil e margem de contribuição de 80%, seriam necessários aproximadamente seis clientes ativos para cobrir os custos fixos [ESTIMATIVA: R$ 5.000 ÷ (R$ 1.200 × 80%) = 5,21; arredondamento para cima]. Essa simulação não comprova que seja possível conquistar ou reter essa carteira.
+
+#### F. Enquadramento digital
+
+* **Modelo:** empresarial — negócio de serviços do mundo real que utiliza a internet para vender, pesquisar oportunidades e reduzir custos operacionais.
+* **Quem detém a relação com o cliente:** o próprio negócio, com contratos, atendimento e histórico comercial próprios. O PNCP é uma fonte pública de informação, não o canal de relacionamento com o cliente. A dependência de plataformas privadas deve ser limitada, priorizando ferramentas substituíveis e dados oficiais.
+
+#### G. Riscos
+
+* **Perfil:** ramo tradicional com operação digital. A necessidade administrativa existe, mas a demanda específica por assessoria terceirizada ainda precisa ser demonstrada.
+* **De que condição externa depende (juros, incentivo, regulação, contrato público, investimento anunciado)?** Depende do volume de compras públicas compatíveis com os clientes, dos procedimentos de contratação e da capacidade financeira dos fornecedores. Não depende de incentivo fiscal ou subsídio.
+* **O que faria esta oportunidade falhar até 2030?** Clientes que não conseguem competir em preço, baixa taxa de contratação após participação em processos, inadimplência, excesso de concorrentes e mensalidades insuficientes para remunerar o trabalho especializado.
+
+#### H. Fontes desta ficha
+
+* [FONTE: Governo Federal — Portal Nacional de Contratações Públicas — consulta em 2026 — sistema oficial de divulgação e consulta de editais, contratos, atas e planos de contratação]. ([Serviços e Informações do Brasil][1])
+* [FONTE: Governo Federal — PNCP, Perguntas e Respostas — atualização consultada em 2026 — funcionamento do portal e informações disponíveis para consulta pública]. ([Serviços e Informações do Brasil][3])
+
+---
+
+### Oportunidade 2: Coordenação de retirada e destinação regular de entulho de pequenas reformas
+
+#### A. Tendência × oportunidade
+
+* **Tendência de origem:** gestão adequada de resíduos da construção civil e redução do descarte irregular.
+* **Problema específico:** moradores e pequenos profissionais de reforma precisam retirar resíduos, mas nem sempre conhecem as opções de destinação regular ou conseguem coordenar rapidamente a coleta e o transporte.
+* **Cliente nomeável (quem, onde no DF, em que situação):** proprietários de apartamentos em Águas Claras, Guará, Taguatinga e Samambaia que estão reformando banheiros, cozinhas ou pisos; pequenos empreiteiros e instaladores que precisam retirar resíduos de obras de curta duração.
+
+A legislação distrital prevê uma estrutura de gestão de resíduos da construção civil, e o SLU informa sobre os pontos de entrega destinados a pequenos volumes e as regras aplicáveis. ([DFLegis][2])
+
+#### B. Cinco perguntas de triagem
+
+* **Quem exatamente tem esse problema?** Proprietários que contratam pequenas reformas, profissionais autônomos e pequenas empresas de reforma sem frota própria ou rotina definida de retirada.
+* **Quanto dói? (custo em dinheiro, tempo ou risco para o cliente)** O cliente enfrenta tempo de coordenação, risco de atrasar a obra e risco de destinação inadequada. O custo médio por ocorrência no DF é **[SEM DADO VERIFICÁVEL]**.
+* **Quem paga, e com que dinheiro? (quem usa, quem decide e quem paga podem ser pessoas diferentes; diga se são)** O proprietário da obra ou o empreiteiro decide e paga com recursos da reforma. O usuário é quem coordena a retirada no local.
+* **Por que um novo pequeno negócio, e não o incumbente? (o que impede um concorrente estabelecido de copiar em três meses?)** O diferencial possível é combinar agendamento rápido, preço previamente informado, comprovação de destinação e atendimento a pequenas demandas. A vantagem não é estrutural: dependerá de confiabilidade, rede de transportadores e densidade de atendimento.
+* **Por que agora, e não em 2020 ou 2035? (que mudança recente abriu a janela)** A regulamentação distrital especifica obrigações para geradores e transportadores, enquanto o SLU divulga opções de destinação. Isso favorece um serviço organizado de coordenação, embora não prove crescimento recente da demanda. ([DFLegis][4])
+
+#### C. 3Ms
+
+**M1 — Demanda de mercado**
+
+* **Público-alvo:** proprietários em pequenas reformas residenciais e profissionais que executam serviços de curta duração. A operação inicial deve se concentrar em bairros com condomínios residenciais e prestadores de reforma.
+* **Acessibilidade dos clientes:** parcerias com lojas de material de construção, instaladores, pequenos empreiteiros, síndicos e administradoras de condomínios. A demanda pode ser recorrente entre parceiros profissionais, embora não necessariamente entre consumidores individuais.
+* **Durabilidade e recuperação do custo de aquisição:** a necessidade de retirada acompanha a atividade de reforma e manutenção. O prazo de recuperação do custo de aquisição é **[SEM DADO VERIFICÁVEL]** até medir pedidos, margem por atendimento e recompra dos parceiros.
+
+**M2 — Tamanho e estrutura do mercado**
+
+* **Tamanho no DF:** **[SEM DADO VERIFICÁVEL]**. Não foi encontrada nesta pesquisa uma estimativa consolidada do número anual de pequenas reformas residenciais que necessitam de serviço privado de retirada.
+* **Situação e estrutura:** mercado de serviços locais, com transportadores, empresas de caçamba e prestadores informais. A participação potencial de um intermediário depende de oferecer conveniência ou confiabilidade superior às alternativas existentes.
+* **Concorrentes e barreiras:** transportadores licenciados, locadores de caçambas e serviços de retirada oferecidos por empreiteiros. A operação pode começar sem frota própria, mas exige verificar licenciamento, documentação e regularidade dos parceiros. A legislação distrital define regras para resíduos e transportadores. ([DFLegis][2])
+
+**M3 — Análise de margem**
+
+* **Margem bruta estimada:** 25% a 40% [ESTIMATIVA: coordenação de pedidos com transportadores terceirizados; diferença entre preço cobrado e custo do transporte, destinação e atendimento, antes das despesas fixas].
+* **Principais custos fixos mensais:** R$ 3 mil a R$ 5 mil [ESTIMATIVA: pró-labore operacional, telefone, divulgação, software de agendamento, contabilidade e despesas administrativas, sem aquisição de veículo].
+* **Ponto de equilíbrio e prazo:** faturamento mensal de aproximadamente R$ 7,5 mil a R$ 20 mil [ESTIMATIVA: custos fixos de R$ 3 mil–R$ 5 mil divididos por margem de contribuição de 25%–40%]. O prazo para alcançá-lo é **[SEM DADO VERIFICÁVEL]**.
+* **Cadeia de valor:** indicação do cliente → cotação e agendamento → transportador regularizado → destinação autorizada → confirmação da conclusão e registro para o cliente.
+
+O negócio deve começar como coordenador de serviços, não como transportador de resíduos. A execução por terceiros reduz a necessidade de capital, mas exige validação regulatória prévia e controle rigoroso dos parceiros.
+
+#### D. Classificação qualitativa (critérios de Timmons)
+
+| Critério                                                  | Alto / Médio / Baixo potencial | Justificativa (1 linha)                                                                                                            |
+| --------------------------------------------------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Necessidades dos clientes                                 | Médio                          | A necessidade operacional é concreta, mas a disposição a pagar por coordenação independente ainda não foi demonstrada.             |
+| Estrutura do mercado                                      | Médio                          | Há diferentes prestadores locais e um serviço potencialmente fragmentado, sem dimensionamento confiável do mercado.                |
+| Barreiras de entrada que o novo negócio consiga construir | Médio                          | Rede confiável de transportadores, rapidez, comprovação de destinação e relacionamento com parceiros podem diferenciar a operação. |
+| Capital inicial                                           | Alto                           | A coordenação pode começar sem frota própria, desde que o modelo seja legalmente viável e os prestadores estejam regularizados.    |
+| Prazo até o ponto de equilíbrio                           | Médio                          | A estrutura é relativamente enxuta, mas a margem por pedido e a frequência de contratação precisam ser validadas.                  |
+
+#### E. Modelo de negócio
+
+* **Quem paga:** proprietário da obra ou pequeno empreiteiro que contrata a retirada.
+* **Por que paga (que valor recebe):** economiza tempo de coordenação, reduz incerteza sobre a contratação e obtém registro do serviço realizado e da destinação aplicável.
+* **Quanto e com que frequência (preço e recorrência):** preço hipotético de R$ 250 a R$ 500 por atendimento [ESTIMATIVA: faixa inicial para testar serviços de retirada de pequenas reformas; preço efetivo depende do volume, acesso, transporte e destinação]. O pagamento tende a ocorrer por demanda, com recorrência maior entre empreiteiros.
+* **A que custo:** investimento inicial de R$ 25 mil a R$ 45 mil [ESTIMATIVA: R$ 3 mil–R$ 6 mil para equipamentos e estrutura; R$ 3 mil–R$ 6 mil para formalização, contratos e configuração operacional; R$ 4 mil–R$ 8 mil para prospecção; R$ 15 mil–R$ 25 mil de capital de giro]. O custo de aquisição de cliente é **[SEM DADO VERIFICÁVEL]**.
+
+**Exemplo econômico ilustrativo:** com faturamento médio de R$ 350 por pedido e contribuição de 30%, cada atendimento geraria R$ 105 para cobrir despesas fixas [ESTIMATIVA: R$ 350 × 30%]. Para cobrir despesas fixas mensais de R$ 4 mil, seriam necessários aproximadamente 39 atendimentos mensais [ESTIMATIVA: R$ 4.000 ÷ R$ 105, arredondado para cima]. Esses valores não são preços de mercado verificados.
+
+#### F. Enquadramento digital
+
+* **Modelo:** empresarial — a operação é física, mas a internet pode reduzir o custo de cotação, agendamento, comunicação e acompanhamento.
+* **Quem detém a relação com o cliente:** o próprio negócio, desde que registre os contatos, contratos e histórico dos atendimentos. A aquisição de clientes exclusivamente por redes sociais ou marketplaces aumenta a dependência de algoritmos, comissões e mudanças nas regras das plataformas.
+
+#### G. Riscos
+
+* **Perfil:** ramo tradicional com coordenação digital. A necessidade de destinação existe, mas a demanda pagante por um intermediário precisa ser comprovada.
+* **De que condição externa depende (juros, incentivo, regulação, contrato público, investimento anunciado)?** Depende da atividade de reformas, da disponibilidade de transportadores regulares, das regras ambientais e dos custos de destinação. Não deve depender de subsídio ou incentivo fiscal.
+* **O que faria esta oportunidade falhar até 2030?** Margens insuficientes, concorrência informal com preços inferiores, baixa densidade de pedidos, problemas de qualidade dos parceiros, destinação irregular ou exigências regulatórias incompatíveis com o modelo operacional.
+
+#### H. Fontes desta ficha
+
+* [FONTE: Governo do Distrito Federal — Lei nº 4.704, de 20 de dezembro de 2011 — legislação distrital sobre gestão integrada de resíduos da construção civil e resíduos volumosos, incluindo obrigações de geradores e transportadores]. ([DFLegis][2])
+* [FONTE: Governo do Distrito Federal — Decreto nº 46.279, de 20 de setembro de 2024 — alterações regulamentares relativas a resíduos da construção civil e ao Plano de Gerenciamento de Resíduos da Construção Civil]. ([DFLegis][4])
+* [FONTE: Serviço de Limpeza Urbana do Distrito Federal — Resíduos da Construção Civil — informações sobre pequenos volumes, Papa-Entulhos e destinação]. ([Limpeza Urbana DF][5])
+
+## 3. Quadro comparativo
+
+| Oportunidade                                                 | Cliente                                                                   | Quem paga                           | Capital inicial estimado                                        | Perfil (tradicional/emergente)      | Principal risco                                                         | Quantidade de [SEM DADO VERIFICÁVEL] na ficha |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------- | ----------------------------------- | --------------------------------------------------------------- | ----------------------------------- | ----------------------------------------------------------------------- | --------------------------------------------- |
+| Assessoria operacional para pequenos fornecedores do governo | Pequenos fornecedores de manutenção, comunicação visual e materiais no DF | Proprietário ou diretor da empresa  | R$ 20 mil–R$ 35 mil [ESTIMATIVA: composição detalhada na ficha] | Tradicional com operação digital    | Não conseguir converter empresas em contratos recorrentes rentáveis     | 3                                             |
+| Coordenação de retirada e destinação regular de entulho      | Proprietários em pequenas reformas e empreiteiros locais                  | Proprietário da obra ou empreiteiro | R$ 25 mil–R$ 45 mil [ESTIMATIVA: composição detalhada na ficha] | Tradicional com coordenação digital | Margem insuficiente ou falhas regulatórias e operacionais dos parceiros | 4                                             |
+
+### Conclusão executiva
+
+**Minha preferência inicial é a assessoria operacional para pequenos fornecedores do governo.** Ela exige menos capital físico, permite testar a demanda antes de ampliar a estrutura e oferece a possibilidade de receita mensal recorrente. Entretanto, sua viabilidade depende de demonstrar que empresas locais pagarão pela assessoria e permanecerão clientes mesmo quando não vencerem licitações.
+
+A coordenação de retirada de resíduos também merece teste, mas apresenta maior exposição a custos variáveis, logística e conformidade regulatória.
+
+**Antes de investir, eu exigiria três evidências comerciais para cada oportunidade:**
+
+* Entrevistas documentadas com potenciais clientes que confirmem o problema e a forma atual de resolvê-lo.
+* Propostas comerciais reais, com preço explícito, apresentadas a clientes identificados no DF.
+* Primeiros contratos pagos que permitam medir margem de contribuição, custo de aquisição e frequência de recompra.
+
+Sem essas evidências, as duas alternativas continuam sendo **oportunidades candidatas qualificadas**, e não negócios comprovadamente viáveis.
+
+[1]: https://www.gov.br/pncp/?utm_source=chatgpt.com "Portal Nacional de Contratações Públicas - PNCP"
+[2]: https://dflegis.df.gov.br/ato.php?p=lei-4704-de-20-de-dezembro-de-2011&utm_source=chatgpt.com "LEI Nº 4.704, DE 20 DE DEZEMBRO DE 2011...."
+[3]: https://www.gov.br/pncp/pt-br/pncp/perguntas-e-respostas/?utm_source=chatgpt.com "Perguntas e Respostas"
+[4]: https://dflegis.df.gov.br/ato.php?p=decreto-46279-de-20-de-setembro-de-2024&utm_source=chatgpt.com "DECRETO Nº 46.279, DE 20 DE SETEMBRO DE 2024..."
+[5]: https://www.slu.df.gov.br/residuos-da-construcao-civil/?utm_source=chatgpt.com "Resíduos da Construção Civil – Rcc - Serviço de Limpeza Urbana do Distrito Federal - Serviço de Limpeza Urbana do Distrito Federal"
+
+<<<R3 — FIM>>>

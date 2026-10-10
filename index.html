@@ -1,0 +1,2055 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+<body>
+<title>Oportunidades DF em Cadeia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
+<style>
+/* Layout: relatório de pesquisa em coluna única, abas fixas por seção, tabelas largas com rolagem própria */
+:root{
+  --paper:#f3f6f5; --surface:#ffffff; --ink:#15222b; --muted:#566670; --line:#d3ddda;
+  --accent:#0a6847; --accent-soft:#dcefe6; --link:#1d5596;
+  --ok:#1b6e40; --ok-bg:#e1f1e7; --warn:#8a5300; --warn-bg:#fbeed6;
+  --bad:#9b2227; --bad-bg:#f8e0e0; --info:#33478f; --info-bg:#e4e8f6;
+  --neutral:#4d5a62; --neutral-bg:#e7ecec; --pend:#5f4b00; --pend-bg:#ffeb8a;
+  --r1:#2d64b0; --r2:#7650b3; --r3:#9a5a17; --r4:#b0412b;
+  --code-bg:#eef3f1;
+  --f-display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#0f1719; --surface:#162125; --ink:#e3ebe8; --muted:#9db0ab; --line:#2b3a3d;
+  --accent:#5fcf9f; --accent-soft:#163a2d; --link:#8bb8f0;
+  --ok:#7fd8a4; --ok-bg:#173627; --warn:#f0bf6a; --warn-bg:#3a2b12;
+  --bad:#f19a9d; --bad-bg:#3c1c1e; --info:#a9b8f2; --info-bg:#1f2747;
+  --neutral:#b9c6c4; --neutral-bg:#26322f; --pend:#ffe680; --pend-bg:#4a3d00;
+  --r1:#7eaaf0; --r2:#b49af0; --r3:#e2a663; --r4:#f08b74; --code-bg:#121c1f; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#0f1719; --surface:#162125; --ink:#e3ebe8; --muted:#9db0ab; --line:#2b3a3d;
+  --accent:#5fcf9f; --accent-soft:#163a2d; --link:#8bb8f0;
+  --ok:#7fd8a4; --ok-bg:#173627; --warn:#f0bf6a; --warn-bg:#3a2b12;
+  --bad:#f19a9d; --bad-bg:#3c1c1e; --info:#a9b8f2; --info-bg:#1f2747;
+  --neutral:#b9c6c4; --neutral-bg:#26322f; --pend:#ffe680; --pend-bg:#4a3d00;
+  --r1:#7eaaf0; --r2:#b49af0; --r3:#e2a663; --r4:#f08b74; --code-bg:#121c1f; color-scheme:dark }
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;margin:0}
+a{color:var(--link)} a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px}
+header.top{border-bottom:1px solid var(--line);background:var(--surface)}
+header.top .wrap{padding-block:28px 22px;display:grid;gap:10px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--f-display);font-weight:600;font-size:clamp(28px,4.4vw,42px);line-height:1.12;margin:0;text-wrap:balance}
+.ident{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--muted);font-size:14px}
+.ident b{color:var(--ink);font-weight:600}
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:thin}
+nav.tabs a{flex:0 0 auto;padding:12px 12px 10px;text-decoration:none;color:var(--muted);font-size:14px;font-weight:500;border-bottom:3px solid transparent;white-space:nowrap}
+nav.tabs a .n{font-family:var(--f-mono);font-size:12px;margin-right:6px;opacity:.8}
+nav.tabs a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
+main .wrap{padding-block:32px 64px}
+section.pg{display:grid;gap:22px}
+section.pg > *{min-width:0}
+h2{font-family:var(--f-display);font-weight:600;font-size:28px;line-height:1.2;margin:8px 0 0;text-wrap:balance}
+h3{font-family:var(--f-display);font-weight:600;font-size:21px;margin:14px 0 0;text-wrap:balance}
+h4{font-size:15px;margin:8px 0 0;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+p,li{max-width:72ch}
+p{margin:0}
+.lede{font-size:18px;color:var(--ink);max-width:68ch}
+.muted{color:var(--muted)}
+.prose{display:grid;gap:14px}
+.prose ul,.prose ol{margin:0;padding-left:22px;display:grid;gap:6px}
+.prose h2{margin-top:22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:14px}
+.chip b{font-weight:600}
+.pendente{background:var(--pend-bg);color:var(--pend);padding:0 5px;border-radius:3px;font-weight:600}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px 20px;display:grid;gap:10px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:grid;gap:2px}
+.kpi .v{font-family:var(--f-display);font-size:30px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.1}
+.kpi .k{font-size:13px;color:var(--muted)}
+/* fluxo da cadeia */
+.flow{display:grid;grid-template-columns:1fr auto 1.3fr auto 1fr auto 1fr;align-items:center;gap:10px}
+.flow .node{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 12px;font-size:14px;display:grid;gap:4px;min-width:0}
+.flow .node b{font-size:13px;font-family:var(--f-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.flow .arrow{color:var(--muted);font-size:20px;text-align:center}
+.flow .trio{display:grid;gap:6px}
+@media (max-width:760px){.flow{grid-template-columns:1fr}.flow .arrow{transform:rotate(90deg)}}
+.rchip{display:inline-block;font-family:var(--f-mono);font-size:12px;font-weight:600;color:var(--surface);border-radius:4px;padding:1px 7px;margin-right:4px;vertical-align:1px}
+.rchip.r1{background:var(--r1)} .rchip.r2{background:var(--r2)} .rchip.r3{background:var(--r3)} .rchip.r4{background:var(--r4)}
+/* tabelas */
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:14px;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600;background:var(--code-bg)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-variant-numeric:tabular-nums}
+.pill{display:inline-block;font-size:12px;font-weight:600;border-radius:999px;padding:2px 9px;line-height:1.5}
+.pill.ok{color:var(--ok);background:var(--ok-bg)} .pill.warn{color:var(--warn);background:var(--warn-bg)}
+.pill.bad{color:var(--bad);background:var(--bad-bg)} .pill.info{color:var(--info);background:var(--info-bg)}
+.pill.neutral{color:var(--neutral);background:var(--neutral-bg)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:13px;color:var(--muted);align-items:center}
+/* régua */
+.regua{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.regua ol,.regua ul{margin:0;padding-left:20px;display:grid;gap:8px}
+.regua li{font-size:15px}
+.regua .aula{font-family:var(--f-mono);font-size:12px;color:var(--accent);margin-left:4px}
+/* prompt blocks */
+.pblock{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:0;border:1px solid var(--line);border-radius:6px;background:var(--surface);overflow:hidden}
+.pblock-code{min-width:0;border-right:1px solid var(--line)}
+.pblock-label{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);padding:10px 14px 0}
+pre{font-family:var(--f-mono);font-size:13px;line-height:1.55;white-space:pre-wrap;word-break:break-word;margin:0;padding:10px 14px 14px;background:transparent}
+.pblock-why{padding:12px 14px;display:grid;grid-template-columns:1fr;gap:2px;align-content:start;background:var(--code-bg)}
+.why-k{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.why-k:first-child{margin-top:0}
+.why-v{font-size:14px}
+@media (max-width:760px){.pblock{grid-template-columns:1fr}.pblock-code{border-right:0;border-bottom:1px solid var(--line)}}
+.codebox{border:1px solid var(--line);border-radius:6px;background:var(--surface);max-height:560px;overflow:auto}
+/* anexos */
+details.anexo{border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+details.anexo>summary{cursor:pointer;padding:14px 16px;font-weight:600;list-style-position:inside}
+.sum-note{font-weight:400;color:var(--muted);font-size:13px;margin-left:6px}
+.anexo-body{padding:0 16px 18px;display:grid;gap:12px;border-top:1px solid var(--line)}
+.anexo-meta{margin:12px 0 0;padding-left:18px;font-family:var(--f-mono);font-size:13px}
+.anexo-src{font-size:14px;color:var(--muted)}
+.anexo-resp{display:grid;gap:12px;min-width:0}
+.anexo-resp h2{font-size:22px}.anexo-resp h3{font-size:18px}.anexo-resp h4{font-size:13px}
+.anexo-resp ul{margin:0;padding-left:22px}
+.sint-pages{display:grid;gap:12px;padding-top:12px}
+.sint-pages img{width:100%;max-width:100%;border:1px solid var(--line);border-radius:4px}
+.downloads{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.downloads a{display:block;padding:12px 14px;border:1px solid var(--line);border-radius:6px;background:var(--surface);text-decoration:none;color:var(--ink);font-size:14px}
+.downloads a span{display:block;color:var(--muted);font-size:13px}
+.next{display:flex;justify-content:flex-end;padding-top:8px}
+.next a{font-weight:600;text-decoration:none}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer .wrap{padding-block:18px 28px}
+@media (prefers-reduced-motion: no-preference){ section.pg{animation:fade .18s ease-out} @keyframes fade{from{opacity:.6}to{opacity:1}} }
+</style>
+<header class="top"><div class="wrap">
+  <span class="eyebrow">ADM0150 · Criação de Negócios · UnB · 2026.2</span>
+  <h1>Oportunidades no DF em cadeia de IAs: detecção, síntese e auditoria</h1>
+  <div class="ident">
+    <span>Aluno: <b>Guilherme Daher Montandon</b></span><span>Matrícula: <b>190046023</b></span>
+    <span>Profa. Marina Figueiredo Moreira</span><span>Atividade 2 · estudo de caso individual</span>
+  </div>
+</div></header>
+<nav class="tabs" aria-label="Seções"><div class="wrap"><a href="#abertura" data-tab="abertura"><span class="n">1</span>Abertura</a><a href="#prompt" data-tab="prompt"><span class="n">2</span>Prompt-mestre</a><a href="#protocolo" data-tab="protocolo"><span class="n">3</span>Protocolo de teste</a><a href="#auditoria" data-tab="auditoria"><span class="n">4</span>Síntese auditada</a><a href="#conclusao" data-tab="conclusao"><span class="n">5</span>Conclusão</a><a href="#anexos" data-tab="anexos"><span class="n">A</span>Anexos</a></div></nav>
+<main><div class="wrap">
+
+<section class="pg" id="abertura" aria-labelledby="h-abertura">
+  <h2 id="h-abertura">Abertura</h2>
+  <p class="lede">Este estudo constrói um prompt que carrega os critérios de avaliação de oportunidade das Aulas 4, 5 e 6, aplica o mesmo texto em três IAs, entrega as três respostas a uma quarta IA para síntese e audita essa síntese contra as respostas originais e contra fontes primárias.</p>
+
+  <div class="chips" aria-label="Recorte">
+    <span class="chip"><b>Região:</b> Distrito Federal</span>
+    <span class="chip"><b>Porte:</b> ME ou EPP (LC 123/2006)</span>
+    <span class="chip"><b>Capital inicial:</b> até R$ 100 mil</span>
+    <span class="chip"><b>Horizonte:</b> 2026–2030</span>
+  </div>
+
+  <h3>A cadeia</h3>
+  <div class="flow" aria-label="Fluxo da cadeia de IAs">
+    <div class="node"><b>Prompt-mestre</b>Régua das Aulas 4–6, recorte DF</div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div class="node trio"><b>3 IAs, mesmo prompt</b>
+      <span><span class="rchip r1">R1</span> Gemini</span>
+      <span><span class="rchip r2">R2</span> DeepSeek</span>
+      <span><span class="rchip r3">R3</span> ChatGPT</span></div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div class="node"><b>4ª IA: síntese</b><span><span class="rchip r4">4ª</span> Claude, sem busca</span></div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div class="node"><b>Auditoria</b>Rastreabilidade, fonte primária, régua</div>
+  </div>
+
+  <h3>Resultado em números</h3>
+  <div class="kpis">
+    <div class="kpi"><span class="v">24 → 8</span><span class="k">candidatas geradas → aprovadas pelas três IAs (3, 3 e 2)</span></div>
+    <div class="kpi"><span class="v">0</span><span class="k">afirmações órfãs na síntese; 4 distorcidas e 2 suprimidas, em 15 auditadas</span></div>
+    <div class="kpi"><span class="v">3 de 7</span><span class="k">afirmações factuais confirmadas em fonte primária; 1 não confirmada</span></div>
+    <div class="kpi"><span class="v">1</span><span class="k">oportunidade defendida: assessoria em compras públicas para MPEs</span></div>
+  </div>
+
+  <h3>A régua analítica</h3>
+  <p class="muted">Um instrumento entrou no prompt quando cumpria duas condições: ter função clara (definir, filtrar, estruturar, exigir evidência ou proibir) e gerar algo que pudesse ser auditado depois.</p>
+  <div class="regua">
+    <div class="panel"><h4>Incorporados (10)</h4>
+      <ol>
+        <li>Tendência × oportunidade e ideia × oportunidade<span class="aula">A4 · A5</span><br><span class="muted">Define o que conta: sem cliente nomeável, é tendência.</span></li>
+        <li>Checklist final de Dornelas<span class="aula">A5</span><br><span class="muted">Filtro eliminatório: um NÃO elimina, e o descarte fica visível.</span></li>
+        <li>Cinco perguntas de triagem<span class="aula">A4</span><br><span class="muted">Exige argumento onde o checklist só pede sim ou não, incluindo quem paga e por que não o incumbente.</span></li>
+        <li>Os 3Ms<span class="aula">A5</span><br><span class="muted">Dão campos fixos na ordem demanda → estrutura → margem e tornam as respostas comparáveis.</span></li>
+        <li>Critérios de Timmons, só os de lógica<span class="aula">A5</span><br><span class="muted">Classificação alto/baixo que vale para qualquer porte de negócio.</span></li>
+        <li>Leitura crítica de dado de mercado<span class="aula">A4</span><br><span class="muted">Fonte, ano e o que o número mede; sem dado, a IA declara a ausência. É o que torna a auditoria possível.</span></li>
+        <li>Definição de modelo de negócio<span class="aula">A6</span><br><span class="muted">Quem paga, por quê e a que custo, em campo obrigatório.</span></li>
+        <li>Métrica de atenção × métrica de negócio<span class="aula">A6</span><br><span class="muted">Proíbe justificar potencial com seguidores, downloads ou usuários.</span></li>
+        <li>"O que pode não acontecer" e tradicional × emergente<span class="aula">A4</span><br><span class="muted">Obriga a dizer de que condição externa a oportunidade depende e qual o perfil de risco.</span></li>
+        <li>Cinco modelos de negócio da web<span class="aula">A6</span><br><span class="muted">Enquadramento condicional ("não se aplica" é aceito) e quem detém a relação com o cliente.</span></li>
+      </ol>
+    </div>
+    <div class="panel"><h4>Deixados de fora (7)</h4>
+      <ul>
+        <li>Patamares numéricos de Timmons<span class="aula">A5</span><br><span class="muted">Crescer 30–50% ao ano é régua de capital de risco; reprovaria um negócio pequeno saudável.</span></li>
+        <li>Cinco aspectos de avaliação<span class="aula">A5</span><br><span class="muted">Mercado, retorno e vantagem já estão nos 3Ms; equipe e compromisso dependem de uma pessoa concreta, que a IA não avalia.</span></li>
+        <li>Experiência no ramo<span class="aula">A5</span><br><span class="muted">É critério sobre o empreendedor, não sobre a oportunidade. Entra na conclusão.</span></li>
+        <li>Fontes de ideias e brainstorming<span class="aula">A5</span><br><span class="muted">Técnicas de geração com lógica de volume, o contrário da seleção que o prompt exige.</span></li>
+        <li>Três vetores e "apostas defensáveis"<span class="aula">A4</span><br><span class="muted">São conclusões da aula. Fora do prompt, viram teste: as IAs chegam lá sozinhas?</span></li>
+        <li>Oportunista × empreendedor, aceleradoras<span class="aula">A6</span><br><span class="muted">Tratam de postura e financiamento; a lição já está nos itens 7 e 8.</span></li>
+        <li>Estudos de caso (FCamara, GetNinjas)<span class="aula">A5 · A6</span><br><span class="muted">Ilustrações, não instrumentos.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Declaração de uso de IA</h3>
+  <div class="panel">
+    <p>Além das quatro IAs que são objeto do estudo, usei o Claude (Anthropic), em conversa separada da síntese, como assistente na organização da régua, na redação do prompt-mestre e do prompt de síntese, na pesquisa de fontes primárias para a auditoria, na redação da auditoria e da conclusão e na construção deste site. As respostas das quatro IAs analisadas estão nos Anexos, sem edição.</p>
+  </div>
+  <div class="next"><a href="#prompt">Próxima: Prompt-mestre →</a></div>
+</section>
+<section class="pg" id="prompt" hidden aria-labelledby="h-prompt">
+  <h2 id="h-prompt">O prompt-mestre</h2>
+  <p class="lede">Um prompt comum pede oportunidades e aceita o que vier. Este chega com a régua pronta: diz o que conta como oportunidade, que evidência exigir, em que estrutura responder e o que rejeitar.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Decisão exigida</th><th>Como o prompt decide</th><th>Bloco</th></tr></thead>
+    <tbody>
+      <tr><td>Recorte</td><td>DF, ME/EPP, capital até R$ 100 mil, abertura em 2026–2027 e sustentável até 2030</td><td>1</td></tr>
+      <tr><td>Critério de corte</td><td>Checklist de Dornelas: qualquer NÃO elimina; o descarte aparece na tabela de triagem com o motivo</td><td>5</td></tr>
+      <tr><td>Padrão de evidência</td><td>Três etiquetas obrigatórias ([FONTE], [ESTIMATIVA], [SEM DADO VERIFICÁVEL]); fontes aceitas e recusadas; proibido inventar links</td><td>3</td></tr>
+      <tr><td>Formato de saída</td><td>Seções 0–3 com títulos fixos e fichas A–H, para comparar as três respostas linha a linha</td><td>6</td></tr>
+      <tr><td>Quantidade</td><td>8 candidatas, no máximo 3 aprovadas; menos de 3 se o filtro não deixar passar</td><td>5</td></tr>
+    </tbody></table></div>
+  <h3>O prompt na íntegra, bloco a bloco</h3>
+  <p class="muted">À esquerda, o texto exato colado nas três IAs. À direita, o instrumento de aula que cada bloco carrega e o efeito esperado.</p>
+  
+<div class="pblock">
+  <div class="pblock-code"><div class="pblock-label">Tarefa</div><pre># TAREFA
+Você atuará como analista de criação de negócios. Sua tarefa é detectar e qualificar oportunidades de negócio no Distrito Federal para o horizonte 2026–2030, aplicando os critérios descritos abaixo. O objetivo não é listar ideias interessantes: é entregar poucas oportunidades que sobrevivam a um filtro rigoroso, com evidência rastreável. Responda em português do Brasil.</pre></div>
+  <aside class="pblock-why">
+    <div class="why-k">Instrumento</div><div class="why-v">Ideia é abundante; oportunidade é rara</div>
+    <div class="why-k">Origem</div><div class="why-v">Aula 5</div>
+    <div class="why-k">Efeito esperado</div><div class="why-v">Avisa desde a primeira linha que o pedido é seleção, não volume.</div>
+  </aside>
+</div>
+<div class="pblock">
+  <div class="pblock-code"><div class="pblock-label">1. Recorte</div><pre># 1. RECORTE (obrigatório; não saia dele)
+- Região: Distrito Federal. Sempre que possível, indique em quais regiões administrativas (RAs) a oportunidade se concentra.
+- Porte: microempresa ou empresa de pequeno porte (Lei Complementar 123/2006).
+- Capital inicial: até R$ 100 mil, somando investimento fixo, capital de giro e despesas pré-operacionais. Oportunidade que exija mais do que isso está fora do recorte.
+- Horizonte: negócio aberto entre 2026 e 2027 e sustentável até 2030.
+- Setor: livre (comércio, serviços, indústria leve, digital, venda para empresas ou para o governo).</pre></div>
+  <aside class="pblock-why">
+    <div class="why-k">Instrumento</div><div class="why-v">Decisão de recorte; capital inicial (Timmons)</div>
+    <div class="why-k">Origem</div><div class="why-v">Enunciado · Aula 5</div>
+    <div class="why-k">Efeito esperado</div><div class="why-v">Evita respostas genéricas sobre o Brasil todo. As RAs e a LC 123 tornam o recorte objetivo, e o DF permite conferir as respostas em fontes locais (PDAD, IPEDF).</div>
+  </aside>
+</div>
+<div class="pblock">
+  <div class="pblock-code"><div class="pblock-label">2. O que conta como oportunidade</div><pre># 2. O QUE CONTA COMO OPORTUNIDADE
+Distinga três coisas:
+- TENDÊNCIA: uma direção geral em que o mercado se move (ex.: "transformação digital", "sustentabilidade"). É verdadeira e observável, mas não tem cliente, preço nem dono. Tendência NÃO é oportunidade.
+- IDEIA: uma solução que alguém imaginou. Ideia sem cliente identificado e sem forma de gerar receita NÃO é oportunidade.
+- OPORTUNIDADE: um problema concreto, de um cliente identificável (quem, onde, em que situação), que esse cliente quer resolver a ponto de pagar, e que um novo pequeno negócio consegue resolver melhor do que quem já tenta.
+Cliente descrito de forma genérica ("as empresas", "as famílias", "os jovens", "o consumidor") indica que você ainda está no nível da tendência. Refine até chegar a um cliente que se possa nomear.</pre></div>
+  <aside class="pblock-why">
+    <div class="why-k">Instrumento</div><div class="why-v">Tendência × oportunidade; ideia × oportunidade</div>
+    <div class="why-k">Origem</div><div class="why-v">Aulas 4 e 5</div>
+    <div class="why-k">Efeito esperado</div><div class="why-v">Impede que tendências apareçam como oportunidade e exige cliente nomeável. Os exemplos de tendência são neutros, para não induzir as IAs a repetir os vetores da Aula 4.</div>
+  </aside>
+</div>
+<div class="pblock">
+  <div class="pblock-code"><div class="pblock-label">3. Padrão de evidência</div><pre># 3. PADRÃO DE EVIDÊNCIA
+Todo número (tamanho de mercado, crescimento, preço, margem, população etc.) deve vir marcado com UMA destas três etiquetas:
+- [FONTE: instituição — publicação — ano de referência dos dados — o que o número mede]. Em "o que mede", deixe claro quando for o caso: volume ou valor nominal; investimento anunciado ou contratado/realizado; Brasil ou DF; qual é o universo (denominador).
+- [ESTIMATIVA: premissas usadas] — para cálculos seus (margem, ponto de equilíbrio, capital). Mostre as premissas; não apresente estimativa como dado.
+- [SEM DADO VERIFICÁVEL] — quando você não tiver dado confiável. Use esta etiqueta em vez de inventar ou arredondar um número plausível. Ela não é falha: é a resposta correta quando falta evidência.
+Fontes preferenciais: IBGE, IPEDF Codeplan (incluindo a PDAD), Sebrae, Banco Central, ministérios, agências reguladoras, Portal Nacional de Contratações Públicas, Receita Federal, associações setoriais e legislação.
+Não aceitas como base única: blogs, notícias sem fonte primária identificada, material promocional de empresas, "estudos indicam" sem identificação, e respostas de outras IAs.
+Não invente links. Informe URL apenas se você acessou a página nesta sessão; caso contrário, cite instituição, publicação e ano.
+Dados nacionais podem ser usados como contexto, mas sinalize quando não houver dado específico do DF.</pre></div>
+  <aside class="pblock-why">
+    <div class="why-k">Instrumento</div><div class="why-v">Leitura crítica de dado de mercado</div>
+    <div class="why-k">Origem</div><div class="why-v">Aula 4</div>
+    <div class="why-k">Efeito esperado</div><div class="why-v">As três etiquetas separam dado citado, cálculo próprio e ausência de dado. Na auditoria, a etiqueta [FONTE] é conferida direto, e afirmação sem etiqueta já é suspeita.</div>
+  </aside>
+</div>
+<div class="pblock">
+  <div class="pblock-code"><div class="pblock-label">4. O que está proibido</div><pre># 4. O QUE ESTÁ PROIBIDO
+- Justificar potencial com métricas de atenção: seguidores, visualizações, downloads, usuários cadastrados, engajamento, "viralização". Potencial se demonstra com quem paga, quanto e com que frequência.
+- Apresentar tendência como oportunidade.
+- Aprovar oportunidade que só fecha a conta com incentivo fiscal, subsídio ou lei ainda não aprovada (isso pode aparecer como risco, não como base).
+- Aprovar oportunidade que dependa de tecnologia que ainda não existe ou de capital acima do recorte.</pre></div>
+  <aside class="pblock-why">
+    <div class="why-k">Instrumento</div><div class="why-v">Métrica de atenção × métrica de negócio; "o que pode não acontecer"</div>
+    <div class="why-k">Origem</div><div class="why-v">Aulas 6 e 4</div>
+    <div class="why-k">Efeito esperado</div><div class="why-v">Corta os argumentos mais comuns e mais fracos (seguidores, downloads, dependência de incentivo) antes que apareçam.</div>
+  </aside>
+</div>
+<div class="pblock">
+  <div class="pblock-code"><div class="pblock-label">5. Procedimento</div><pre># 5. PROCEDIMENTO
+Passo 1 — Gere 8 oportunidades candidatas dentro do recorte.
+Passo 2 — Submeta cada candidata ao Checklist de Dornelas, que funciona como filtro eliminatório:
+  C1. Existe um problema a ser resolvido?
+  C2. Existe um produto ou serviço que solucionará esse problema?
+  C3. É possível identificar com clareza os potenciais clientes?
+  C4. É possível implantar uma estratégia de marketing e vendas exequível, em custo e retorno?
+  C5. A janela da oportunidade está aberta no DF entre 2026 e 2027?
+  Responda SIM ou NÃO para cada pergunta. Qualquer NÃO elimina a candidata. Na dúvida, responda NÃO.
+Passo 3 — Das candidatas que passarem nas cinco perguntas, selecione no máximo 3, as de evidência mais sólida, e desenvolva cada uma na ficha da seção 6. Se menos de 3 passarem, entregue apenas as que passaram e diga isso. Não afrouxe o filtro para completar a quantidade.</pre></div>
+  <aside class="pblock-why">
+    <div class="why-k">Instrumento</div><div class="why-v">Checklist final de Dornelas como filtro</div>
+    <div class="why-k">Origem</div><div class="why-v">Aula 5</div>
+    <div class="why-k">Efeito esperado</div><div class="why-v">Pedir 8 candidatas e aprovar no máximo 3 força a seleção. A tabela de triagem mostra o que foi descartado e por quê. "Na dúvida, NÃO" e "não afrouxe" impedem a IA de completar a cota.</div>
+  </aside>
+</div>
+<div class="pblock">
+  <div class="pblock-code"><div class="pblock-label">6. Formato de saída</div><pre># 6. FORMATO DE SAÍDA (obrigatório: use exatamente estes títulos, nesta ordem)
+Seja conciso: frases curtas, no máximo 3 linhas por campo (tabelas à parte).
+
+## 0. Condições desta resposta
+- Data de corte do seu conhecimento:
+- Você usou busca na web nesta resposta? (sim/não)
+- Principais limitações de dado para o DF:
+
+## 1. Triagem das 8 candidatas
+Tabela com as colunas: Candidata | Tendência de origem | C1 | C2 | C3 | C4 | C5 | Resultado (aprovada/eliminada) | Se eliminada: pergunta em que falhou e motivo (1 linha)
+
+## 2. Fichas das oportunidades aprovadas (no máximo 3)
+
+### Oportunidade [n]: [nome]
+
+A. Tendência × oportunidade
+- Tendência de origem:
+- Problema específico:
+- Cliente nomeável (quem, onde no DF, em que situação):
+
+B. Cinco perguntas de triagem
+- Quem exatamente tem esse problema?
+- Quanto dói? (custo em dinheiro, tempo ou risco para o cliente)
+- Quem paga, e com que dinheiro? (quem usa, quem decide e quem paga podem ser pessoas diferentes; diga se são)
+- Por que um novo pequeno negócio, e não o incumbente? (o que impede um concorrente estabelecido de copiar em três meses?)
+- Por que agora, e não em 2020 ou 2035? (que mudança recente abriu a janela)
+
+C. 3Ms
+- M1 Demanda de mercado: público-alvo; o cliente é alcançável por canais acessíveis?; durabilidade do produto no mercado; o custo de captar um cliente se recupera em menos de um ano?
+- M2 Tamanho e estrutura do mercado: tamanho no DF (com etiqueta); cresce, está estável ou encolhe?; mercado fragmentado, emergente ou consolidado?; principais concorrentes ou tipos de concorrente; barreiras de entrada e custos de saída.
+- M3 Análise de margem: margem bruta estimada; principais custos fixos mensais; ponto de equilíbrio e prazo para alcançá-lo; cadeia de valor até o cliente final.
+
+D. Classificação qualitativa (critérios de Timmons)
+Tabela: Critério | Alto / Médio / Baixo potencial | Justificativa (1 linha)
+Critérios: necessidades dos clientes; estrutura do mercado; barreiras de entrada que o novo negócio consiga construir; capital inicial; prazo até o ponto de equilíbrio.
+Não use metas de crescimento de 30% a 50% ao ano: elas valem para startups de capital de risco, não para este recorte.
+
+E. Modelo de negócio
+- Quem paga:
+- Por que paga (que valor recebe):
+- Quanto e com que frequência (preço e recorrência):
+- A que custo: principais custos, custo de aquisição de cliente e capital inicial estimado (até R$ 100 mil), com a composição.
+
+F. Enquadramento digital
+- Se a oportunidade usa a internet como canal ou como essência, enquadre-a em um dos cinco modelos: intermediação de negócios; comercialização de propaganda; mercado virtual (puramente virtual ou com loja física); empresarial (negócio do mundo real que usa a web para vender mais ou custar menos); redes sociais. Se não se aplicar, escreva "não se aplica" e explique em 1 linha.
+- Quem detém a relação com o cliente: o próprio negócio ou uma plataforma de terceiros (marketplace, aplicativo de entrega, rede social)? Qual o risco disso?
+
+G. Riscos
+- Perfil: ramo tradicional (demanda comprovada; exige diferenciação) ou emergente (demanda em formação; exige fôlego de caixa)?
+- De que condição externa depende (juros, incentivo, regulação, contrato público, investimento anunciado)?
+- O que faria esta oportunidade falhar até 2030?
+
+H. Fontes desta ficha
+Liste as fontes citadas com a etiqueta [FONTE].
+
+## 3. Quadro comparativo
+Tabela: Oportunidade | Cliente | Quem paga | Capital inicial estimado | Perfil (tradicional/emergente) | Principal risco | Quantidade de [SEM DADO VERIFICÁVEL] na ficha</pre></div>
+  <aside class="pblock-why">
+    <div class="why-k">Instrumento</div><div class="why-v">Cinco perguntas de triagem, 3Ms, Timmons (lógica), modelo de negócio, cinco modelos da web, tradicional × emergente</div>
+    <div class="why-k">Origem</div><div class="why-v">Aulas 4, 5 e 6</div>
+    <div class="why-k">Efeito esperado</div><div class="why-v">Campos fixos tornam as três respostas comparáveis linha a linha. A seção 0 registra data de corte e uso de busca; A–H carregam um instrumento cada; o quadro final conta os [SEM DADO VERIFICÁVEL] de cada ficha.</div>
+  </aside>
+</div>
+<div class="pblock">
+  <div class="pblock-code"><div class="pblock-label">7. Verificação final</div><pre># 7. VERIFICAÇÃO FINAL ANTES DE RESPONDER
+Revise a resposta e confirme que:
+- todo número tem uma das três etiquetas;
+- nenhum potencial foi justificado por métrica de atenção;
+- nenhum cliente está descrito de forma genérica;
+- nenhuma oportunidade aprovada recebeu NÃO no checklist;
+- os títulos e a ordem da seção 6 foram seguidos.
+Corrija o que não atender antes de entregar.</pre></div>
+  <aside class="pblock-why">
+    <div class="why-k">Instrumento</div><div class="why-v">Todos os anteriores</div>
+    <div class="why-k">Origem</div><div class="why-v">—</div>
+    <div class="why-k">Efeito esperado</div><div class="why-v">Uma autorrevisão reduz o descumprimento do formato, sem eliminá-lo. O que escapar vira achado da auditoria.</div>
+  </aside>
+</div>
+  <div class="next"><a href="#protocolo">Próxima: Protocolo de teste →</a></div>
+</section>
+<section class="pg" id="protocolo" hidden aria-labelledby="h-protocolo">
+  <h2 id="h-protocolo">Protocolo de teste</h2>
+  <p class="lede">O mesmo prompt foi colado, sem adaptação, em uma conversa nova de cada ferramenta. Foi registrada apenas a primeira resposta, sem refinamento em conversa.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Ferramenta</th><th>Modelo</th><th>Data e hora</th><th>Busca na web (registro)</th><th>O que a IA declarou na seção 0</th></tr></thead>
+    <tbody>
+      <tr><td><span class="rchip r1">R1</span> Gemini</td><td>3.6 Flash</td><td>10/10/2026, 18h53</td><td>Ativada</td><td>Não usou busca; data de corte "outubro de 2026"</td></tr>
+      <tr><td><span class="rchip r2">R2</span> DeepSeek</td><td>Não visível</td><td>10/10/2026, 18h53</td><td>Ativada</td><td>Usou busca; data de corte "outubro de 2026"</td></tr>
+      <tr><td><span class="rchip r3">R3</span> ChatGPT</td><td>Não visível</td><td>10/10/2026, 18h53</td><td>Ativada</td><td>Usou busca; data de corte "10/10/2026"</td></tr>
+      <tr><td><span class="rchip r4">4ª</span> Claude (síntese)</td><td>Claude Opus 5.5</td><td>10/10/2026, 19h30</td><td><span class="pendente">[ativada/desativada]</span></td><td>Não se aplica</td></tr>
+    </tbody></table></div>
+  <div class="panel">
+    <h4>Observações de protocolo</h4>
+    <ul>
+      <li>No Gemini, a busca estava ativada, mas a própria resposta declara que não a usou. As duas informações são registradas: estar ativada não significa ter sido usada.</li>
+      <li>As três declararam data de corte em outubro de 2026. Para modelos com corte de treinamento anterior, isso só faz sentido se a resposta usou busca. O Gemini declarou não ter usado e, ainda assim, deu essa data.</li>
+      <li>A quarta IA é diferente das três primeiras e rodou em conversa separada, sem acesso ao material de preparação do estudo.</li>
+    </ul>
+  </div>
+
+  <h3>Preparação da entrada da quarta IA</h3>
+  <ul class="prose" style="padding-left:22px">
+    <li>Cada resposta foi copiada a partir da seção "0. Condições", sem o cabeçalho de registro, e conferida por comparação byte a byte com o original.</li>
+    <li>As respostas foram identificadas apenas como R1, R2 e R3, para que a quarta IA não favorecesse nenhuma marca. Limitação: os links de R3 contêm "chatgpt.com" e não foram removidos, porque a resposta precisava ficar sem edição.</li>
+    <li>A entrada completa (prompt + três respostas) está nos Anexos.</li>
+  </ul>
+
+  <h3>O prompt de síntese</h3>
+  <div class="codebox"><pre># TAREFA
+Você receberá três respostas (R1, R2 e R3), produzidas por três ferramentas de IA diferentes a partir de um mesmo prompt, sobre oportunidades de negócio para micro e pequenas empresas no Distrito Federal (capital inicial até R$ 100 mil, horizonte 2026–2030). As três seguem a mesma estrutura: condições da resposta, triagem de candidatas, fichas das oportunidades aprovadas e quadro comparativo.
+
+Sua tarefa é SINTETIZAR as três em um único panorama. Você é um sintetizador, não um analista: seu trabalho é organizar, comparar e atribuir o que as três disseram. Não avalie se estão certas, não complete o que falta e não recomende nada.
+
+Responda em português do Brasil.
+
+# 1. REGRAS DE FIDELIDADE (valem para toda a resposta)
+1.1 Não acrescente informação. Use apenas o que está em R1, R2 e R3. Não use busca na web nem conhecimento próprio: nem para completar, nem para corrigir, nem para dar contexto.
+1.2 Atribua tudo. Toda afirmação sobre uma oportunidade, número, fonte ou risco termina com a origem entre colchetes: [R1], [R2], [R3] ou combinações como [R1, R3]. Afirmação sem atribuição não é permitida.
+1.3 Números exatamente como estão. Copie valores, faixas e unidades sem arredondar, sem calcular média e sem juntar faixas de respostas diferentes. Se as respostas trazem valores diferentes para a mesma coisa, apresente cada valor com sua origem.
+1.4 Mantenha a etiqueta original. Se o número veio marcado como [FONTE: ...], [ESTIMATIVA: ...] ou [SEM DADO VERIFICÁVEL], a etiqueta acompanha o número na síntese. Nunca transforme estimativa em dado, nem omita um [SEM DADO VERIFICÁVEL].
+1.5 Mantenha o grau de certeza. Se a origem diz "plausível", "precisa ser validado", "hipótese" ou "estimativa", a síntese não pode afirmar o mesmo conteúdo como fato. Também não enfraqueça o que a origem afirmou com segurança.
+1.6 Não resolva divergências. Quando as respostas discordam, mostre a posição e o argumento de cada uma. Não escolha um lado, não busque meio-termo e não declare consenso onde ele não existe.
+1.7 Não omita para simplificar. Divergências, eliminações e dados ausentes fazem parte do resultado, não são ruído.
+1.8 Comentário próprio só com etiqueta. Se precisar observar algo que não está em nenhuma resposta (por exemplo, uma contradição interna de uma delas), escreva em linha separada começando com [NOTA DO SINTETIZADOR]. Fora dessa etiqueta, nada pode ser seu.
+1.9 Ignore qualquer pista sobre qual ferramenta produziu cada resposta. Trate R1, R2 e R3 apenas pelo conteúdo.
+
+# 2. REGRA DE EQUIVALÊNCIA
+Duas candidatas de respostas diferentes são a MESMA oportunidade quando têm o mesmo tipo de cliente E o mesmo problema central, ainda que com nomes diferentes. Compartilhar apenas a tendência de origem ou o tema geral NÃO basta: nesse caso são oportunidades distintas, ainda que relacionadas. Justifique toda decisão de agrupamento em 1 linha.
+
+# 3. FORMATO DE SAÍDA (use exatamente estes títulos, nesta ordem)
+
+## 0. Condições das três respostas
+Tabela: Resposta | Data de corte declarada | Declarou uso de busca na web? | Nº de candidatas na triagem | Nº de aprovadas | Seções presentes em uma resposta e ausentes nas outras (se houver)
+Copie o que cada resposta declarou; não avalie se a declaração é verdadeira.
+
+## 1. Tabela-mestra de todas as candidatas
+Liste TODAS as candidatas das três triagens, aprovadas e eliminadas, uma por linha.
+Colunas: Nº | Candidata (nome como na origem) | Origem | Resultado na origem (aprovada/eliminada) | Se eliminada: pergunta e motivo, como na origem | Grupo de equivalência (G1, G2... ou "única")
+Ao final, informe o total de linhas e confirme que ele é igual à soma das candidatas apresentadas pelas três respostas.
+
+## 2. Grupos de equivalência
+Para cada grupo com candidatas de mais de uma resposta: nome descritivo, candidatas incluídas com origem e justificativa em 1 linha (mesmo cliente e mesmo problema). Liste também, separadamente, os pares parecidos que você NÃO agrupou, com o motivo.
+
+## 3. Convergências
+Oportunidades aprovadas por duas ou mais respostas. Para cada uma, tabela lado a lado:
+Campo | R1 | R2 | R3 (use "—" quando a resposta não aprovou ou não tratou)
+Campos: cliente nomeável; problema; quem paga; preço e recorrência; capital inicial estimado; margem bruta; ponto de equilíbrio; perfil (tradicional/emergente); principal risco; fontes citadas.
+Depois da tabela, até 3 linhas sobre em que as respostas concordam e em que diferem dentro dessa oportunidade, sempre com atribuição.
+
+## 4. Oportunidades aprovadas por uma única resposta
+Para cada uma: nome, origem, cliente, quem paga, capital inicial estimado, principal risco, e se ela (ou equivalente) aparece eliminada em outra resposta.
+
+## 5. Divergências
+Para cada item, a posição de cada resposta e o argumento que ela deu:
+5.1 Mesma oportunidade (ou equivalente) aprovada por uma resposta e eliminada por outra.
+5.2 Mesma oportunidade com números conflitantes (preço, capital, margem, prazo, tamanho de mercado).
+5.3 Mesma oportunidade com classificações conflitantes (tradicional/emergente; critérios alto/médio/baixo).
+Se não houver divergência de algum desses tipos, escreva "nenhuma encontrada".
+
+## 6. Inventário de fontes
+Tabela com TODAS as afirmações marcadas como [FONTE] nas três respostas, e com as fontes citadas fora de etiqueta (links, leis, instituições):
+Afirmação ou número | Fonte, exatamente como citada (incluindo link, se houver) | Origem
+Não verifique, não corrija e não complete as fontes.
+
+## 7. Panorama
+Texto de no máximo 250 palavras que resuma o conjunto: quais oportunidades têm mais apoio entre as respostas, onde estão as principais divergências e onde a evidência é mais fraca (muitos [SEM DADO VERIFICÁVEL] ou apenas [ESTIMATIVA]). Cada frase com atribuição. Sem recomendação de investimento e sem eleger a melhor oportunidade.
+
+## 8. O que ficou de fora desta síntese
+Liste o que você deixou de incluir por espaço ou por julgar secundário (detalhes de fichas, seções extras de alguma resposta, justificativas etc.). Se não deixou nada de fora, diga isso.
+
+# 4. VERIFICAÇÃO FINAL ANTES DE RESPONDER
+Confirme que:
+- toda afirmação tem atribuição [R1], [R2] ou [R3], ou está marcada como [NOTA DO SINTETIZADOR];
+- nenhum número foi alterado, arredondado, somado ou calculado;
+- nenhuma etiqueta [FONTE], [ESTIMATIVA] ou [SEM DADO VERIFICÁVEL] foi removida ou trocada;
+- a tabela-mestra contém todas as candidatas das três respostas;
+- nenhuma divergência foi resolvida ou omitida;
+- nada foi trazido de fora das três respostas.
+Corrija o que não atender antes de entregar.
+
+# 5. AS TRÊS RESPOSTAS
+&lt;&lt;&lt;R1 — INÍCIO&gt;&gt;&gt;
+[resposta R1 completa, sem edição]
+&lt;&lt;&lt;R1 — FIM&gt;&gt;&gt;
+
+&lt;&lt;&lt;R2 — INÍCIO&gt;&gt;&gt;
+[resposta R2 completa, sem edição]
+&lt;&lt;&lt;R2 — FIM&gt;&gt;&gt;
+
+&lt;&lt;&lt;R3 — INÍCIO&gt;&gt;&gt;
+[resposta R3 completa, sem edição]
+&lt;&lt;&lt;R3 — FIM&gt;&gt;&gt;</pre></div>
+
+  <h3>Por que cada exigência</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Bloco</th><th>Exigência</th><th>Efeito esperado na auditoria</th></tr></thead>
+    <tbody>
+      <tr><td>Tarefa</td><td>Sintetizador, não analista; sem recomendação</td><td>A IA não ganha espaço para opinar; a escolha da oportunidade fica para a análise própria.</td></tr>
+      <tr><td>1.1</td><td>Sem busca e sem conhecimento próprio</td><td>Qualquer conteúdo que não esteja nas três respostas é órfão por definição.</td></tr>
+      <tr><td>1.2</td><td>Atribuir [R1], [R2] ou [R3] em toda afirmação</td><td>Cada frase pode ser conferida direto na resposta de origem.</td></tr>
+      <tr><td>1.3–1.5</td><td>Números literais, etiqueta original, mesmo grau de certeza</td><td>Atacam as três formas de distorção: mudar o número, mudar o status (estimativa vira fonte) e mudar a certeza ("plausível" vira fato).</td></tr>
+      <tr><td>1.6–1.7</td><td>Não resolver divergências; não omitir para simplificar</td><td>Combatem a supressão, tendência natural de uma síntese que busca consenso.</td></tr>
+      <tr><td>1.8</td><td>Comentário próprio só como [NOTA DO SINTETIZADOR]</td><td>Dá um lugar legítimo para a IA comentar; o que aparecer fora disso sem atribuição é órfão.</td></tr>
+      <tr><td>1.9</td><td>Respostas anônimas</td><td>Evita viés de marca na síntese.</td></tr>
+      <tr><td>2</td><td>Regra de equivalência explícita</td><td>Os agrupamentos ficam justificados e podem ser contestados.</td></tr>
+      <tr><td>Seções 0–1</td><td>Condições e tabela-mestra com conferência do total</td><td>Se a tabela não tiver as 24 linhas, houve supressão.</td></tr>
+      <tr><td>Seções 3–5</td><td>Convergências lado a lado; três tipos de divergência</td><td>Estrutura direta para a tabela de rastreabilidade.</td></tr>
+      <tr><td>Seção 6</td><td>Inventário de fontes copiado literalmente</td><td>Lista de onde saem as afirmações verificadas em fonte primária.</td></tr>
+      <tr><td>Seção 7</td><td>Panorama curto, com atribuição frase a frase</td><td>É onde mais se espera distorção; o limite e a atribuição a tornam visível.</td></tr>
+      <tr><td>Seção 8</td><td>Declarar o que ficou de fora</td><td>O que sumiu e não foi declarado é supressão.</td></tr>
+    </tbody></table></div>
+  <div class="next"><a href="#auditoria">Próxima: Síntese auditada →</a></div>
+</section>
+<section class="pg" id="auditoria" hidden aria-labelledby="h-auditoria">
+  <h2 id="h-auditoria">A síntese auditada</h2>
+  <p class="lede">A síntese da quarta IA foi tratada como objeto de investigação. Cada afirmação foi localizada na resposta de origem, e as afirmações factuais centrais foram confrontadas com fontes oficiais.</p>
+  <div class="legend"><span>Legenda:</span>
+    <span class="pill ok">Sustentada / Confirmada</span><span class="pill warn">Distorcida / Fonte secundária</span>
+    <span class="pill bad">Suprimida / Não confirmada</span><span class="pill info">Nota própria da 4ª IA</span><span class="pill neutral">Não foi possível verificar</span></div>
+  <div class="prose"><h2 id="auditoria-de-rastreabilidade">5.1 Auditoria de rastreabilidade</h2>
+<p>Método: cada afirmação da síntese foi localizada na resposta de origem (seção e campo indicados) e comparada palavra a palavra, com atenção a número, etiqueta e grau de certeza.</p>
+<div class="tbl"><table>
+
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Afirmação da síntese (seção)</th>
+<th>Aparece em</th>
+<th>Classificação</th>
+<th>Comentário</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>R1 declarou <strong>não</strong> ter usado busca na web; R2 e R3 declararam que sim (seção 0)</td>
+<td>R1, R2, R3 (seção 0 de cada)</td>
+<td><span class="pill ok">Sustentada</span></td>
+<td>Reproduz o que cada IA declarou. Observação de protocolo: no registro do aluno, a busca do Gemini estava “ativada”. Ativada não é o mesmo que usada, e as duas informações devem constar.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>24 candidatas no total (8 + 8 + 8); aprovadas: 3, 3 e 2 (seções 0 e 1)</td>
+<td>R1, R2, R3 (triagem)</td>
+<td><span class="pill ok">Sustentada</span></td>
+<td>A tabela-mestra tem as 24 linhas, com nome e motivo de eliminação copiados literalmente. A exigência de conferir o total funcionou: nenhuma candidata sumiu.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Manutenção fotovoltaica residencial foi aprovada por R1 e R2 (G1)</td>
+<td>R1 (oport. 1), R2 (oport. 1)</td>
+<td><span class="pill ok">Sustentada</span></td>
+<td>Agrupamento correto: mesmo cliente e mesmo problema. As diferenças (RAs-alvo; sujidade × fim da garantia) foram preservadas na seção 3.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Assessoria de licitações foi aprovada por R2 e R3, nas mesmas RAs: Taguatinga, Ceilândia, Guará e Samambaia (G2)</td>
+<td>R2 (oport. 3, campo A), R3 (oport. 1, campo A)</td>
+<td><span class="pill ok">Sustentada</span></td>
+<td>As duas citam as mesmas quatro RAs. A diferença de escopo (GDF × compras públicas em geral via PNCP) foi mantida.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Margem bruta de 70–85% [ESTIMATIVA] nas duas respostas do G2 (seção 3)</td>
+<td>R2 (M3), R3 (M3)</td>
+<td><span class="pill ok">Sustentada</span></td>
+<td>Mesma faixa, mesma etiqueta.</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Capital inicial do G1: [ESTIMATIVA: R$ 38.000,00] [R1] × R$ 25–40 mil [R2] (seção 5.2)</td>
+<td>R1 (campo E), R2 (campo E)</td>
+<td><span class="pill ok">Sustentada</span></td>
+<td>Números literais, sem média. O valor de R2 aparece sem etiqueta porque estava sem etiqueta na origem, e a síntese avisa isso numa nota.</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Refeições para idosos: R1 aprova; R2 elimina a equivalente em C4 por “exigências sanitárias (…) e logística de entrega” (seção 5.1)</td>
+<td>R1 (triagem e oport. 2), R2 (triagem, nº 6)</td>
+<td><span class="pill ok">Sustentada, com ressalva</span></td>
+<td>O texto está fiel. Já o agrupamento G3 é discutível: R1 trata de dieta pastosa para idosos com disfagia; R2, de refeições congeladas genéricas. A própria síntese admite, em [NOTA], que agrupou pelos nomes da triagem. É essa decisão que cria a “principal divergência” do panorama.</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>“Perda de geração: 15% a 30% (sem etiqueta) [R1] × 10–25% ao ano [R2]” (seção 5.2)</td>
+<td>R1 (campo A), R2 (campo B)</td>
+<td><span class="pill warn">Distorcida (etiqueta)</span></td>
+<td>Em R2, o 10–25% é premissa de uma [ESTIMATIVA]. A seção 3 da síntese manteve a etiqueta, mas a 5.2 a retirou. O número parece mais firme do que era na origem, o que viola a regra 1.4 do prompt de síntese.</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>“Nas duas [G1 e G2], as respostas concordam no tipo de cliente e no problema” (seção 7, Panorama)</td>
+<td>R1, R2, R3</td>
+<td><span class="pill warn">Distorcida (grau de consenso)</span></td>
+<td>A própria seção 3 registra diferenças: em G1, RAs e faixa de renda diferentes e causas diferentes (sujidade × fim da garantia); em G2, GDF × compras públicas em geral. O panorama transforma concordância parcial em concordância plena.</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>“Três aprovadas aparecem em uma só resposta: higienização [R1], hortifrúti [R2] e entulho [R3]” (seção 7)</td>
+<td>R1, R2, R3</td>
+<td><span class="pill warn">Distorcida (contagem)</span></td>
+<td>A seção 4 da própria síntese lista <strong>quatro</strong> aprovadas por uma única resposta. A marmitaria [R1] ficou fora da contagem por ter sido tratada como divergência.</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>“Seções F: todas classificam como Empresarial, com relação própria com o cliente e risco de plataforma baixo ou nulo [R1, R2, R3]” (seção 8)</td>
+<td>R1 e R2 sim; R3 não</td>
+<td><span class="pill warn">Distorcida (atribuição a R3)</span></td>
+<td>“Empresarial” está correto para as 7 fichas. Mas R3 não classifica o risco como baixo: na ficha do entulho, alerta que captar clientes só por redes sociais ou marketplaces “aumenta a dependência de algoritmos, comissões e mudanças nas regras”. A síntese atribuiu a R3 uma tranquilidade que R3 não expressou.</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Conclusão de R3: “Sem essas evidências, as duas alternativas continuam sendo oportunidades candidatas qualificadas, e não negócios comprovadamente viáveis”, com as três evidências exigidas antes de investir</td>
+<td>R3 (“Conclusão executiva”)</td>
+<td><span class="pill bad">Suprimida (declarada)</span></td>
+<td>Ficou fora do corpo da síntese, mas foi declarada na seção 8. Era a ressalva mais forte do conjunto: a única resposta que diz explicitamente que nada está comprovado. O panorama manteve só uma versão suavizada (“trata preços e capital como hipóteses”).</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>A divergência sobre refeições aparece no panorama só como R1 × R2</td>
+<td>R3 (triagem, nº 6 e 7)</td>
+<td><span class="pill bad">Suprimida no panorama</span></td>
+<td>R3 também eliminou, em C4, a “Cozinha de refeições congeladas por assinatura” e o “Serviço de adaptação residencial para idosos”. Isso aparece nas seções 1, 2 e 4, mas some do panorama, que é o trecho que um leitor apressado leria.</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>Justificativa de G3: “mesmo problema (fornecimento de refeições prontas <strong>adaptadas</strong> a idosos) [R1, R2]” (seção 2)</td>
+<td>R1 sim; R2 não</td>
+<td><span class="pill warn">Acréscimo atribuído</span> (o mais próximo de uma órfã)</td>
+<td>R2 diz apenas “refeições congeladas para idosos”. O “adaptadas” vem de R1 e foi estendido a R2. É detalhe pequeno, mas é conteúdo atribuído a uma fonte que não o contém.</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>[NOTA DO SINTETIZADOR]: os quadros de R2 e R3 declaram menos [SEM DADO VERIFICÁVEL] do que há nas fichas (R2: 1 declarado × 2 no texto; R3: 3 × 5 e 4 × 5)</td>
+<td>Produção da 4ª IA</td>
+<td><span class="pill info">Nota própria, verificada correta</span></td>
+<td>É conteúdo novo, mas veio etiquetado, como o prompt exigia. Conferi as contagens e estão certas. A 4ª IA usou o canal de [NOTA] para apontar erros nas respostas originais, em vez de corrigi-los em silêncio.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Resumo:</strong> 7 sustentadas (uma com ressalva), 4 distorcidas, 2 suprimidas, 1 acréscimo atribuído e nenhuma órfã propriamente dita. Todo conteúdo novo da 4ª IA veio marcado como [NOTA DO SINTETIZADOR], e as notas conferidas estão corretas.</p>
+<p><strong>Onde os problemas se concentram:</strong> nas tabelas detalhadas (seções 1 a 6) a síntese é fiel. As distorções aparecem nas partes de compressão: o panorama (seção 7) e o resumo do que ficou de fora (seção 8). É exatamente onde a síntese precisa resumir, e onde o leitor apressado vai ler.</p>
+<hr />
+<h2 id="verificação-em-fonte-primária">5.2 Verificação em fonte primária</h2>
+<div class="tbl"><table>
+
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Afirmação (origem)</th>
+<th>Resultado</th>
+<th>O que a fonte diz</th>
+<th>Referência</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>“População com 60 anos ou mais no Distrito Federal: 342.306 pessoas” [FONTE: IBGE — Censo 2022] (R1, oport. 2, M2; reproduzida na síntese, seção 6)</td>
+<td><span class="pill bad">Não confirmada</span></td>
+<td>O IPEDF, com dados do Censo 2022, informa que os idosos (60+) são <strong>13,0%</strong> da população do DF. Somando as faixas etárias de 60+ do anexo, chega-se a <strong>365.090</strong> pessoas de um total de 2.817.381. O número de R1 equivale a 12,15% e não corresponde.</td>
+<td>IPEDF, <em>Informe Demográfico nº 4: Doze anos: o que mudou na estrutura etária do Distrito Federal?</em>, com dados do IBGE, Censo Demográfico 2022. https://ipe.df.gov.br/documents/d/ipedf/informe-n4_doze-anos-o-que-mudou-na-estrutura-etaria-do-distrito-federal-pdf-1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Tratamento diferenciado para MPEs, “com cotas e exclusividade em itens de até R$ 80 mil” [FONTE: Lei 14.133/2021, art. 4º; LC 123/2006, arts. 42–49] (R2, oport. 3, B)</td>
+<td><span class="pill ok">Confirmada, com ressalva</span></td>
+<td>A Lei 14.133/2021, art. 4º, manda aplicar às licitações os arts. 42 a 49 da LC 123/2006. A LC 123, art. 48, I, prevê licitação exclusiva para microempresas e empresas de pequeno porte nos itens de até R$ 80.000,00, e o inciso III prevê cota de até 25% em bens divisíveis. <strong>Ressalva:</strong> esses valores têm redação da LC 147/2014, ou seja, existem desde 2014. Usar a regra como “mudança recente que abriu a janela” é frágil.</td>
+<td>BRASIL. Lei nº 14.133, de 1º de abril de 2021, art. 4º. https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm · BRASIL. Lei Complementar nº 123, de 14 de dezembro de 2006, art. 48, I e III (redação dada pela LC nº 147/2014).</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Lei distrital 4.704/2011 trata da gestão de resíduos da construção civil, “incluindo obrigações de geradores e transportadores” [FONTE] (R3, oport. 2, H)</td>
+<td><span class="pill ok">Confirmada</span></td>
+<td>Ementa: “Dispõe sobre a gestão integrada de resíduos da construção civil e de resíduos volumosos”. O art. 23 responsabiliza os geradores; o art. 24 restringe o transporte a operadores “cadastrado[s] e autorizado[s] pelo Poder Executivo”.</td>
+<td>DISTRITO FEDERAL. Lei nº 4.704, de 20 de dezembro de 2011. DFLegis. https://dflegis.df.gov.br/ato.php?p=lei-4704-de-20-de-dezembro-de-2011</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Decreto 46.279/2024: “alterações regulamentares relativas a resíduos da construção civil e ao PGRCC” [FONTE] (R3, oport. 2, H)</td>
+<td><span class="pill ok">Confirmada, com achado relevante</span></td>
+<td>O decreto altera o Decreto 45.189/2023, que regulamenta a Lei 4.704/2011. Entre as mudanças, <strong>dispensa a apresentação do PGRCC em obras de pequeno volume</strong>. Isso enfraquece o argumento de R3 de que a regulação cria necessidade para pequenas reformas, que são justamente o cliente-alvo.</td>
+<td>DISTRITO FEDERAL. Decreto nº 46.279, de 20 de setembro de 2024. DFLegis. https://dflegis.df.gov.br/ato.php?p=decreto-46279-de-20-de-setembro-de-2024</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>“421.935 MPEs ativas no DF” [FONTE: Sebrae-DF — levantamento citado pelo Correio Braziliense — 2026] (R2, oport. 3)</td>
+<td><span class="pill warn">Confirmada na fonte secundária; fonte primária não localizada</span></td>
+<td>A reportagem diz: “Dos 479.954 empreendimentos ativos no DF, 421.935 são micro e pequenas empresas (MPEs)”, atribuindo o dado a levantamento do Sebrae-DF. A publicação original do Sebrae não foi encontrada. O próprio prompt-mestre não aceitava notícia sem fonte primária identificada como base única.</td>
+<td>Correio Braziliense, “Candidatos ao GDF apresentam propostas para atrair pequenos empresários”, 12/09/2026. https://www.correiobraziliense.com.br/cidades-df/2026/09/7498634-candidatos-ao-gdf-apresentam-propostas-para-atrair-pequenos-empresarios.html</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>“Número de unidades consumidoras com microgeração distribuída fotovoltaica no DF: 32.400 unidades” [FONTE: ANEEL — 2024] (R1, oport. 1, M2)</td>
+<td><span class="pill neutral">Não foi possível verificar</span></td>
+<td>A base da ANEEL existe e é atualizada (versão de 08/10/2026), mas a contagem por estado exige baixar o arquivo completo, o que não foi possível nesta auditoria. O único dado oficial encontrado é da distribuidora: 7.809 clientes com usina solar no DF em 06/10/2022 (7.162 residenciais). R1 declarou não ter feito busca e, mesmo assim, citou um número preciso. <strong>Para fechar o item:</strong> no painel de Geração Distribuída da ANEEL, filtre por UF = DF e por fonte solar.</td>
+<td>ANEEL. <em>Relação de empreendimentos de Mini e Micro Geração Distribuída</em>, Portal de Dados Abertos. https://dadosabertos.aneel.gov.br/dataset/relacao-de-empreendimentos-de-geracao-distribuida · Neoenergia Brasília, “Energia solar cresce mais de 100% em todo o Distrito Federal”. https://www.neoenergia.com/web/brasilia/w/geracao-energia-solar-dobra-no-distrito-federal</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>“Rendimento per capita por RA: Águas Claras R$ 5.901, Sudoeste R$ 7.842, Jardim Botânico R$ 6.004” [FONTE: IPEDF — PDAD-A 2024] (R2, oport. 1, B)</td>
+<td><span class="pill neutral">Não foi possível verificar</span></td>
+<td>A PDAD-A 2024 existe (coleta de 01/11/2023 a 04/10/2024; divulgada em 26/01/2026). Os valores por RA que foram divulgados publicamente (Lago Sul R$ 15.780,19; Plano Piloto R$ 10.407,82) não incluem as três RAs citadas, e o relatório do Sudoeste e Octogonal disponível não traz tabela de renda. O painel da pesquisa (pdad.ipe.df.gov.br) pode confirmar.</td>
+<td>IPEDF, PDAD-A 2024, Sudoeste e Octogonal: resultados gerais. https://pdad.ipe.df.gov.br/files/reports/sudoeste_e_octogonal_OsjrOsN.pdf · Jornal de Brasília, “Renda per capita no DF atinge R$ 3 mil, aponta estudo do IPEDF”. https://jornaldebrasilia.com.br/brasilia/renda-per-capita-no-df-atinge-r-3-mil-aponta-estudo-do-ipedf/</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Achado central para a conclusão:</strong> a síntese reproduziu com fidelidade o número de 342.306 idosos de R1, com etiqueta [FONTE: IBGE]. O número está errado. A cadeia funcionou como foi desenhada e, mesmo assim, propagou o erro, porque a 4ª IA estava proibida de verificar. Fidelidade à origem não é veracidade. Por isso a verificação em fonte primária é uma etapa separada da rastreabilidade.</p>
+<hr />
+<h2 id="aplicação-da-régua-às-três-oportunidades-mais-promissoras">5.3 Aplicação da régua às três oportunidades mais promissoras</h2>
+<p><strong>Critério de escolha:</strong> as duas oportunidades que convergiram entre IAs (G1 e G2) e a de base documental mais verificada (entulho, R3, cujas fontes legais foram confirmadas).</p>
+<h3 id="checklist-final-de-dornelas-aula-5">Checklist final de Dornelas (Aula 5)</h3>
+<div class="tbl"><table>
+
+<thead>
+<tr class="header">
+<th>Pergunta</th>
+<th>G1: Manutenção fotovoltaica (R1, R2)</th>
+<th>G2: Assessoria de licitações (R2, R3)</th>
+<th>Entulho de pequenas reformas (R3)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C1. Existe um problema?</td>
+<td>Sim. Perda de geração por sujeira ou falta de revisão.</td>
+<td>Sim. Pequenas empresas perdem licitações por documentação e proposta mal feitas.</td>
+<td>Sim. Quem reforma precisa retirar o entulho.</td>
+</tr>
+<tr class="even">
+<td>C2. Existe solução?</td>
+<td>Sim. Limpeza e inspeção periódica.</td>
+<td>Sim. Monitoramento de editais, organização documental e preparação de propostas.</td>
+<td>Sim, mas como intermediação de transportadores de terceiros.</td>
+</tr>
+<tr class="odd">
+<td>C3. Clientes identificáveis?</td>
+<td>Sim em tese, mas o tamanho da base no DF <strong>não foi verificado</strong> (ANEEL, item 6).</td>
+<td>Sim. MPEs das RAs citadas; existe universo de 421.935 MPEs (fonte secundária).</td>
+<td>Sim, mas é demanda pontual: uma reforma não se repete.</td>
+</tr>
+<tr class="even">
+<td>C4. Marketing e vendas exequíveis em custo e retorno?</td>
+<td><strong>Duvidoso para sistemas pequenos</strong> (ver abaixo).</td>
+<td><strong>Provável</strong>: B2B, capital baixo, canais existentes (associações, contadores). O custo de aquisição de cliente é desconhecido.</td>
+<td><strong>Duvidoso</strong>: margem de 25–40% exige de 15 a 80 atendimentos por mês para cobrir o fixo.</td>
+</tr>
+<tr class="odd">
+<td>C5. Janela aberta?</td>
+<td>Plausível (base instalada crescendo desde a Lei 14.300/2022), sem número verificado.</td>
+<td>Parcial: a exclusividade até R$ 80 mil é de 2014, não é nova (item 2). O próprio R3 diz que a janela é “operacional”.</td>
+<td>Fraca: o Decreto 46.279/2024 <strong>dispensa</strong> o PGRCC em obras pequenas (item 4), e o SLU oferece pontos gratuitos de entrega (os Papa-Entulhos, citados pelo próprio R3).</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="modelo-de-negócio-aula-6-quem-paga-por-quê-a-que-custo">Modelo de negócio (Aula 6): quem paga, por quê, a que custo</h3>
+<p><strong>G1: Manutenção fotovoltaica</strong> - <strong>Quem paga:</strong> o dono do imóvel. <strong>Por quê:</strong> recuperar a geração perdida. - <strong>A conta interna de R1 não fecha.</strong> Preço de R$ 350 menos custo variável de R$ 50 dá contribuição de R$ 300 (85,7%, e não os 70% declarados). Com fixo de R$ 3.500, o ponto de equilíbrio é de cerca de 12 atendimentos por mês, e não 20. R1 também coloca “veículo usado adaptado” dentro de R$ 18 mil, junto com o kit de limpeza e segurança, o que merece verificação. - <strong>O ponto que decide a oportunidade:</strong> no exemplo do próprio R2 (sistema de 4 kWp), a perda evitada é de R$ 40–100 por mês, ou seja, R$ 480–1.200 por ano. Duas visitas por ano a R$ 350–600 custam R$ 700–1.200. <strong>O serviço custa quase o mesmo que a perda que evita.</strong> Só compensa claramente em sistemas grandes, como o de 8 kWp de R1, com perda de até R$ 3.000 por ano. Isso estreita o cliente para residências de alta renda com sistemas grandes, um mercado cujo tamanho não foi verificado. - <strong>Volume necessário:</strong> com recorrência semestral, sustentar 20 atendimentos por mês exige cerca de 120 clientes ativos; para 6–8 atendimentos, de 36 a 48 clientes.</p>
+<p><strong>G2: Assessoria de licitações</strong> - <strong>Quem paga:</strong> o dono da MPE, com o caixa da empresa. <strong>Por quê:</strong> acesso a contratos públicos. - <strong>A diferença de capital entre as IAs se explica pelo pró-labore.</strong> R2 estima fixo de R$ 1.500–2.500 e capital de R$ 5–10 mil, sem remunerar o próprio trabalho. R3 inclui pró-labore e chega a fixo de R$ 4–7 mil e capital de R$ 20–35 mil. A estimativa de R3 é a defensável; a de R2 subestima o custo real. - <strong>A conta:</strong> mensalidade de R$ 900–1.500 e contribuição de 70–85% levam a cerca de 6 clientes ativos para cobrir o fixo (exemplo de R3). É uma carteira pequena para um serviço B2B. - <strong>Risco central:</strong> o cliente só percebe valor quando vence uma licitação, e o serviço “não deve prometer vitória” (R3). Se ele não vencer, cancela. Também vale verificar se o Sebrae oferece capacitação gratuita em compras públicas, o que seria um concorrente de preço zero. - <strong>Coerência com as aulas:</strong> serviço técnico B2B (o segmento que mais cresce na PMS, Aula 4), com o Estado como cliente final e o cliente físico em Brasília (Aula 4, vetor 3). Formação de preço, parte central do serviço, é conteúdo de custos.</p>
+<p><strong>Entulho de pequenas reformas</strong> - <strong>Quem paga:</strong> o proprietário ou o empreiteiro. <strong>Por quê:</strong> conveniência e comprovação de destinação correta. - <strong>A conta:</strong> preço de R$ 250–500 com margem de 25–40% exige de 15 a 80 atendimentos por mês para cobrir fixo de R$ 3–5 mil (R3 estima cerca de 39). - <strong>Fragilidades:</strong> a demanda é pontual (sem recorrência para o morador); o intermediário pode ser dispensado depois do primeiro contato, quando cliente e transportador se conhecem; há alternativa pública gratuita para pequenos volumes; e a regulação ficou mais branda justamente para obras pequenas.</p>
+<h3 id="o-que-a-análise-indica">O que a análise indica</h3>
+<ul>
+<li><strong>G2</strong> é a que melhor resiste ao checklist e à pergunta do modelo de negócio: capital baixo, cliente pagante B2B, conta que fecha com poucos clientes e coerência com os vetores da Aula 4. Com uma ressalva honesta: a disposição a pagar ainda não está demonstrada, e a “janela” é mais operacional do que nova.</li>
+<li><strong>G1</strong> sobrevive com um recorte mais estreito (sistemas grandes, alta renda), e o tamanho desse mercado não foi verificado.</li>
+<li><strong>Entulho</strong> não sobrevive a C4 e C5.</li>
+</ul>
+<p>A oportunidade escolhida e a defesa completa estão na seção <strong>Conclusão</strong>.</p>
+</div>
+  <div class="next"><a href="#conclusao">Próxima: Conclusão →</a></div>
+</section>
+<section class="pg" id="conclusao" hidden aria-labelledby="h-conclusao">
+  <h2 id="h-conclusao">Conclusão</h2>
+  <div class="prose"><h2 id="a-oportunidade-que-defendo">A oportunidade que defendo</h2>
+<p><strong>Assessoria operacional em compras públicas para pequenas empresas fornecedoras no DF</strong>, aprovada originalmente por R2 (DeepSeek) e R3 (ChatGPT), com recorte refinado a partir da auditoria.</p>
+<p>Entre as três oportunidades submetidas à régua, defendo esta. Ela não é a mais vistosa; na verdade é a menos. Mas é a única cujas premissas centrais resistiram à verificação em fonte primária e cuja conta fecha com poucos clientes e pouco capital.</p>
+<h3 id="por-que-ela-resiste-ao-checklist-aula-5">Por que ela resiste ao checklist (Aula 5)</h3>
+<ul>
+<li><strong>C1 — Existe um problema?</strong> Sim. A pequena empresa que tem capacidade de fornecer, mas não tem ninguém dedicado a licitações, perde oportunidades por documentação incompleta, proposta mal precificada ou desconhecimento dos editais.</li>
+<li><strong>C2 — Existe solução?</strong> Sim. Monitoramento de editais compatíveis, organização documental e montagem da proposta. O serviço não exige tecnologia própria, porque a informação é pública e está centralizada no Portal Nacional de Contratações Públicas.</li>
+<li><strong>C3 — O cliente é identificável?</strong> Sim. É a micro ou pequena empresa de manutenção predial, limpeza, comunicação visual ou fornecimento de materiais em Taguatinga, Ceilândia, Guará e Samambaia que já vende para outras empresas, mas não participa regularmente de licitações. O universo é amplo: 421.935 MPEs ativas no DF, segundo levantamento do Sebrae-DF citado pelo <em>Correio Braziliense</em> (12/09/2026). É uma fonte secundária; a publicação original não foi localizada.</li>
+<li><strong>C4 — Vendas exequíveis em custo e retorno?</strong> Sim, com uma incógnita. A venda é B2B, com prospecção direta por associações comerciais e escritórios de contabilidade, que já atendem esse público. O custo de aquisição de cliente é desconhecido e é a primeira coisa a medir.</li>
+<li><strong>C5 — A janela está aberta?</strong> Sim, mas por um motivo diferente do que as IAs apontaram. A reserva de mercado para MPEs não é nova: a licitação exclusiva até R$ 80 mil e a cota de até 25% estão na LC 123/2006, art. 48, com redação de 2014, e a Lei 14.133/2021 apenas as manteve (art. 4º). O que é recente é operacional. A Lei 8.666/1993 perdeu vigência em 30/12/2023, e desde então a Lei 14.133 é o único regime: todo fornecedor precisa operar sob regras e portal novos. É uma janela de transição, que tende a fechar à medida que as empresas aprendem. Por isso a entrada precisa ser em 2026–2027.</li>
+</ul>
+<h3 id="quem-paga-por-quê-a-que-custo-aula-6">Quem paga, por quê, a que custo (Aula 6)</h3>
+<ul>
+<li><strong>Quem paga:</strong> o dono da pequena empresa, com o caixa da própria empresa. Quem decide e quem paga é a mesma pessoa, o que encurta a venda. O governo é cliente do meu cliente, não meu: eu não dependo de vencer licitação para faturar.</li>
+<li><strong>Por que paga:</strong> para ter acesso a um comprador que movimenta mais de R$ 1 trilhão por ano em compras públicas (Aula 4, slide 17) e que, nos itens de até R$ 80 mil, só pode comprar de ME e EPP.</li>
+<li><strong>A que custo:</strong> uso as estimativas de R3 como hipótese, não como dado: custo fixo de R$ 4–7 mil/mês já com pró-labore, capital inicial de R$ 20–35 mil e mensalidade de R$ 900–1.500. Com mensalidade média de R$ 1.200 e margem de contribuição de 80%, o ponto de equilíbrio fica entre <strong>5 e 8 clientes ativos</strong>. Descartei a estimativa de R2 (capital de R$ 5–10 mil) porque ela não inclui o pró-labore e subestima o custo real.</li>
+</ul>
+<h3 id="o-ajuste-que-a-auditoria-me-levou-a-fazer">O ajuste que a auditoria me levou a fazer</h3>
+<p>O próprio R3 aponta o ponto fraco: o cliente só percebe valor quando vence uma licitação, e o serviço não pode prometer vitória. Proponho, por isso, <strong>cobrança em duas partes</strong>: - uma mensalidade menor pelo monitoramento e pela organização documental, que entregam valor mesmo sem vitória, porque a empresa fica sempre em condições de participar; - uma <strong>taxa de êxito</strong> sobre os contratos ganhos.</p>
+<p>Isso alinha o meu incentivo ao do cliente e reduz o cancelamento. Também restrinjo o foco inicial a um ou dois segmentos (manutenção predial e limpeza), em que os editais se repetem. Nesses segmentos, o conhecimento acumulado vira barreira de entrada, a única realista para um serviço que, de outro modo, é fácil de copiar.</p>
+<h3 id="por-que-não-as-outras">Por que não as outras</h3>
+<ul>
+<li><strong>Manutenção fotovoltaica:</strong> no exemplo do próprio R2 (sistema de 4 kWp), duas visitas por ano custam R$ 700–1.200, quase o mesmo que a perda que evitam (R$ 480–1.200 por ano). Só fecha para sistemas grandes, e o tamanho desse mercado não pôde ser verificado: as 32.400 unidades que R1 atribuiu à ANEEL não foram confirmadas.</li>
+<li><strong>Retirada de entulho:</strong> a margem de intermediação de 25–40% exige dezenas de atendimentos por mês; a demanda é pontual; o SLU oferece pontos gratuitos para pequenos volumes; e o Decreto distrital 46.279/2024 dispensou o plano de gerenciamento de resíduos justamente nas obras pequenas, o que retira parte da necessidade que R3 apontava.</li>
+</ul>
+<h3 id="coerência-com-a-disciplina">Coerência com a disciplina</h3>
+<p>É um serviço técnico B2B, o tipo de serviço que mais cresce (Aula 4, slides 7 e 18), e tem o Estado como cliente final, com o comprador a poucos quilômetros (Aula 4, slide 17). Pela Aula 5, também é uma área em que tenho base: formação de preço e análise de custos são o núcleo de uma proposta de licitação.</p>
+<h3 id="o-que-eu-validaria-antes-de-investir">O que eu validaria antes de investir</h3>
+<ol type="1">
+<li><strong>Disposição a pagar:</strong> entrevistar de 15 a 20 pequenas empresas dos segmentos-alvo e apresentar proposta com preço. Meta: pelo menos 3 contratos-piloto pagos.</li>
+<li><strong>Custo de aquisição:</strong> medir quantos contatos vindos de contadores e associações viram cliente.</li>
+<li><strong>Concorrência gratuita:</strong> verificar a oferta de capacitação gratuita em compras públicas (Sebrae e outros) e posicionar o serviço como execução, não como treinamento.</li>
+<li><strong>Retenção:</strong> acompanhar por seis meses quantos clientes permanecem mesmo sem vencer.</li>
+</ol>
+<p>Se a disposição a pagar não aparecer, a oportunidade volta a ser apenas uma tendência, e eu a abandonaria.</p>
+<p><strong>Fontes:</strong> BRASIL. Lei Complementar nº 123/2006, art. 48, I e III (redação da LC nº 147/2014). BRASIL. Lei nº 14.133/2021, arts. 4º e 193, II; prazo de transição estendido até 30/12/2023 (MP nº 1.167/2023 e LC nº 198/2023). <em>Correio Braziliense</em>, 12/09/2026. Aula 4 (ADM0150), slides 7, 17 e 18. Respostas R2 e R3 (anexos), usadas apenas como hipóteses.</p>
+</div>
+
+  <h2>O que aprendi sobre encadear IAs</h2>
+  <div class="prose">
+    <p><strong>A régua no prompt funciona, mas não garante obediência.</strong> As três IAs seguiram a estrutura de campos e aplicaram o filtro, o que tornou as respostas comparáveis. Mesmo assim, duas declararam nos quadros menos [SEM DADO VERIFICÁVEL] do que havia nas próprias fichas, o DeepSeek deixou preços e capital sem etiqueta e o ChatGPT acrescentou seções que não foram pedidas.</p>
+    <p><strong>Um prompt de síntese restritivo reduz a invenção.</strong> Não encontrei afirmações órfãs. Quando quis comentar algo, a quarta IA usou a etiqueta [NOTA DO SINTETIZADOR], e as notas que conferi estavam corretas: ela apontou erros de contagem nas respostas originais em vez de corrigi-los em silêncio.</p>
+    <p><strong>A distorção mora na compressão.</strong> As tabelas da síntese reproduzem as respostas com fidelidade. Os problemas aparecem no panorama e no resumo do que ficou de fora: concordância parcial vira concordância plena, uma contagem sai errada e a ressalva mais forte do ChatGPT perde força. São os trechos que um leitor apressado leria primeiro.</p>
+    <p><strong>Fidelidade não é verdade.</strong> A síntese transportou intacto o número de 342.306 idosos no DF, com etiqueta de fonte do IBGE. O IPEDF, com dados do mesmo Censo, indica 13,0% da população, cerca de 365 mil pessoas. A cadeia funcionou como desenhada e propagou o erro, porque a quarta IA estava proibida de verificar. Rastreabilidade e verificação são etapas diferentes, e nenhuma substitui a outra.</p>
+    <p><strong>Etiqueta não é evidência.</strong> O Gemini declarou zero dados ausentes e não ter usado busca, mas citou números precisos com etiqueta de fonte oficial. Um não se confirmou e outro não pôde ser verificado. A resposta que parecia mais completa era a menos verificável.</p>
+    <p><strong>O que eu faria diferente.</strong> Verificaria as fontes das três respostas antes da síntese, para que a quarta IA recebesse números já checados. Pediria que o panorama fosse escrito apenas a partir das tabelas da própria síntese. E usaria a contagem de etiquetas, declarada e real, como indicador de confiabilidade de cada resposta.</p>
+  </div>
+  <div class="next"><a href="#anexos">Próxima: Anexos →</a></div>
+</section>
+<section class="pg" id="anexos" hidden aria-labelledby="h-anexos">
+  <h2 id="h-anexos">Anexos</h2>
+  <p class="lede">As quatro respostas completas, sem edição. Os arquivos originais estão disponíveis para download.</p>
+  <div class="downloads">
+    <a href="anexos/anexos-completos.pdf">Anexos completos (PDF)<span>As quatro respostas em um arquivo</span></a>
+    <a href="anexos/sintese-claude.pdf">Síntese da 4ª IA (PDF original)<span>Claude, 17 páginas</span></a>
+    <a href="anexos/entrada-4a-ia.txt">Entrada da 4ª IA (TXT)<span>Prompt de síntese + R1, R2, R3</span></a>
+  </div>
+  
+<details class="anexo" id="anexo-r1">
+  <summary><span class="rchip r1">R1</span> Gemini 3.6 Flash <span class="sum-note">resposta completa, sem edição</span></summary>
+  <div class="anexo-body">
+    <ul class="anexo-meta"><li>Ferramenta: Gemini</li><li>Modelo (se visível): 3.6 Flash</li><li>Data e hora: 10/10/2026, 18h53</li><li>Busca na web: ativada</li></ul>
+    <p class="anexo-src">Texto original em arquivo: <a href="anexos/R1-gemini.txt">R1-gemini.txt</a>. Abaixo, o mesmo texto com o Markdown da resposta renderizado.</p>
+    <div class="anexo-resp"><h2 id="0-condições-desta-resposta">0. Condições desta resposta</h2>
+<ul>
+<li><strong>Data de corte do seu conhecimento:</strong> Outubro de 2026.</li>
+<li><strong>Você usou busca na web nesta resposta?:</strong> Não.</li>
+<li><strong>Principais limitações de dado para o DF:</strong> Indisponibilidade de microdados de faturamento setorial recente para microempresas por Região Administrativa (RA); a maioria dos dados econômicos do IPEDF/Codeplan agrega serviços gerais sem detalhar nichos específicos B2B/B2C.</li>
+</ul>
+<hr />
+<h2 id="1-triagem-das-8-candidatas">1. Triagem das 8 candidatas</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Candidata</th>
+<th>Tendência de origem</th>
+<th>C1</th>
+<th>C2</th>
+<th>C3</th>
+<th>C4</th>
+<th>C5</th>
+<th>Resultado</th>
+<th>Se eliminada: pergunta em que falhou e motivo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1. Manutenção preventiva de energia solar residencial</strong></td>
+<td>Transição energética e descarbonização</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td><strong>Aprovada</strong></td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td><strong>2. Plataforma de mediação jurídica por IA para servidores</strong></td>
+<td>Inteligência Artificial Generativa no setor público</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td><strong>Eliminada</strong></td>
+<td>C3: Não identifica grupo específico de servidores dispostos a pagar diretamente sem contratação via sindicato/órgão.</td>
+</tr>
+<tr class="odd">
+<td><strong>3. Marmitaria funcional para idosos de alta renda</strong></td>
+<td>Envelhecimento populacional e alimentação saudável</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td><strong>Aprovada</strong></td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td><strong>4. Consultoria de adequação ESG para fornecedores do GDF</strong></td>
+<td>Governança corporativa e sustentabilidade (ESG)</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td><strong>Eliminada</strong></td>
+<td>C3/C4: Pequenas empresas fornecedoras do GDF ainda não têm exigência legal mandatória de ESG que gere disposição de pagar no curto prazo.</td>
+</tr>
+<tr class="odd">
+<td><strong>5. Higienização e manutenção de carrinhos/bebê conforto</strong></td>
+<td>Economia circular e reutilização de artigos infantis</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td><strong>Aprovada</strong></td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td><strong>6. Aplicativo de entregas hiperlocais para comércio de RA</strong></td>
+<td>Digitalização do comércio local e entregas rápidas</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td><strong>Eliminada</strong></td>
+<td>C4: Custo de aquisição de clientes (CAC) e de motoristas inviabiliza operação com capital inicial de até R$ 100 mil frente a grandes plataformas.</td>
+</tr>
+<tr class="odd">
+<td><strong>7. Software SaaS de gestão para feirantes da Ceilândia</strong></td>
+<td>Inclusão digital de microempreendedores informais</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td><strong>Eliminada</strong></td>
+<td>C3: Baixa disposição a pagar por software mensal em um segmento de alta informalidade e margens apertadas.</td>
+</tr>
+<tr class="even">
+<td><strong>8. Hub de coworking com estúdio para criadores digitais</strong></td>
+<td>Economia dos criadores (<em>Creator Economy</em>)</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td><strong>Eliminada</strong></td>
+<td>C4: Custo fixo imobiliário em RAs centrais do DF excede o teto de capital de R$ 100 mil para payback viável em curto prazo.</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="2-fichas-das-oportunidades-aprovadas">2. Fichas das oportunidades aprovadas</h2>
+<h3 id="oportunidade-1-serviço-especializado-de-limpeza-e-manutenção-preventiva-de-painéis-solares-fotovoltaicos">Oportunidade 1: Serviço Especializado de Limpeza e Manutenção Preventiva de Painéis Solares Fotovoltaicos</h3>
+<h4 id="a-tendência--oportunidade">A. Tendência × oportunidade</h4>
+<ul>
+<li><strong>Tendência de origem:</strong> Transição energética, descentralização da geração elétrica e expansão da energia solar fotovoltaica.</li>
+<li><strong>Problema específico:</strong> Perda de eficiência energética de 15% a 30% em microgeração distribuída por acúmulo de poeira e sujidade, sem oferta de manutenção periódica acessível.</li>
+<li><strong>Cliente nomeável:</strong> Proprietários de residências unifamiliares com usinas fotovoltaicas instaladas (3 a 10 kWp) no Lago Sul, Lago Norte e Park Way (DF).</li>
+</ul>
+<h4 id="b-cinco-perguntas-de-triagem">B. Cinco perguntas de triagem</h4>
+<ul>
+<li><strong>Quem exatamente tem esse problema?:</strong> Proprietários de casas no Lago Sul, Lago Norte e Park Way com sistema solar instalado há mais de 6 meses.</li>
+<li><strong>Quanto dói?:</strong> Perda financeira de [ESTIMATIVA: redução de até R$ 250/mês na economia da fatura de energia elétrica para um sistema de 8 kWp com 20% de perda de eficiência devido à sujidade acumulada].</li>
+<li><strong>Quem paga, e com que dinheiro?:</strong> O proprietário da imóvel/usina solar, com recursos próprios (orçamento doméstico de manutenção da residência).</li>
+<li><strong>Por que um novo pequeno negócio, e não o incumbente?:</strong> Integradores fotovoltaicos focam na venda/instalação de alto ticket e terceirizam ou negligenciam o pós-venda preventivo de baixo ticket diário.</li>
+<li><strong>Por que agora, e não em 2020 ou 2035?:</strong> Atingimento de maturidade da base instalada no DF pós-Marco Legal da Geração Distribuída (Lei 14.300/2022), exigindo limpeza contínua para preservar o <em>payback</em>.</li>
+</ul>
+<h4 id="c-3ms">C. 3Ms</h4>
+<ul>
+<li><strong>M1 Demanda de mercado:</strong> Residências de alta renda com energia solar no DF; alcance direto via tráfego pago geolocalizado e parcerias com integradores; durabilidade contínua (serviço recorrente a cada 6 meses); CAC recuperado na primeira sessão de limpeza.</li>
+<li><strong>M2 Tamanho e estrutura do mercado:</strong> O DF possui [FONTE: ANEEL — Banco de Informações de Geração — 2024 — número de unidades consumidoras com microgeração distribuída fotovoltaica no DF: 32.400 unidades]; mercado em crescimento acelerado, fragmentado, sem liderança consolidada em pós-venda; barreiras de entrada baixas (exige equipamento de segurança NR-35 e lavadoras de baixa pressão específicas).</li>
+<li><strong>M3 Análise de margem:</strong> Margem bruta estimada em [ESTIMATIVA: 70%, considerando insumos biodegradáveis, combustível e depreciação de equipamentos]; custos fixos de [ESTIMATIVA: R$ 3.500/mês com ajudante, marketing local e seguros]; ponto de equilíbrio em [ESTIMATIVA: 20 atendimentos/mês, atingível no 3º mês]; venda direta ao cliente final.</li>
+</ul>
+<h4 id="d-classificação-qualitativa-critérios-de-timmons">D. Classificação qualitativa (critérios de Timmons)</h4>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Critério</th>
+<th>Potencial</th>
+<th>Justificativa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Necessidades dos clientes</strong></td>
+<td>Alto</td>
+<td>Impacta diretamente o retorno financeiro de um investimento alto feito pelo cliente.</td>
+</tr>
+<tr class="even">
+<td><strong>Estrutura do mercado</strong></td>
+<td>Alto</td>
+<td>Mercado fragmentado no DF e sem grandes operadores focados exclusivamente em pós-venda residencial.</td>
+</tr>
+<tr class="odd">
+<td><strong>Barreiras de entrada</strong></td>
+<td>Médio</td>
+<td>Requer certificações de trabalho em altura (NR-35) e equipamentos dedicados, reduzindo curiosos.</td>
+</tr>
+<tr class="even">
+<td><strong>Capital inicial</strong></td>
+<td>Alto</td>
+<td>Demanda baixa imobilização inicial, enquadrando-se com folga no teto de R$ 100 mil.</td>
+</tr>
+<tr class="odd">
+<td><strong>Prazo até ponto de equilíbrio</strong></td>
+<td>Alto</td>
+<td>Curto prazo estimado de 3 meses devido aos baixos custos fixos operacionais.</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="e-modelo-de-negócio">E. Modelo de negócio</h4>
+<ul>
+<li><strong>Quem paga:</strong> Proprietário da residência com sistema fotovoltaico.</li>
+<li><strong>Por que paga:</strong> Para recuperar a capacidade nominal de geração de energia solar e evitar perda de dinheiro na conta de luz.</li>
+<li><strong>Quanto e com que frequência:</strong> [ESTIMATIVA: R$ 350,00 por visita técnica de limpeza/inspeção, com recorrência semestral (2 vezes ao ano)].</li>
+<li><strong>A que custo:</strong> Custo variável por atendimento de [ESTIMATIVA: R$ 50,00 em transporte e insumos]; CAC de [ESTIMATIVA: R$ 60,00]; Capital inicial estimado em [ESTIMATIVA: R$ 38.000,00, composto por R$ 18.000 em kit de limpeza/segurança/veículo usado adaptado, R$ 10.000 em pré-operacional/regularização e R$ 10.000 em capital de giro].</li>
+</ul>
+<h4 id="f-enquadramento-digital">F. Enquadramento digital</h4>
+<ul>
+<li><strong>Modelo:</strong> Empresarial (negócio do mundo real que usa tráfego pago geolocalizado no Instagram/Google e WhatsApp Business para captar e agendar clientes).</li>
+<li><strong>Relação com o cliente:</strong> Próprio negócio detém o cadastro e canal direto via WhatsApp; risco baixo por não depender de mediação de plataformas terceiras.</li>
+</ul>
+<h4 id="g-riscos">G. Riscos</h4>
+<ul>
+<li><strong>Perfil:</strong> Tradicional com diferencial de prestação de serviço especializado (prestação de serviços técnicos residenciais).</li>
+<li><strong>Condição externa:</strong> Depende da estabilidade da radiação solar média no DF e manutenção das regras de compensação de energia distribuída.</li>
+<li><strong>O que faria esta oportunidade falhar até 2030:</strong> Aumento acentuado de acidentes operacionais por falta de treinamento técnico ou entrada agressiva das próprias integradoras ofertando manutenção gratuita como garantia estendida.</li>
+</ul>
+<h4 id="h-fontes-desta-ficha">H. Fontes desta ficha</h4>
+<ul>
+<li>[FONTE: ANEEL — Banco de Informações de Geração — 2024 — Quantidade de microgeradores fotovoltaicos distribuídos cadastrados no Distrito Federal]</li>
+</ul>
+<hr />
+<h3 id="oportunidade-2-marmitaria-de-dietas-pastosas-e-pastas-nutritivas-para-idosos-em-domicílio">Oportunidade 2: Marmitaria de Dietas Pastosas e Pastas Nutritivas para Idosos em Domicílio</h3>
+<h4 id="a-tendência--oportunidade-1">A. Tendência × oportunidade</h4>
+<ul>
+<li><strong>Tendência de origem:</strong> Envelhecimento populacional e aumento da demanda por nutrição preventiva e adaptada.</li>
+<li><strong>Problema específico:</strong> Dificuldade de famílias e cuidadores em preparar refeições diárias balanceadas e com textura adequada (pastosa/semilíquida) para idosos com disfagia ou problemas de mastigação.</li>
+<li><strong>Cliente nomeável:</strong> Filhos adultos (45-60 anos), responsáveis pelo cuidado de pais idosos residentes nas RAs de Asa Sul, Asa Norte e Sudoeste/Octogonal.</li>
+</ul>
+<h4 id="b-cinco-perguntas-de-triagem-1">B. Cinco perguntas de triagem</h4>
+<ul>
+<li><strong>Quem exatamente tem esse problema?:</strong> Filhos de idosos com disfagia leve a moderada residentes no Plano Piloto e Sudoeste.</li>
+<li><strong>Quanto dói?:</strong> [ESTIMATIVA: Cerca de 15 a 20 horas semanais gastas pela família na compra, cozimento e trituração adequada de alimentos, além do risco de broncoaspiração por textura incorreta].</li>
+<li><strong>Quem paga, e com que dinheiro?:</strong> Filhos adultos do idoso (ou o próprio idoso de classe A/B), utilizando o orçamento familiar de assistência à saúde e alimentação.</li>
+<li><strong>Por que um novo pequeno negócio, e não o incumbente?:</strong> Restaurantes e marmitarias tradicionais não possuem nutricionista responsável nem processos sem contaminação cruzada para texturas modificadas hospitalares/domiciliares.</li>
+<li><strong>Por que agora, e não em 2020 ou 2035?:</strong> Crescimento acelerado da população idosa com mais de 75 anos no DF e consolidação do atendimento <em>Home Care</em> pós-pandemia.</li>
+</ul>
+<h4 id="c-3ms-1">C. 3Ms</h4>
+<ul>
+<li><strong>M1 Demanda de mercado:</strong> População idosa das RAs de maior renda do DF; alcance por parcerias com geriatras, fonoaudiólogos e tráfego pago focado nos filhos (45-60 anos); alta durabilidade (consumo diário); CAC recuperado no primeiro mês de assinatura.</li>
+<li><strong>M2 Tamanho e estrutura do mercado:</strong> O DF possui [FONTE: IBGE — Censo Demográfico — 2022 — população com 60 anos ou mais no Distrito Federal: 342.306 pessoas]; mercado emergente, pulverizado em marmitarias fitness genéricas, sem marca especializada em disfagia/terceira idade; barreiras de entrada médicas/sanitárias (alvará da Vigilância Sanitária do DF - DIVISA e responsável técnico em nutrição).</li>
+<li><strong>M3 Análise de margem:</strong> Margem bruta estimada em [ESTIMATIVA: 55%, considerando ingredientes de alta qualidade e embalagens termoseladas livre de BPA]; custos fixos de [ESTIMATIVA: R$ 8.500/mês com aluguel de cozinha industrial adaptada em Taguatinga/SIA, nutricionista e energia]; ponto de equilíbrio com [ESTIMATIVA: 35 assinantes mensais de kits semanais, atingível no 5º mês]; venda direta por e-commerce/WhatsApp.</li>
+</ul>
+<h4 id="d-classificação-qualitativa-critérios-de-timmons-1">D. Classificação qualitativa (critérios de Timmons)</h4>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Critério</th>
+<th>Potencial</th>
+<th>Justificativa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Necessidades dos clientes</strong></td>
+<td>Alto</td>
+<td>Resolve uma necessidade crítica de saúde diária do idoso e reduz a sobrecarga do cuidador familiar.</td>
+</tr>
+<tr class="even">
+<td><strong>Estrutura do mercado</strong></td>
+<td>Alto</td>
+<td>Nicho pouco explorado na gastronomia funcional local, sem players dominantes no DF.</td>
+</tr>
+<tr class="odd">
+<td><strong>Barreiras de entrada</strong></td>
+<td>Médio</td>
+<td>Exige conformidade com a Vigilância Sanitária e supervisão nutricional especializada.</td>
+</tr>
+<tr class="even">
+<td><strong>Capital inicial</strong></td>
+<td>Médio</td>
+<td>Adequado ao teto, exigindo adequação leve de cozinha comercial e compra de seladora/ultracongelador.</td>
+</tr>
+<tr class="odd">
+<td><strong>Prazo até ponto de equilíbrio</strong></td>
+<td>Médio</td>
+<td>Estimado entre 4 e 5 meses para consolidação da carteira fixa de assinantes.</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="e-modelo-de-negócio-1">E. Modelo de negócio</h4>
+<ul>
+<li><strong>Quem paga:</strong> Filhos adultos (45-60 anos) responsáveis pela gestão de cuidados do idoso.</li>
+<li><strong>Por que paga:</strong> Para garantir nutrição segura, com textura correta prescrita por fonoaudiólogos/nutricionistas, poupando tempo de preparo.</li>
+<li><strong>Quanto e com que frequência:</strong> [ESTIMATIVA: Plano semanal de R$ 280,00 (14 refeições: almoço e jantar), cobrado via assinatura mensal recorrente de R$ 1.120,00].</li>
+<li><strong>A que custo:</strong> Custo dos insumos e embalagem de [ESTIMATIVA: R$ 126,00 por kit semanal]; CAC de [ESTIMATIVA: R$ 150,00]; Capital inicial estimado em [ESTIMATIVA: R$ 75.000,00, composto por R$ 35.000 em equipamentos (ultracongelador, seladora, multiprocessadores), R$ 15.000 em adequação sanitária/licenças, R$ 10.000 em marketing/site e R$ 15.000 em capital de giro].</li>
+</ul>
+<h4 id="f-enquadramento-digital-1">F. Enquadramento digital</h4>
+<ul>
+<li><strong>Modelo:</strong> Empresarial (produção de alimentos física com vendas e gestão de assinaturas realizadas por loja virtual própria e WhatsApp).</li>
+<li><strong>Relação com o cliente:</strong> Próprio negócio detém a relação; risco baixo quanto a plataformas terceiras por focar em vendas diretas recorrentes.</li>
+</ul>
+<h4 id="g-riscos-1">G. Riscos</h4>
+<ul>
+<li><strong>Perfil:</strong> Emergente (demanda por refeições com textura modificada fora do ambiente hospitalar está em fase de estruturação).</li>
+<li><strong>Condição externa:</strong> Regulamentação e fiscalização da Vigilância Sanitária do DF (DIVISA).</li>
+<li><strong>O que faria esta oportunidade falhar até 2030:</strong> Falhas na cadeia de refrigeração/logística levando a contaminação microbiológica e perda da reputação com a comunidade médica prescritora.</li>
+</ul>
+<h4 id="h-fontes-desta-ficha-1">H. Fontes desta ficha</h4>
+<ul>
+<li>[FONTE: IBGE — Censo Demográfico — 2022 — População residente de 60 anos ou mais no Distrito Federal]</li>
+</ul>
+<hr />
+<h3 id="oportunidade-3-serviço-movel-de-higienização-e-sanitização-técnica-de-bebês-conforto-carrinhos-e-artigos-infantism">Oportunidade 3: Serviço Movel de Higienização e Sanitização Técnica de Bebês Conforto, Carrinhos e Artigos Infantism</h3>
+<h4 id="a-tendência--oportunidade-2">A. Tendência × oportunidade</h4>
+<ul>
+<li><strong>Tendência de origem:</strong> Economia circular, reaproveitamento de bens duráveis e parentalidade consciente.</li>
+<li><strong>Problema específico:</strong> Dificuldade de famílias higienizarem profundamente tecidos e estruturas de equipamentos infantis seminovos, acumulando ácaros, fungos e sujeira orgânica impregnada.</li>
+<li><strong>Cliente nomeável:</strong> Mães e pais de primeira ou segunda viagem residentes em Águas Claras, Guará e Noroeste (DF), além de compradores de itens seminovos em brechós infantis.</li>
+</ul>
+<h4 id="b-cinco-perguntas-de-triagem-2">B. Cinco perguntas de triagem</h4>
+<ul>
+<li><strong>Quem exatamente tem esse problema?:</strong> Famílias com bebês e crianças até 4 anos residentes em Águas Claras, Guará e Noroeste que possuem ou herdaram/compraram carrinhos e cadeirinhas seminovas.</li>
+<li><strong>Quanto dói?:</strong> [ESTIMATIVA: Risco de alergias respiratórias e dermatológicas no bebê, somado ao custo de R$ 1.500 a R$ 4.000 para comprar um equipamento novo similar em vez de higienizar o usado].</li>
+<li><strong>Quem paga, e com que dinheiro?:</strong> Os pais da criança, utilizando o orçamento familiar de manutenção e enxoval do bebê.</li>
+<li><strong>Por que um novo pequeno negócio, e não o incumbente?:</strong> Lavanderias tradicionais e limpadores de sofás não fazem a desmontagem/remontagem das estruturas mecânicas e cintos de segurança dos carrinhos infantis por falta de treinamento específico.</li>
+<li><strong>Por que agora, e não em 2020 ou 2035?:</strong> Forte adensamento populacional de famílias jovens nas RAs de Águas Claras e Guará associado ao crescimento da compra/venda de artigos infantis seminovos em plataformas C2C.</li>
+</ul>
+<h4 id="c-3ms-2">C. 3Ms</h4>
+<ul>
+<li><strong>M1 Demanda de mercado:</strong> Casais jovens com filhos pequenos em RAs verticais; alcance via grupos de mães no WhatsApp, parcerias com brechós infantis locais e tráfego no Instagram; durabilidade contínua (demanda a cada 4 a 6 meses ou na troca de dono do item); CAC recuperado no primeiro atendimento.</li>
+<li><strong>M2 Tamanho e estrutura do mercado:</strong> O DF apresenta [FONTE: IPEDF Codeplan — Pesquisa Distrital por Amostra de Domicílios (PDAD) — 2021 — População estimada e estrutura domiciliar nas RAs de Águas Claras e Guará]; mercado fragmentado, operado informalmente sem padrão técnico sanitário; baixas barreiras de entrada de capital, mas com exigência de qualificação em desmontagem mecânica de marcas importadas.</li>
+<li><strong>M3 Análise de margem:</strong> Margem bruta estimada em [ESTIMATIVA: 75%, considerando insumos hipoalergênicos e extratora profissional]; custos fixos de [ESTIMATIVA: R$ 3.000/mês com ajudante, tráfego pago e custos operacionais]; ponto de equilíbrio com [ESTIMATIVA: 22 atendimentos/mês, alcançado no 2º mês]; atendimento em domicílio (modalidade <em>delivery</em> do serviço) ou coleta/entrega.</li>
+</ul>
+<h4 id="d-classificação-qualitativa-critérios-de-timmons-2">D. Classificação qualitativa (critérios de Timmons)</h4>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Critério</th>
+<th>Potencial</th>
+<th>Justificativa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Necessidades dos clientes</strong></td>
+<td>Alto</td>
+<td>Forte apelo de saúde e higiene para recém-nascidos combinado com economia de recursos financeiros.</td>
+</tr>
+<tr class="even">
+<td><strong>Estrutura do mercado</strong></td>
+<td>Alto</td>
+<td>Segmento especializado pouco explorado pelas lavanderias convencionais do DF.</td>
+</tr>
+<tr class="odd">
+<td><strong>Barreiras de entrada</strong></td>
+<td>Médio</td>
+<td>Requer domínio técnico de montagem/desmontagem e produtos químicos atóxicos certificados pela ANVISA.</td>
+</tr>
+<tr class="even">
+<td><strong>Capital inicial</strong></td>
+<td>Alto</td>
+<td>Exige investimento reduzido, muito abaixo do limite de R$ 100 mil.</td>
+</tr>
+<tr class="odd">
+<td><strong>Prazo até ponto de equilíbrio</strong></td>
+<td>Alto</td>
+<td>Rápida atração de clientes com ponto de equilíbrio atingível em até 60 dias.</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="e-modelo-de-negócio-2">E. Modelo de negócio</h4>
+<ul>
+<li><strong>Quem paga:</strong> Pais de recém-nascidos e crianças pequenas.</li>
+<li><strong>Por que paga:</strong> Para garantir a eliminação de agentes patogênicos e ácaros no equipamento do bebê com a conveniência da execução em domicílio ou busca/entrega.</li>
+<li><strong>Quanto e com que frequência:</strong> [ESTIMATIVA: R$ 180,00 por carrinho simples / R$ 260,00 por combo carrinho + bebê conforto; frequência média de 2 vezes ao ano por família].</li>
+<li><strong>A que custo:</strong> Custo variável de insumos e transporte de [ESTIMATIVA: R$ 35,00 por atendimento]; CAC de [ESTIMATIVA: R$ 40,00]; Capital inicial estimado em [ESTIMATIVA: R$ 32.000,00, composto por R$ 12.000 em equipamentos (extratora profissional, vaporizadora, secadores), R$ 10.000 em veículo próprio/usado ou logística inicial, R$ 4.000 em marketing/identidade e R$ 6.000 em capital de giro].</li>
+</ul>
+<h4 id="f-enquadramento-digital-2">F. Enquadramento digital</h4>
+<ul>
+<li><strong>Modelo:</strong> Empresarial (prestação de serviço presencial agendada e divulgada inteiramente via mídias sociais e WhatsApp).</li>
+<li><strong>Relação com o cliente:</strong> Próprio negócio possui a base de contatos direta; risco nulo de retenção por plataformas terceirizadas.</li>
+</ul>
+<h4 id="g-riscos-2">G. Riscos</h4>
+<ul>
+<li><strong>Perfil:</strong> Tradicional (serviço de limpeza e conservação direcionado a um público-alvo específico).</li>
+<li><strong>Condição externa:</strong> Depende do poder de compra e manutenção da taxa de natalidade nas RAs de média/alta renda do DF.</li>
+<li><strong>O que faria esta oportunidade falhar até 2030:</strong> Danos ou extravio de peças de artigos de alto valor (como carrinhos importados) por erro de montagem, gerando indenizações e perda de reputação em redes de mães.</li>
+</ul>
+<h4 id="h-fontes-desta-ficha-2">H. Fontes desta ficha</h4>
+<ul>
+<li>[FONTE: IPEDF Codeplan — Pesquisa Distrital por Amostra de Domicílios (PDAD) — 2021 — Domicílios e perfil demográfico por Região Administrativa do DF]</li>
+</ul>
+<hr />
+<h2 id="3-quadro-comparativo">3. Quadro comparativo</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Oportunidade</th>
+<th>Cliente</th>
+<th>Quem paga</th>
+<th>Capital inicial estimado</th>
+<th>Perfil</th>
+<th>Principal risco</th>
+<th>Qtd. de [SEM DADO VERIFICÁVEL]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1. Manutenção de painéis solares</strong></td>
+<td>Proprietários de casas com energia solar no Lago Sul, Lago Norte e Park Way</td>
+<td>O próprio proprietário do imóvel</td>
+<td>[ESTIMATIVA: R$ 38.000,00]</td>
+<td>Tradicional</td>
+<td>Acidentes de trabalho em altura ou avaria de placas fotovoltaicas durante a limpeza</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td><strong>2. Marmitaria para idosos (disfagia)</strong></td>
+<td>Idosos com problemas de mastigação/engasgo nas RAs Asa Sul, Asa Norte e Sudoeste</td>
+<td>Filhos adultos (45-60 anos) responsáveis pelos pais</td>
+<td>[ESTIMATIVA: R$ 75.000,00]</td>
+<td>Emergente</td>
+<td>Falhas na cadeia de frio/segurança alimentar que prejudiquem a saúde do idoso</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td><strong>3. Higienização de artigos infantis</strong></td>
+<td>Pais de crianças de 0 a 4 anos em Águas Claras, Guará e Noroeste</td>
+<td>Pais da criança</td>
+<td>[ESTIMATIVA: R$ 32.000,00]</td>
+<td>Tradicional</td>
+<td>Danos ou erros na remontagem de estruturas mecânicas de carrinhos importados</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+  </div>
+</details>
+<details class="anexo" id="anexo-r2">
+  <summary><span class="rchip r2">R2</span> DeepSeek <span class="sum-note">resposta completa, sem edição</span></summary>
+  <div class="anexo-body">
+    <ul class="anexo-meta"><li>Ferramenta: Deepseek</li><li>Modelo (se visível): Não visível</li><li>Data e hora: 10/10/2026, 18h53</li><li>Busca na web: ativada</li></ul>
+    <p class="anexo-src">Texto original em arquivo: <a href="anexos/R2-deepseek.txt">R2-deepseek.txt</a>. Abaixo, o mesmo texto com o Markdown da resposta renderizado.</p>
+    <div class="anexo-resp"><h2 id="0-condições-desta-resposta">0. Condições desta resposta</h2>
+<ul>
+<li><strong>Data de corte do seu conhecimento:</strong> outubro de 2026 (baseado nas publicações disponíveis).</li>
+<li><strong>Você usou busca na web nesta resposta?</strong> Sim.</li>
+<li><strong>Principais limitações de dado para o DF:</strong> Os dados de renda e perfil socioeconômico mais recentes disponíveis são da PDAD-A 2024 (coleta 2023–2024), que ainda usa parte da metodologia e referências da PDAD 2021 . Não há dados públicos específicos de mercado (tamanho em valor, margem) para segmentos muito específicos do DF; esses números foram tratados como estimativas.</li>
+</ul>
+<hr />
+<h2 id="1-triagem-das-8-candidatas">1. Triagem das 8 candidatas</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Candidata</th>
+<th>Tendência de origem</th>
+<th>C1</th>
+<th>C2</th>
+<th>C3</th>
+<th>C4</th>
+<th>C5</th>
+<th>Resultado</th>
+<th>Se eliminada: motivo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1. Manutenção de sistemas fotovoltaicos em residências de classe média</strong></td>
+<td>Transição energética</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td><strong>Aprovada</strong></td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><strong>2. Fornecimento de hortifrúti orgânico para restaurantes e padarias do Plano Piloto</strong></td>
+<td>Alimentação saudável / agricultura orgânica</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td><strong>Aprovada</strong></td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><strong>3. Consultoria de licitações públicas para MPEs do DF</strong></td>
+<td>Profissionalização de MPEs / acesso a compras públicas</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td><strong>Aprovada</strong></td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><strong>4. Aplicativo de gestão de escalas para clínicas odontológicas</strong></td>
+<td>Transformação digital</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td><strong>Eliminada</strong></td>
+<td>C3: cliente não é nomeável com precisão sem pesquisa primária; C4: CAC em software B2B para micro-clínicas não se recupera em &lt; 1 ano sem equipe de vendas dedicada</td>
+</tr>
+<tr class="odd">
+<td><strong>5. Lavanderia self-service em Ceilândia/Samambaia</strong></td>
+<td>Urbanização / praticidade</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td><strong>Eliminada</strong></td>
+<td>C4: capital inicial para 5–8 máquinas + ponto comercial nas RAs-alvo ultrapassa R$ 100 mil [SEM DADO VERIFICÁVEL específico]; risco de recuperação lenta</td>
+</tr>
+<tr class="even">
+<td><strong>6. Produção de refeições congeladas para idosos em Águas Claras</strong></td>
+<td>Envelhecimento populacional</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td><strong>Eliminada</strong></td>
+<td>C4: exigências sanitárias (cozinha industrial, licenças) e logística de entrega tornam CAC e margem incompatíveis com teto de R$ 100 mil</td>
+</tr>
+<tr class="odd">
+<td><strong>7. Locação de equipamentos de videomonitoramento para condomínios de Taguatinga</strong></td>
+<td>Segurança privada</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td><strong>Eliminada</strong></td>
+<td>C4: capital para estoque de câmeras e instalação excede o recorte; concorrência de empresas consolidadas com escala</td>
+</tr>
+<tr class="even">
+<td><strong>8. Fabricação de bebidas alcoólicas prontas com insumos do Cerrado</strong></td>
+<td>Industrialização local / consumo de conveniência</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td><strong>Eliminada</strong></td>
+<td>C3: cliente final B2C difuso e B2B (bares) fragmentado; C4: custo de registro no MAPA e produção em escala mínima viável é incerto [SEM DADO VERIFICÁVEL]</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="2-fichas-das-oportunidades-aprovadas-3">2. Fichas das oportunidades aprovadas (3)</h2>
+<h3 id="oportunidade-1-manutenção-preventiva-de-sistemas-fotovoltaicos-em-residências-de-classe-média-das-ras-de-renda-média-alta">Oportunidade 1: Manutenção preventiva de sistemas fotovoltaicos em residências de classe média das RAs de renda média-alta</h3>
+<p><strong>A. Tendência × oportunidade</strong></p>
+<ul>
+<li><strong>Tendência de origem:</strong> Transição energética e queda do custo de instalação solar.</li>
+<li><strong>Problema específico:</strong> Residências que instalaram painéis solares entre 2018–2022 estão fora do período de garantia de instalação e acumulam queda de geração sem manutenção.</li>
+<li><strong>Cliente nomeável (quem, onde no DF, em que situação):</strong> Proprietário de casa própria em Águas Claras, Sudoeste/Octogonal ou Jardim Botânico que instalou sistema fotovoltaico há 3–5 anos e não recebe visita técnica desde a instalação.</li>
+</ul>
+<p><strong>B. Cinco perguntas de triagem</strong></p>
+<ul>
+<li><strong>Quem exatamente tem esse problema?</strong> Morador de imóvel próprio (não alugado) em RA com renda per capita acima de R$ 5 mil, que fez o investimento inicial no sistema [FONTE: IPEDF — PDAD-A 2024 — rendimento per capita por RA — Águas Claras R$ 5.901, Sudoeste R$ 7.842, Jardim Botânico R$ 6.004] .</li>
+<li><strong>Quanto dói?</strong> Perda de geração de 10–25% ao ano sem limpeza e revisão de conexões; em um sistema de 4 kWp, isso representa R$ 40–100/mês na conta de luz [ESTIMATIVA: tarifa média DF ~R$ 0,95/kWh; geração média 480 kWh/mês; perda de 10–25%]. O custo é percebido na conta e na decepção com o investimento.</li>
+<li><strong>Quem paga, e com que dinheiro?</strong> O próprio morador (proprietário do imóvel). Renda familiar média nas RAs-alvo permite absorver serviço de R$ 350–600 por visita [FONTE: IPEDF — PDAD-A 2024 — rendimento domiciliar médio em Águas Claras, Plano Piloto, Sudoeste].</li>
+<li><strong>Por que um novo pequeno negócio, e não o incumbente?</strong> Empresas instaladoras priorizam vendas de sistemas novos, não manutenção. O serviço é de baixa escala, exige agenda local e confiança do morador — vantagem de quem está próximo e disponível.</li>
+<li><strong>Por que agora, e não em 2020 ou 2035?</strong> Volume de sistemas instalados no DF cresceu substancialmente entre 2018–2023; os contratos de instalação desses sistemas estão vencendo agora [SEM DADO VERIFICÁVEL específico do DF para volume instalado por ano]. A janela é 2026–2027.</li>
+</ul>
+<p><strong>C. 3Ms</strong></p>
+<ul>
+<li><strong>M1 Demanda de mercado:</strong> Cliente alcançável via grupos de WhatsApp de condomínios, parcerias com instaladoras (indicação para manutenção) e marketing digital geolocalizado. Durabilidade alta: sistema tem vida útil de 20+ anos, manutenção é recorrente. CAC estimado baixo (R$ 50–150) por indicação; retorno em 1–3 visitas [ESTIMATIVA].</li>
+<li><strong>M2 Tamanho e estrutura do mercado:</strong> [SEM DADO VERIFICÁVEL] para número de sistemas fotovoltaicos residenciais instalados no DF e taxa de crescimento anual. Mercado fragmentado entre instaladoras que não fazem manutenção; poucos prestadores especializados em manutenção preventiva. Barreira de entrada baixa (equipamento e formação), mas barreira de confiança média (acesso ao telhado e ao quadro elétrico).</li>
+<li><strong>M3 Análise de margem:</strong> Preço por visita: R$ 350–600. Custo direto: deslocamento + produtos de limpeza + seguro: R$ 80–120. Margem bruta estimada: 65–75% [ESTIMATIVA]. Custos fixos mensais: R$ 2.500–4.000 (MEI/ME, sem loja física). Ponto de equilíbrio: 6–8 visitas/mês [ESTIMATIVA].</li>
+</ul>
+<p><strong>D. Classificação qualitativa (Timmons)</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Critério</th>
+<th>Potencial</th>
+<th>Justificativa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Necessidades dos clientes</td>
+<td>Alto</td>
+<td>Problema concreto com custo mensurável na conta de luz.</td>
+</tr>
+<tr class="even">
+<td>Estrutura do mercado</td>
+<td>Médio</td>
+<td>Fragmentado, mas falta dado de volume instalado no DF.</td>
+</tr>
+<tr class="odd">
+<td>Barreiras de entrada</td>
+<td>Baixo/Médio</td>
+<td>Baixa técnica, mas acesso ao cliente exige confiança.</td>
+</tr>
+<tr class="even">
+<td>Capital inicial</td>
+<td>Alto</td>
+<td>Ferramentas + veículo + seguro: R$ 25–40 mil.</td>
+</tr>
+<tr class="odd">
+<td>Prazo até ponto de equilíbrio</td>
+<td>Alto</td>
+<td>3–6 meses com 8 visitas/mês.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>E. Modelo de negócio</strong></p>
+<ul>
+<li><strong>Quem paga:</strong> Proprietário do imóvel.</li>
+<li><strong>Por que paga:</strong> Recupera geração perdida e protege o investimento feito.</li>
+<li><strong>Quanto e com que frequência:</strong> R$ 350–600 por visita semestral ou anual.</li>
+<li><strong>A que custo:</strong> Capital inicial estimado R$ 25–40 mil (ferramentas de limpeza e teste, veículo usado, seguro, reserva de giro). CAC R$ 50–150 por indicação.</li>
+</ul>
+<p><strong>F. Enquadramento digital</strong></p>
+<ul>
+<li><strong>Modelo:</strong> Empresarial (negócio do mundo real que usa a web para vender mais ou custar menos).</li>
+<li><strong>Relação com o cliente:</strong> Própria. Risco de plataforma terceirizada: baixo.</li>
+</ul>
+<p><strong>G. Riscos</strong></p>
+<ul>
+<li><strong>Perfil:</strong> Tradicional (demanda comprovada; exige diferenciação por confiança e agenda).</li>
+<li><strong>Condição externa:</strong> Depende de renda disponível das famílias e da estabilidade da tarifa de energia. Não depende de incentivo fiscal.</li>
+<li><strong>O que faria falhar:</strong> Instaladoras passarem a oferecer manutenção como serviço incluso; queda na renda das famílias-alvo.</li>
+</ul>
+<p><strong>H. Fontes desta ficha</strong></p>
+<ul>
+<li>[FONTE: IPEDF — PDAD-A 2024 — rendimento per capita por RA — Águas Claras R$ 5.901, Sudoeste R$ 7.842, Jardim Botânico R$ 6.004] .</li>
+</ul>
+<hr />
+<h3 id="oportunidade-2-fornecimento-regular-de-hortifrúti-orgânico-para-restaurantes-e-padarias-independentes-do-plano-piloto">Oportunidade 2: Fornecimento regular de hortifrúti orgânico para restaurantes e padarias independentes do Plano Piloto</h3>
+<p><strong>A. Tendência × oportunidade</strong></p>
+<ul>
+<li><strong>Tendência de origem:</strong> Valorização de alimentação saudável e produção orgânica.</li>
+<li><strong>Problema específico:</strong> Restaurantes e padarias de médio padrão no Plano Piloto querem oferecer opções orgânicas no menu, mas não encontram fornecedor local com entrega regular, volume pequeno e preço previsível.</li>
+<li><strong>Cliente nomeável (quem, onde no DF, em que situação):</strong> Proprietário ou chef de restaurante independente (não rede) no Plano Piloto ou Asa Norte que já tentou comprar orgânicos em feiras ou supermercados e desistiu pela irregularidade.</li>
+</ul>
+<p><strong>B. Cinco perguntas de triagem</strong></p>
+<ul>
+<li><strong>Quem exatamente tem esse problema?</strong> Restaurantes e padarias de bairro com menu que valoriza ingredientes frescos, localizados no Plano Piloto (Asa Norte, Asa Sul, Sudoeste), que compram hortifrúti semanalmente e têm dificuldade com fornecedores orgânicos.</li>
+<li><strong>Quanto dói?</strong> Perda de valor percebido no menu (não pode cobrar mais por prato orgânico) e tempo do chef/dono na compra dispersa. O custo em tempo pode chegar a 4–6 horas/semana [ESTIMATIVA: deslocamento + feira + negociação].</li>
+<li><strong>Quem paga, e com que dinheiro?</strong> O restaurante (CNPJ), com verba de compras de insumos. Quem decide é o chef ou proprietário; quem usa é a cozinha.</li>
+<li><strong>Por que um novo pequeno negócio, e não o incumbente?</strong> Grandes distribuidores não atendem pedidos pequenos e frequentes. O pequeno produtor individual não tem logística de entrega. Um intermediário local com veículo e rota fixa resolve os dois lados.</li>
+<li><strong>Por que agora, e não em 2020 ou 2035?</strong> Pressão por diferenciação em menus pós-pandemia e oferta de produtores orgânicos no DF que precisam de escoamento [FONTE: Sebrae-DF — entrevista com gestor de Agronegócio — 2026 — principais desafios do pequeno produtor: acesso a mercados].</li>
+</ul>
+<p><strong>C. 3Ms</strong></p>
+<ul>
+<li><strong>M1 Demanda de mercado:</strong> Cliente alcançável por visita presencial e WhatsApp. Durabilidade alta: restaurante compra semanalmente. CAC estimado: R$ 100–200 por cliente (visitas e amostras); retorno em 1–2 pedidos [ESTIMATIVA].</li>
+<li><strong>M2 Tamanho e estrutura do mercado:</strong> [SEM DADO VERIFICÁVEL] para número de restaurantes independentes no Plano Piloto que comprariam orgânicos regularmente. Mercado emergente no lado da oferta (produtores orgânicos no DF) e fragmentado no lado da demanda. Concorrentes: feiras orgânicas, CEASA, distribuidores convencionais. Barreira de entrada: relacionamento com produtores e rota de entrega.</li>
+<li><strong>M3 Análise de margem:</strong> Markup sobre preço do produtor: 40–60%. Ticket médio semanal por restaurante: R$ 400–700. Margem bruta estimada: 25–35% após custos de perda e logística [ESTIMATIVA]. Custos fixos: veículo, combustível, embalagens: R$ 3.000–4.500/mês. Ponto de equilíbrio: 12–15 clientes ativos [ESTIMATIVA].</li>
+</ul>
+<p><strong>D. Classificação qualitativa (Timmons)</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Critério</th>
+<th>Potencial</th>
+<th>Justificativa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Necessidades dos clientes</td>
+<td>Alto</td>
+<td>Restaurante precisa de regularidade e conveniência.</td>
+</tr>
+<tr class="even">
+<td>Estrutura do mercado</td>
+<td>Médio</td>
+<td>Fragmentado, mas demanda ainda em formação.</td>
+</tr>
+<tr class="odd">
+<td>Barreiras de entrada</td>
+<td>Baixo</td>
+<td>Fácil de imitar, mas relação com produtores é barreira real.</td>
+</tr>
+<tr class="even">
+<td>Capital inicial</td>
+<td>Alto</td>
+<td>Veículo + embalagens + giro: R$ 35–50 mil.</td>
+</tr>
+<tr class="odd">
+<td>Prazo até ponto de equilíbrio</td>
+<td>Médio</td>
+<td>6–10 meses.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>E. Modelo de negócio</strong></p>
+<ul>
+<li><strong>Quem paga:</strong> Restaurante/padaria (CNPJ).</li>
+<li><strong>Por que paga:</strong> Regularidade, qualidade orgânica, conveniência e diferenciação no menu.</li>
+<li><strong>Quanto e com que frequência:</strong> R$ 400–700 por pedido semanal.</li>
+<li><strong>A que custo:</strong> Capital inicial R$ 35–50 mil (veículo usado, embalagens, capital de giro, acordos com produtores). CAC R$ 100–200.</li>
+</ul>
+<p><strong>F. Enquadramento digital</strong></p>
+<ul>
+<li><strong>Modelo:</strong> Empresarial (negócio real que usa WhatsApp e planilha para pedidos).</li>
+<li><strong>Relação com o cliente:</strong> Própria. Risco de plataforma: baixo.</li>
+</ul>
+<p><strong>G. Riscos</strong></p>
+<ul>
+<li><strong>Perfil:</strong> Emergente (demanda em formação; exige fôlego de caixa até consolidar carteira).</li>
+<li><strong>Condição externa:</strong> Depende de renda dos restaurantes e do custo do combustível.</li>
+<li><strong>O que faria falhar:</strong> Produtores orgânicos não conseguirem volume regular; restaurantes voltarem a comprar em feiras por preço.</li>
+</ul>
+<p><strong>H. Fontes desta ficha</strong></p>
+<ul>
+<li>[FONTE: Sebrae-DF — entrevista com gestor de Agronegócio — 2026 — principais desafios do pequeno produtor: acesso a mercados].</li>
+</ul>
+<hr />
+<h3 id="oportunidade-3-consultoria-e-preparação-de-propostas-para-mpes-do-df-que-querem-vender-ao-gdf">Oportunidade 3: Consultoria e preparação de propostas para MPEs do DF que querem vender ao GDF</h3>
+<p><strong>A. Tendência × oportunidade</strong></p>
+<ul>
+<li><strong>Tendência de origem:</strong> Profissionalização de MPEs e ampliação do acesso a compras públicas.</li>
+<li><strong>Problema específico:</strong> MPEs do DF têm produto ou serviço para vender ao GDF, mas não sabem cadastrar-se, interpretar editais, formar preço ou montar proposta vencedora.</li>
+<li><strong>Cliente nomeável (quem, onde no DF, em que situação):</strong> MEI ou ME (serviços ou comércio) em Taguatinga, Ceilândia, Guará ou Samambaia que já tentou vender para o GDF e desistiu por complexidade ou perdeu por erro de proposta.</li>
+</ul>
+<p><strong>B. Cinco perguntas de triagem</strong></p>
+<ul>
+<li><strong>Quem exatamente tem esse problema?</strong> Microempresário do DF com faturamento entre R$ 80 mil e R$ 500 mil/ano, que já ouviu falar de licitações do GDF mas não tem equipe administrativa para cuidar disso.</li>
+<li><strong>Quanto dói?</strong> Perda de oportunidade de receita estável e recorrente. Um contrato de R$ 50 mil com o GDF pode representar 20–50% do faturamento anual de uma ME [ESTIMATIVA]. O custo em tempo perdido tentando entender editais é de 10–20 horas por licitação fracassada [ESTIMATIVA].</li>
+<li><strong>Quem paga, e com que dinheiro?</strong> O dono da MPE, do caixa da empresa. Quem decide é o dono; quem usa é o dono ou um auxiliar administrativo.</li>
+<li><strong>Por que um novo pequeno negócio, e não o incumbente?</strong> Consultorias grandes cobram R$ 5–15 mil/mês, fora do alcance de MEIs e MEs. Há espaço para consultoria pontual (por edital ou por mês) a preço acessível, com foco em editais de baixo valor.</li>
+<li><strong>Por que agora, e não em 2020 ou 2035?</strong> A Lei 14.133/2021 consolidou tratamento diferenciado para MPEs, com cotas e exclusividade em itens de até R$ 80 mil [FONTE: Lei 14.133/2021, art. 4º e LC 123/2006, arts. 42–49]. Isso ampliou o volume de editais acessíveis. Além disso, o DF tem 421.935 MPEs ativas [FONTE: Sebrae-DF — levantamento citado pelo Correio Braziliense — 2026 — número de MPEs ativas no DF].</li>
+</ul>
+<p><strong>C. 3Ms</strong></p>
+<ul>
+<li><strong>M1 Demanda de mercado:</strong> Cliente alcançável via Sebrae, associações comerciais, grupos de WhatsApp de empreendedores e prospecção ativa em editais. Durabilidade: enquanto houver compras públicas, haverá demanda por consultoria. CAC estimado: R$ 200–500 por cliente (tempo de prospecção + material); retorno em 1 contrato [ESTIMATIVA].</li>
+<li><strong>M2 Tamanho e estrutura do mercado:</strong> 421.935 MPEs ativas no DF [FONTE: Sebrae-DF — levantamento citado pelo Correio Braziliense — 2026 — total de MPEs ativas]. [SEM DADO VERIFICÁVEL] para número exato que participa de licitações. Mercado emergente e fragmentado. Concorrentes: consultorias generalistas, contadores que fazem “um pouco de tudo”. Barreira de entrada: conhecimento técnico de licitações e reputação.</li>
+<li><strong>M3 Análise de margem:</strong> Preço: R$ 500–1.500 por edital acompanhado, ou R$ 800–2.000/mês em modelo recorrente. Custo direto: tempo do consultor + software básico. Margem bruta estimada: 70–85% [ESTIMATIVA]. Custos fixos: R$ 1.500–2.500/mês (internet, celular, deslocamento). Ponto de equilíbrio: 3–5 clientes/mês [ESTIMATIVA].</li>
+</ul>
+<p><strong>D. Classificação qualitativa (Timmons)</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Critério</th>
+<th>Potencial</th>
+<th>Justificativa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Necessidades dos clientes</td>
+<td>Alto</td>
+<td>MPE quer vender ao GDF mas não sabe como.</td>
+</tr>
+<tr class="even">
+<td>Estrutura do mercado</td>
+<td>Médio</td>
+<td>Fragmentado; sem player dominante no segmento micro.</td>
+</tr>
+<tr class="odd">
+<td>Barreiras de entrada</td>
+<td>Médio</td>
+<td>Conhecimento técnico + reputação.</td>
+</tr>
+<tr class="even">
+<td>Capital inicial</td>
+<td>Alto</td>
+<td>Computador + software + marketing: R$ 5–10 mil.</td>
+</tr>
+<tr class="odd">
+<td>Prazo até ponto de equilíbrio</td>
+<td>Alto</td>
+<td>2–4 meses.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>E. Modelo de negócio</strong></p>
+<ul>
+<li><strong>Quem paga:</strong> Dono da MPE (pessoa física via CNPJ).</li>
+<li><strong>Por que paga:</strong> Acesso a contratos públicos estáveis e recorrentes.</li>
+<li><strong>Quanto e com que frequência:</strong> R$ 500–1.500 por edital ou R$ 800–2.000/mês recorrente.</li>
+<li><strong>A que custo:</strong> Capital inicial R$ 5–10 mil (computador, software de pesquisa de editais, site simples, marketing). CAC R$ 200–500.</li>
+</ul>
+<p><strong>F. Enquadramento digital</strong></p>
+<ul>
+<li><strong>Modelo:</strong> Empresarial (negócio real que usa web para vender mais).</li>
+<li><strong>Relação com o cliente:</strong> Própria, com apoio de WhatsApp e e-mail. Risco de plataforma: baixo.</li>
+</ul>
+<p><strong>G. Riscos</strong></p>
+<ul>
+<li><strong>Perfil:</strong> Tradicional (demanda comprovada; exige diferenciação por preço acessível e foco em micro).</li>
+<li><strong>Condição externa:</strong> Depende do volume de licitações do GDF e da manutenção das cotas para MPEs. Mudança na LC 123 ou na Lei 14.133 pode reduzir o mercado.</li>
+<li><strong>O que faria falhar:</strong> MPEs preferirem aprender sozinhas; concorrência de contadores que passarem a oferecer o serviço de graça para reter clientes.</li>
+</ul>
+<p><strong>H. Fontes desta ficha</strong></p>
+<ul>
+<li>[FONTE: Lei 14.133/2021, art. 4º e LC 123/2006, arts. 42–49 — tratamento diferenciado para MPEs em licitações].</li>
+<li>[FONTE: Sebrae-DF — levantamento citado pelo Correio Braziliense — 2026 — 421.935 MPEs ativas no DF].</li>
+</ul>
+<hr />
+<h2 id="3-quadro-comparativo">3. Quadro comparativo</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Oportunidade</th>
+<th>Cliente</th>
+<th>Quem paga</th>
+<th>Capital inicial estimado</th>
+<th>Perfil</th>
+<th>Principal risco</th>
+<th>Qtd. [SEM DADO VERIFICÁVEL]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1. Manutenção fotovoltaica residencial</strong></td>
+<td>Proprietário de casa em Águas Claras, Sudoeste, Jardim Botânico</td>
+<td>Proprietário</td>
+<td>R$ 25–40 mil</td>
+<td>Tradicional</td>
+<td>Instaladoras incorporarem manutenção grátis</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><strong>2. Hortifrúti orgânico para restaurantes do Plano Piloto</strong></td>
+<td>Restaurantes/padarias independentes no Plano Piloto</td>
+<td>Restaurante (CNPJ)</td>
+<td>R$ 35–50 mil</td>
+<td>Emergente</td>
+<td>Irregularidade de oferta dos produtores</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><strong>3. Consultoria de licitações para MPEs do DF</strong></td>
+<td>MEI/ME em Taguatinga, Ceilândia, Guará, Samambaia</td>
+<td>Dono da MPE</td>
+<td>R$ 5–10 mil</td>
+<td>Tradicional</td>
+<td>MPEs desistirem ou concorrência de contadores</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+  </div>
+</details>
+<details class="anexo" id="anexo-r3">
+  <summary><span class="rchip r3">R3</span> ChatGPT <span class="sum-note">resposta completa, sem edição</span></summary>
+  <div class="anexo-body">
+    <ul class="anexo-meta"><li>Ferramenta: ChatGPT</li><li>Modelo (se visível): Não Visível</li><li>Data e hora: 10/10/2026, 18h53</li><li>Busca na web: ativada</li></ul>
+    <p class="anexo-src">Texto original em arquivo: <a href="anexos/R3-chatgpt.txt">R3-chatgpt.txt</a>. Abaixo, o mesmo texto com o Markdown da resposta renderizado.</p>
+    <div class="anexo-resp"><h2 id="0-condições-desta-resposta">0. Condições desta resposta</h2>
+<ul>
+<li><strong>Data de corte do seu conhecimento:</strong> 10/10/2026.</li>
+<li><strong>Você usou busca na web nesta resposta?</strong> Sim.</li>
+<li><strong>Principais limitações de dado para o DF:</strong> faltam dados públicos consolidados sobre faturamento, preços praticados, margens e demanda insatisfeita por nicho e região administrativa. A PDAD do IPEDF permite caracterizar a população, mas não comprova disposição a pagar por serviços específicos. As estimativas financeiras desta análise são hipóteses de viabilidade, não resultados observados de empresas locais.</li>
+</ul>
+<p><strong>Critério de rigor:</strong> diferencio evidências de demanda existente, hipóteses comerciais e informações ainda não verificadas. Uma tendência setorial, isoladamente, não aprova uma oportunidade. As estimativas devem ser validadas com entrevistas e propostas comerciais antes de qualquer investimento.</p>
+<p>As oportunidades foram avaliadas para abertura entre 2026 e 2027, com operação sustentável até 2030 e capital total de até R$ 100 mil, incluindo equipamentos, despesas pré-operacionais e capital de giro.</p>
+<h2 id="1-triagem-das-8-candidatas">1. Triagem das 8 candidatas</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Candidata</th>
+<th>Tendência de origem</th>
+<th>C1</th>
+<th>C2</th>
+<th>C3</th>
+<th>C4</th>
+<th>C5</th>
+<th>Resultado (aprovada/eliminada)</th>
+<th>Se eliminada: pergunta em que falhou e motivo (1 linha)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Assessoria operacional para pequenos fornecedores do governo</td>
+<td>Digitalização das compras públicas</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>Aprovada</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>2. Coordenação de retirada e destinação regular de entulho de pequenas reformas</td>
+<td>Gestão de resíduos e economia circular</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>Aprovada</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>3. Agência de marketing digital para pequenos negócios</td>
+<td>Digitalização comercial</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td>Eliminada</td>
+<td>C4: mercado concorrido, oferta facilmente copiável e ausência de diferenciação comprovada.</td>
+</tr>
+<tr class="even">
+<td>4. Instalação de carregadores para veículos elétricos</td>
+<td>Eletrificação da mobilidade</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td>Eliminada</td>
+<td>C4: não há evidência suficiente de demanda local recorrente que justifique a aquisição de equipamentos e a estrutura de instalação dentro do capital disponível.</td>
+</tr>
+<tr class="odd">
+<td>5. Loja virtual de produtos regionais do Cerrado</td>
+<td>Comércio eletrônico e valorização regional</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td>Eliminada</td>
+<td>C4: custo de aquisição de clientes, logística e margem não foram comprovados para um nicho específico do DF.</td>
+</tr>
+<tr class="even">
+<td>6. Cozinha de refeições congeladas por assinatura</td>
+<td>Conveniência alimentar</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td>Eliminada</td>
+<td>C4: não há evidência de que a margem, a recorrência e o custo de aquisição fechem a conta para um público local definido.</td>
+</tr>
+<tr class="odd">
+<td>7. Serviço de adaptação residencial para idosos</td>
+<td>Envelhecimento populacional e acessibilidade</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td>Eliminada</td>
+<td>C4: falta comprovação de demanda pagante e de um canal de aquisição economicamente viável no DF.</td>
+</tr>
+<tr class="even">
+<td>8. Lavagem ecológica de veículos por assinatura em condomínios</td>
+<td>Serviços por assinatura e economia de água</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>SIM</td>
+<td>NÃO</td>
+<td>SIM</td>
+<td>Eliminada</td>
+<td>C4: a recorrência é plausível, mas a disposição a pagar, a densidade de clientes e a rentabilidade por rota não estão comprovadas.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Resultado da triagem:</strong> duas candidatas passaram pelas cinco perguntas. Isso não significa que sua viabilidade esteja comprovada: significa que há um problema identificável, uma solução executável, um cliente delimitável, um canal comercial plausível e uma janela de entrada defensável. Ambas exigem validação comercial antes do investimento.</p>
+<p><strong>Base documental da triagem:</strong> o Portal Nacional de Contratações Públicas (PNCP) permite consultar editais, contratos e planos de contratação, oferecendo uma fonte oficial para investigar a demanda por serviços e compras governamentais. (<a href="https://www.gov.br/pncp/?utm_source=chatgpt.com" title="Portal Nacional de Contratações Públicas - PNCP">Serviços e Informações do Brasil</a>) A legislação distrital também estabelece obrigações específicas para o gerenciamento dos resíduos da construção civil, criando uma necessidade operacional concreta. (<a href="https://dflegis.df.gov.br/ato.php?p=lei-4704-de-20-de-dezembro-de-2011&amp;utm_source=chatgpt.com" title="LEI Nº 4.704, DE 20 DE DEZEMBRO DE 2011....">DFLegis</a>)</p>
+<h2 id="2-fichas-das-oportunidades-aprovadas">2. Fichas das oportunidades aprovadas</h2>
+<h3 id="oportunidade-1-assessoria-operacional-para-pequenos-fornecedores-do-governo">Oportunidade 1: Assessoria operacional para pequenos fornecedores do governo</h3>
+<h4 id="a-tendência--oportunidade">A. Tendência × oportunidade</h4>
+<ul>
+<li><strong>Tendência de origem:</strong> digitalização das compras públicas e ampliação da disponibilidade de informações sobre licitações e contratos.</li>
+<li><strong>Problema específico:</strong> pequenos fornecedores perdem oportunidades porque não monitoram editais adequados, não organizam a documentação ou não conseguem preparar propostas comerciais e administrativas de forma consistente.</li>
+<li><strong>Cliente nomeável (quem, onde no DF, em que situação):</strong> empresas de manutenção predial, comunicação visual, limpeza, fornecimento de materiais e serviços administrativos estabelecidas em Taguatinga, Ceilândia, Guará e Samambaia, que já vendem para outras empresas, mas ainda não participam regularmente de licitações.</li>
+</ul>
+<p>O PNCP centraliza informações sobre contratações públicas, editais, atas, contratos e planos de contratação. Isso permite pesquisar oportunidades sem desenvolver uma plataforma própria. (<a href="https://www.gov.br/pncp/?utm_source=chatgpt.com" title="Portal Nacional de Contratações Públicas - PNCP">Serviços e Informações do Brasil</a>)</p>
+<h4 id="b-cinco-perguntas-de-triagem">B. Cinco perguntas de triagem</h4>
+<ul>
+<li><strong>Quem exatamente tem esse problema?</strong> Proprietários de pequenas empresas que possuem capacidade operacional para fornecer produtos ou serviços, mas não dispõem de funcionário dedicado a licitações.</li>
+<li><strong>Quanto dói? (custo em dinheiro, tempo ou risco para o cliente)</strong> O custo pode incluir horas administrativas, contratação de consultoria pontual e oportunidades perdidas por documentação incompleta. O prejuízo médio por empresa no DF é <strong>[SEM DADO VERIFICÁVEL]</strong>.</li>
+<li><strong>Quem paga, e com que dinheiro? (quem usa, quem decide e quem paga podem ser pessoas diferentes; diga se são)</strong> O proprietário ou diretor financeiro decide e paga com o caixa da própria empresa. O usuário do serviço é o responsável comercial ou administrativo.</li>
+<li><strong>Por que um novo pequeno negócio, e não o incumbente? (o que impede um concorrente estabelecido de copiar em três meses?)</strong> O negócio pode competir com atendimento próximo, especialização em poucos segmentos e acompanhamento individual. A diferenciação é operacional, não uma barreira tecnológica; a retenção dependerá de resultados, confiança e conhecimento acumulado dos clientes.</li>
+<li><strong>Por que agora, e não em 2020 ou 2035? (que mudança recente abriu a janela)</strong> O PNCP oferece uma fonte pública centralizada para pesquisar oportunidades e acompanhar processos. A janela é operacional, e não uma ruptura tecnológica exclusiva de 2026. (<a href="https://www.gov.br/pncp/?utm_source=chatgpt.com" title="Portal Nacional de Contratações Públicas - PNCP">Serviços e Informações do Brasil</a>)</li>
+</ul>
+<h4 id="c-3ms">C. 3Ms</h4>
+<p><strong>M1 — Demanda de mercado</strong></p>
+<ul>
+<li><strong>Público-alvo:</strong> pequenas empresas locais com capacidade de atender órgãos públicos, mas sem equipe própria de licitações. Os segmentos iniciais podem ser manutenção predial, comunicação visual e fornecimento de materiais.</li>
+<li><strong>Acessibilidade dos clientes:</strong> prospecção direta em associações empresariais, redes de contabilidade, fornecedores locais e contatos comerciais. A frequência de contratação do serviço dependerá da quantidade de processos adequados ao perfil de cada cliente.</li>
+<li><strong>Durabilidade e recuperação do custo de aquisição:</strong> a necessidade pode persistir enquanto a empresa desejar vender ao governo. O prazo para recuperar o custo de aquisição é <strong>[SEM DADO VERIFICÁVEL]</strong> até testar conversão, preço e retenção.</li>
+</ul>
+<p><strong>M2 — Tamanho e estrutura do mercado</strong></p>
+<ul>
+<li><strong>Tamanho no DF:</strong> <strong>[SEM DADO VERIFICÁVEL]</strong>. Não foi apurado o número de pequenas empresas com capacidade e interesse em contratar assessoria recorrente para licitações no Distrito Federal.</li>
+<li><strong>Situação e estrutura:</strong> mercado potencialmente fragmentado, com consultores independentes, escritórios especializados e empresas que mantêm equipe interna. A existência de demanda pagante precisa ser comprovada por entrevistas e contratos.</li>
+<li><strong>Concorrentes e barreiras:</strong> consultorias de licitação, assessorias administrativas e profissionais autônomos. A entrada exige baixo investimento físico, mas a reputação, o domínio dos procedimentos e o histórico de entregas podem favorecer a retenção. A saída tem custo relativamente baixo, desde que não haja compromissos contratuais relevantes.</li>
+</ul>
+<p><strong>M3 — Análise de margem</strong></p>
+<ul>
+<li><strong>Margem bruta estimada:</strong> 70% a 85% [ESTIMATIVA: prestação de serviços predominantemente intelectual; custos diretos de execução, ferramentas e apoio operacional equivalentes a 15%–30% da receita, sem incluir pró-labore e despesas administrativas].</li>
+<li><strong>Principais custos fixos mensais:</strong> R$ 4 mil a R$ 7 mil [ESTIMATIVA: pró-labore operacional, contabilidade, software, internet, telefonia, prospecção e despesas administrativas; sem escritório comercial dedicado].</li>
+<li><strong>Ponto de equilíbrio e prazo:</strong> receita mensal de aproximadamente R$ 5,7 mil a R$ 10 mil [ESTIMATIVA: custos fixos de R$ 4 mil a R$ 7 mil divididos por margem de contribuição de 70%]. Prazo para alcançá-lo: <strong>[SEM DADO VERIFICÁVEL]</strong>, pois depende da velocidade de aquisição de clientes.</li>
+<li><strong>Cadeia de valor:</strong> PNCP e portais oficiais → identificação e filtragem de oportunidades → conferência documental → preparação administrativa da proposta → acompanhamento do processo → cliente fornecedor.</li>
+</ul>
+<p>O serviço não deve prometer vitória em licitações. A entrega contratada é a assessoria operacional, documental e comercial.</p>
+<h4 id="d-classificação-qualitativa-critérios-de-timmons">D. Classificação qualitativa (critérios de Timmons)</h4>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Critério</th>
+<th>Alto / Médio / Baixo potencial</th>
+<th>Justificativa (1 linha)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Necessidades dos clientes</td>
+<td>Médio</td>
+<td>O problema é plausível, mas a intensidade da dor e a disposição a pagar precisam ser validadas com fornecedores locais.</td>
+</tr>
+<tr class="even">
+<td>Estrutura do mercado</td>
+<td>Médio</td>
+<td>Há clientes potencialmente dispersos e diferentes alternativas de atendimento, sem estimativa confiável do tamanho do mercado.</td>
+</tr>
+<tr class="odd">
+<td>Barreiras de entrada que o novo negócio consiga construir</td>
+<td>Médio</td>
+<td>Especialização por segmento, processos padronizados e histórico de relacionamento podem elevar a retenção, mas são copiáveis.</td>
+</tr>
+<tr class="even">
+<td>Capital inicial</td>
+<td>Alto</td>
+<td>É possível começar de casa, usando ferramentas existentes e sem desenvolver software próprio.</td>
+</tr>
+<tr class="odd">
+<td>Prazo até o ponto de equilíbrio</td>
+<td>Médio</td>
+<td>A estrutura pode ser enxuta, mas a formação da carteira comercial é incerta.</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="e-modelo-de-negócio">E. Modelo de negócio</h4>
+<ul>
+<li><strong>Quem paga:</strong> proprietário ou diretor de pequenas empresas fornecedoras.</li>
+<li><strong>Por que paga (que valor recebe):</strong> economiza tempo administrativo, melhora a organização documental e recebe uma seleção de oportunidades compatíveis com sua capacidade operacional.</li>
+<li><strong>Quanto e com que frequência (preço e recorrência):</strong> mensalidade de R$ 900 a R$ 1.500 por empresa [ESTIMATIVA: preço inicial hipotético para monitoramento, organização documental e acompanhamento administrativo; deve ser testado comercialmente]. Serviços extraordinários podem ser cobrados separadamente.</li>
+<li><strong>A que custo:</strong> investimento inicial de R$ 20 mil a R$ 35 mil [ESTIMATIVA: R$ 4 mil–R$ 7 mil para equipamentos e estrutura; R$ 3 mil–R$ 5 mil para formalização, identidade comercial e configuração; R$ 4 mil–R$ 8 mil para prospecção inicial; R$ 9 mil–R$ 15 mil para capital de giro]. O custo de aquisição de cliente é <strong>[SEM DADO VERIFICÁVEL]</strong> até medir o esforço comercial e a taxa de conversão.</li>
+</ul>
+<p><strong>Exemplo econômico ilustrativo:</strong> com mensalidade média de R$ 1.200, custos fixos de R$ 5 mil e margem de contribuição de 80%, seriam necessários aproximadamente seis clientes ativos para cobrir os custos fixos [ESTIMATIVA: R$ 5.000 ÷ (R$ 1.200 × 80%) = 5,21; arredondamento para cima]. Essa simulação não comprova que seja possível conquistar ou reter essa carteira.</p>
+<h4 id="f-enquadramento-digital">F. Enquadramento digital</h4>
+<ul>
+<li><strong>Modelo:</strong> empresarial — negócio de serviços do mundo real que utiliza a internet para vender, pesquisar oportunidades e reduzir custos operacionais.</li>
+<li><strong>Quem detém a relação com o cliente:</strong> o próprio negócio, com contratos, atendimento e histórico comercial próprios. O PNCP é uma fonte pública de informação, não o canal de relacionamento com o cliente. A dependência de plataformas privadas deve ser limitada, priorizando ferramentas substituíveis e dados oficiais.</li>
+</ul>
+<h4 id="g-riscos">G. Riscos</h4>
+<ul>
+<li><strong>Perfil:</strong> ramo tradicional com operação digital. A necessidade administrativa existe, mas a demanda específica por assessoria terceirizada ainda precisa ser demonstrada.</li>
+<li><strong>De que condição externa depende (juros, incentivo, regulação, contrato público, investimento anunciado)?</strong> Depende do volume de compras públicas compatíveis com os clientes, dos procedimentos de contratação e da capacidade financeira dos fornecedores. Não depende de incentivo fiscal ou subsídio.</li>
+<li><strong>O que faria esta oportunidade falhar até 2030?</strong> Clientes que não conseguem competir em preço, baixa taxa de contratação após participação em processos, inadimplência, excesso de concorrentes e mensalidades insuficientes para remunerar o trabalho especializado.</li>
+</ul>
+<h4 id="h-fontes-desta-ficha">H. Fontes desta ficha</h4>
+<ul>
+<li>[FONTE: Governo Federal — Portal Nacional de Contratações Públicas — consulta em 2026 — sistema oficial de divulgação e consulta de editais, contratos, atas e planos de contratação]. (<a href="https://www.gov.br/pncp/?utm_source=chatgpt.com" title="Portal Nacional de Contratações Públicas - PNCP">Serviços e Informações do Brasil</a>)</li>
+<li>[FONTE: Governo Federal — PNCP, Perguntas e Respostas — atualização consultada em 2026 — funcionamento do portal e informações disponíveis para consulta pública]. (<a href="https://www.gov.br/pncp/pt-br/pncp/perguntas-e-respostas/?utm_source=chatgpt.com" title="Perguntas e Respostas">Serviços e Informações do Brasil</a>)</li>
+</ul>
+<hr />
+<h3 id="oportunidade-2-coordenação-de-retirada-e-destinação-regular-de-entulho-de-pequenas-reformas">Oportunidade 2: Coordenação de retirada e destinação regular de entulho de pequenas reformas</h3>
+<h4 id="a-tendência--oportunidade-1">A. Tendência × oportunidade</h4>
+<ul>
+<li><strong>Tendência de origem:</strong> gestão adequada de resíduos da construção civil e redução do descarte irregular.</li>
+<li><strong>Problema específico:</strong> moradores e pequenos profissionais de reforma precisam retirar resíduos, mas nem sempre conhecem as opções de destinação regular ou conseguem coordenar rapidamente a coleta e o transporte.</li>
+<li><strong>Cliente nomeável (quem, onde no DF, em que situação):</strong> proprietários de apartamentos em Águas Claras, Guará, Taguatinga e Samambaia que estão reformando banheiros, cozinhas ou pisos; pequenos empreiteiros e instaladores que precisam retirar resíduos de obras de curta duração.</li>
+</ul>
+<p>A legislação distrital prevê uma estrutura de gestão de resíduos da construção civil, e o SLU informa sobre os pontos de entrega destinados a pequenos volumes e as regras aplicáveis. (<a href="https://dflegis.df.gov.br/ato.php?p=lei-4704-de-20-de-dezembro-de-2011&amp;utm_source=chatgpt.com" title="LEI Nº 4.704, DE 20 DE DEZEMBRO DE 2011....">DFLegis</a>)</p>
+<h4 id="b-cinco-perguntas-de-triagem-1">B. Cinco perguntas de triagem</h4>
+<ul>
+<li><strong>Quem exatamente tem esse problema?</strong> Proprietários que contratam pequenas reformas, profissionais autônomos e pequenas empresas de reforma sem frota própria ou rotina definida de retirada.</li>
+<li><strong>Quanto dói? (custo em dinheiro, tempo ou risco para o cliente)</strong> O cliente enfrenta tempo de coordenação, risco de atrasar a obra e risco de destinação inadequada. O custo médio por ocorrência no DF é <strong>[SEM DADO VERIFICÁVEL]</strong>.</li>
+<li><strong>Quem paga, e com que dinheiro? (quem usa, quem decide e quem paga podem ser pessoas diferentes; diga se são)</strong> O proprietário da obra ou o empreiteiro decide e paga com recursos da reforma. O usuário é quem coordena a retirada no local.</li>
+<li><strong>Por que um novo pequeno negócio, e não o incumbente? (o que impede um concorrente estabelecido de copiar em três meses?)</strong> O diferencial possível é combinar agendamento rápido, preço previamente informado, comprovação de destinação e atendimento a pequenas demandas. A vantagem não é estrutural: dependerá de confiabilidade, rede de transportadores e densidade de atendimento.</li>
+<li><strong>Por que agora, e não em 2020 ou 2035? (que mudança recente abriu a janela)</strong> A regulamentação distrital especifica obrigações para geradores e transportadores, enquanto o SLU divulga opções de destinação. Isso favorece um serviço organizado de coordenação, embora não prove crescimento recente da demanda. (<a href="https://dflegis.df.gov.br/ato.php?p=decreto-46279-de-20-de-setembro-de-2024&amp;utm_source=chatgpt.com" title="DECRETO Nº 46.279, DE 20 DE SETEMBRO DE 2024...">DFLegis</a>)</li>
+</ul>
+<h4 id="c-3ms-1">C. 3Ms</h4>
+<p><strong>M1 — Demanda de mercado</strong></p>
+<ul>
+<li><strong>Público-alvo:</strong> proprietários em pequenas reformas residenciais e profissionais que executam serviços de curta duração. A operação inicial deve se concentrar em bairros com condomínios residenciais e prestadores de reforma.</li>
+<li><strong>Acessibilidade dos clientes:</strong> parcerias com lojas de material de construção, instaladores, pequenos empreiteiros, síndicos e administradoras de condomínios. A demanda pode ser recorrente entre parceiros profissionais, embora não necessariamente entre consumidores individuais.</li>
+<li><strong>Durabilidade e recuperação do custo de aquisição:</strong> a necessidade de retirada acompanha a atividade de reforma e manutenção. O prazo de recuperação do custo de aquisição é <strong>[SEM DADO VERIFICÁVEL]</strong> até medir pedidos, margem por atendimento e recompra dos parceiros.</li>
+</ul>
+<p><strong>M2 — Tamanho e estrutura do mercado</strong></p>
+<ul>
+<li><strong>Tamanho no DF:</strong> <strong>[SEM DADO VERIFICÁVEL]</strong>. Não foi encontrada nesta pesquisa uma estimativa consolidada do número anual de pequenas reformas residenciais que necessitam de serviço privado de retirada.</li>
+<li><strong>Situação e estrutura:</strong> mercado de serviços locais, com transportadores, empresas de caçamba e prestadores informais. A participação potencial de um intermediário depende de oferecer conveniência ou confiabilidade superior às alternativas existentes.</li>
+<li><strong>Concorrentes e barreiras:</strong> transportadores licenciados, locadores de caçambas e serviços de retirada oferecidos por empreiteiros. A operação pode começar sem frota própria, mas exige verificar licenciamento, documentação e regularidade dos parceiros. A legislação distrital define regras para resíduos e transportadores. (<a href="https://dflegis.df.gov.br/ato.php?p=lei-4704-de-20-de-dezembro-de-2011&amp;utm_source=chatgpt.com" title="LEI Nº 4.704, DE 20 DE DEZEMBRO DE 2011....">DFLegis</a>)</li>
+</ul>
+<p><strong>M3 — Análise de margem</strong></p>
+<ul>
+<li><strong>Margem bruta estimada:</strong> 25% a 40% [ESTIMATIVA: coordenação de pedidos com transportadores terceirizados; diferença entre preço cobrado e custo do transporte, destinação e atendimento, antes das despesas fixas].</li>
+<li><strong>Principais custos fixos mensais:</strong> R$ 3 mil a R$ 5 mil [ESTIMATIVA: pró-labore operacional, telefone, divulgação, software de agendamento, contabilidade e despesas administrativas, sem aquisição de veículo].</li>
+<li><strong>Ponto de equilíbrio e prazo:</strong> faturamento mensal de aproximadamente R$ 7,5 mil a R$ 20 mil [ESTIMATIVA: custos fixos de R$ 3 mil–R$ 5 mil divididos por margem de contribuição de 25%–40%]. O prazo para alcançá-lo é <strong>[SEM DADO VERIFICÁVEL]</strong>.</li>
+<li><strong>Cadeia de valor:</strong> indicação do cliente → cotação e agendamento → transportador regularizado → destinação autorizada → confirmação da conclusão e registro para o cliente.</li>
+</ul>
+<p>O negócio deve começar como coordenador de serviços, não como transportador de resíduos. A execução por terceiros reduz a necessidade de capital, mas exige validação regulatória prévia e controle rigoroso dos parceiros.</p>
+<h4 id="d-classificação-qualitativa-critérios-de-timmons-1">D. Classificação qualitativa (critérios de Timmons)</h4>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Critério</th>
+<th>Alto / Médio / Baixo potencial</th>
+<th>Justificativa (1 linha)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Necessidades dos clientes</td>
+<td>Médio</td>
+<td>A necessidade operacional é concreta, mas a disposição a pagar por coordenação independente ainda não foi demonstrada.</td>
+</tr>
+<tr class="even">
+<td>Estrutura do mercado</td>
+<td>Médio</td>
+<td>Há diferentes prestadores locais e um serviço potencialmente fragmentado, sem dimensionamento confiável do mercado.</td>
+</tr>
+<tr class="odd">
+<td>Barreiras de entrada que o novo negócio consiga construir</td>
+<td>Médio</td>
+<td>Rede confiável de transportadores, rapidez, comprovação de destinação e relacionamento com parceiros podem diferenciar a operação.</td>
+</tr>
+<tr class="even">
+<td>Capital inicial</td>
+<td>Alto</td>
+<td>A coordenação pode começar sem frota própria, desde que o modelo seja legalmente viável e os prestadores estejam regularizados.</td>
+</tr>
+<tr class="odd">
+<td>Prazo até o ponto de equilíbrio</td>
+<td>Médio</td>
+<td>A estrutura é relativamente enxuta, mas a margem por pedido e a frequência de contratação precisam ser validadas.</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="e-modelo-de-negócio-1">E. Modelo de negócio</h4>
+<ul>
+<li><strong>Quem paga:</strong> proprietário da obra ou pequeno empreiteiro que contrata a retirada.</li>
+<li><strong>Por que paga (que valor recebe):</strong> economiza tempo de coordenação, reduz incerteza sobre a contratação e obtém registro do serviço realizado e da destinação aplicável.</li>
+<li><strong>Quanto e com que frequência (preço e recorrência):</strong> preço hipotético de R$ 250 a R$ 500 por atendimento [ESTIMATIVA: faixa inicial para testar serviços de retirada de pequenas reformas; preço efetivo depende do volume, acesso, transporte e destinação]. O pagamento tende a ocorrer por demanda, com recorrência maior entre empreiteiros.</li>
+<li><strong>A que custo:</strong> investimento inicial de R$ 25 mil a R$ 45 mil [ESTIMATIVA: R$ 3 mil–R$ 6 mil para equipamentos e estrutura; R$ 3 mil–R$ 6 mil para formalização, contratos e configuração operacional; R$ 4 mil–R$ 8 mil para prospecção; R$ 15 mil–R$ 25 mil de capital de giro]. O custo de aquisição de cliente é <strong>[SEM DADO VERIFICÁVEL]</strong>.</li>
+</ul>
+<p><strong>Exemplo econômico ilustrativo:</strong> com faturamento médio de R$ 350 por pedido e contribuição de 30%, cada atendimento geraria R$ 105 para cobrir despesas fixas [ESTIMATIVA: R$ 350 × 30%]. Para cobrir despesas fixas mensais de R$ 4 mil, seriam necessários aproximadamente 39 atendimentos mensais [ESTIMATIVA: R$ 4.000 ÷ R$ 105, arredondado para cima]. Esses valores não são preços de mercado verificados.</p>
+<h4 id="f-enquadramento-digital-1">F. Enquadramento digital</h4>
+<ul>
+<li><strong>Modelo:</strong> empresarial — a operação é física, mas a internet pode reduzir o custo de cotação, agendamento, comunicação e acompanhamento.</li>
+<li><strong>Quem detém a relação com o cliente:</strong> o próprio negócio, desde que registre os contatos, contratos e histórico dos atendimentos. A aquisição de clientes exclusivamente por redes sociais ou marketplaces aumenta a dependência de algoritmos, comissões e mudanças nas regras das plataformas.</li>
+</ul>
+<h4 id="g-riscos-1">G. Riscos</h4>
+<ul>
+<li><strong>Perfil:</strong> ramo tradicional com coordenação digital. A necessidade de destinação existe, mas a demanda pagante por um intermediário precisa ser comprovada.</li>
+<li><strong>De que condição externa depende (juros, incentivo, regulação, contrato público, investimento anunciado)?</strong> Depende da atividade de reformas, da disponibilidade de transportadores regulares, das regras ambientais e dos custos de destinação. Não deve depender de subsídio ou incentivo fiscal.</li>
+<li><strong>O que faria esta oportunidade falhar até 2030?</strong> Margens insuficientes, concorrência informal com preços inferiores, baixa densidade de pedidos, problemas de qualidade dos parceiros, destinação irregular ou exigências regulatórias incompatíveis com o modelo operacional.</li>
+</ul>
+<h4 id="h-fontes-desta-ficha-1">H. Fontes desta ficha</h4>
+<ul>
+<li>[FONTE: Governo do Distrito Federal — Lei nº 4.704, de 20 de dezembro de 2011 — legislação distrital sobre gestão integrada de resíduos da construção civil e resíduos volumosos, incluindo obrigações de geradores e transportadores]. (<a href="https://dflegis.df.gov.br/ato.php?p=lei-4704-de-20-de-dezembro-de-2011&amp;utm_source=chatgpt.com" title="LEI Nº 4.704, DE 20 DE DEZEMBRO DE 2011....">DFLegis</a>)</li>
+<li>[FONTE: Governo do Distrito Federal — Decreto nº 46.279, de 20 de setembro de 2024 — alterações regulamentares relativas a resíduos da construção civil e ao Plano de Gerenciamento de Resíduos da Construção Civil]. (<a href="https://dflegis.df.gov.br/ato.php?p=decreto-46279-de-20-de-setembro-de-2024&amp;utm_source=chatgpt.com" title="DECRETO Nº 46.279, DE 20 DE SETEMBRO DE 2024...">DFLegis</a>)</li>
+<li>[FONTE: Serviço de Limpeza Urbana do Distrito Federal — Resíduos da Construção Civil — informações sobre pequenos volumes, Papa-Entulhos e destinação]. (<a href="https://www.slu.df.gov.br/residuos-da-construcao-civil/?utm_source=chatgpt.com" title="Resíduos da Construção Civil – Rcc - Serviço de Limpeza Urbana do Distrito Federal - Serviço de Limpeza Urbana do Distrito Federal">Limpeza Urbana DF</a>)</li>
+</ul>
+<h2 id="3-quadro-comparativo">3. Quadro comparativo</h2>
+<div class="tbl"><table>
+<thead>
+<tr class="header">
+<th>Oportunidade</th>
+<th>Cliente</th>
+<th>Quem paga</th>
+<th>Capital inicial estimado</th>
+<th>Perfil (tradicional/emergente)</th>
+<th>Principal risco</th>
+<th>Quantidade de [SEM DADO VERIFICÁVEL] na ficha</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Assessoria operacional para pequenos fornecedores do governo</td>
+<td>Pequenos fornecedores de manutenção, comunicação visual e materiais no DF</td>
+<td>Proprietário ou diretor da empresa</td>
+<td>R$ 20 mil–R$ 35 mil [ESTIMATIVA: composição detalhada na ficha]</td>
+<td>Tradicional com operação digital</td>
+<td>Não conseguir converter empresas em contratos recorrentes rentáveis</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Coordenação de retirada e destinação regular de entulho</td>
+<td>Proprietários em pequenas reformas e empreiteiros locais</td>
+<td>Proprietário da obra ou empreiteiro</td>
+<td>R$ 25 mil–R$ 45 mil [ESTIMATIVA: composição detalhada na ficha]</td>
+<td>Tradicional com coordenação digital</td>
+<td>Margem insuficiente ou falhas regulatórias e operacionais dos parceiros</td>
+<td>4</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="conclusão-executiva">Conclusão executiva</h3>
+<p><strong>Minha preferência inicial é a assessoria operacional para pequenos fornecedores do governo.</strong> Ela exige menos capital físico, permite testar a demanda antes de ampliar a estrutura e oferece a possibilidade de receita mensal recorrente. Entretanto, sua viabilidade depende de demonstrar que empresas locais pagarão pela assessoria e permanecerão clientes mesmo quando não vencerem licitações.</p>
+<p>A coordenação de retirada de resíduos também merece teste, mas apresenta maior exposição a custos variáveis, logística e conformidade regulatória.</p>
+<p><strong>Antes de investir, eu exigiria três evidências comerciais para cada oportunidade:</strong></p>
+<ul>
+<li>Entrevistas documentadas com potenciais clientes que confirmem o problema e a forma atual de resolvê-lo.</li>
+<li>Propostas comerciais reais, com preço explícito, apresentadas a clientes identificados no DF.</li>
+<li>Primeiros contratos pagos que permitam medir margem de contribuição, custo de aquisição e frequência de recompra.</li>
+</ul>
+<p>Sem essas evidências, as duas alternativas continuam sendo <strong>oportunidades candidatas qualificadas</strong>, e não negócios comprovadamente viáveis.</p>
+</div>
+  </div>
+</details>
+  <details class="anexo" id="anexo-sintese">
+    <summary><span class="rchip r4">4ª</span> Claude: síntese de R1, R2 e R3 <span class="sum-note">17 páginas, reprodução do PDF original</span></summary>
+    <div class="anexo-body"><div class="sint-pages"><img src="anexos/sintese-p-01.jpg" alt="Síntese da 4ª IA, página 1 de 17" loading="lazy"><img src="anexos/sintese-p-02.jpg" alt="Síntese da 4ª IA, página 2 de 17" loading="lazy"><img src="anexos/sintese-p-03.jpg" alt="Síntese da 4ª IA, página 3 de 17" loading="lazy"><img src="anexos/sintese-p-04.jpg" alt="Síntese da 4ª IA, página 4 de 17" loading="lazy"><img src="anexos/sintese-p-05.jpg" alt="Síntese da 4ª IA, página 5 de 17" loading="lazy"><img src="anexos/sintese-p-06.jpg" alt="Síntese da 4ª IA, página 6 de 17" loading="lazy"><img src="anexos/sintese-p-07.jpg" alt="Síntese da 4ª IA, página 7 de 17" loading="lazy"><img src="anexos/sintese-p-08.jpg" alt="Síntese da 4ª IA, página 8 de 17" loading="lazy"><img src="anexos/sintese-p-09.jpg" alt="Síntese da 4ª IA, página 9 de 17" loading="lazy"><img src="anexos/sintese-p-10.jpg" alt="Síntese da 4ª IA, página 10 de 17" loading="lazy"><img src="anexos/sintese-p-11.jpg" alt="Síntese da 4ª IA, página 11 de 17" loading="lazy"><img src="anexos/sintese-p-12.jpg" alt="Síntese da 4ª IA, página 12 de 17" loading="lazy"><img src="anexos/sintese-p-13.jpg" alt="Síntese da 4ª IA, página 13 de 17" loading="lazy"><img src="anexos/sintese-p-14.jpg" alt="Síntese da 4ª IA, página 14 de 17" loading="lazy"><img src="anexos/sintese-p-15.jpg" alt="Síntese da 4ª IA, página 15 de 17" loading="lazy"><img src="anexos/sintese-p-16.jpg" alt="Síntese da 4ª IA, página 16 de 17" loading="lazy"><img src="anexos/sintese-p-17.jpg" alt="Síntese da 4ª IA, página 17 de 17" loading="lazy"></div></div>
+  </details>
+</section>
+</div></main>
+<footer><div class="wrap">Departamento de Administração · FACE · Universidade de Brasília. Toda afirmação factual no corpo do site traz fonte citada; respostas de IA aparecem apenas como objeto de estudo.</div></footer>
+<script>
+(function(){
+  var keys=['abertura', 'prompt', 'protocolo', 'auditoria', 'conclusao', 'anexos'];
+  function show(k){
+    if(keys.indexOf(k)<0) k='abertura';
+    keys.forEach(function(x){ var s=document.getElementById(x); if(s) s.hidden=(x!==k); });
+    document.querySelectorAll('nav.tabs a').forEach(function(a){
+      if(a.getAttribute('data-tab')===k) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+  }
+  function fromHash(scroll){
+    var h=(location.hash||'').slice(1);
+    var target=h;
+    if(keys.indexOf(h)<0){ var el=h&&document.getElementById(h); var sec=el&&el.closest('section.pg'); target=sec?sec.id:'abertura'; }
+    show(target);
+    if(scroll){ var el2=h&&document.getElementById(h); if(el2&&el2.tagName==='DETAILS') el2.open=true;
+      window.scrollTo(0, keys.indexOf(h)>=0 ? 0 : (el2? el2.getBoundingClientRect().top+window.scrollY-70 : 0)); }
+  }
+  window.addEventListener('hashchange',function(){fromHash(true)});
+  fromHash(false);
+})();
+</script>
+</body>
+</html>
